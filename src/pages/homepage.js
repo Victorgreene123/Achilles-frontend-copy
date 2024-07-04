@@ -11,7 +11,7 @@ const HomePage = () => {
       <Hero />
       <TrustedSchools />
       <Products />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Accordion />
     </div>
   );
