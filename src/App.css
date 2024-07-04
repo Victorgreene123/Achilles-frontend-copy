@@ -1,0 +1,11 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.active {
+  background-color: #0000ff;
+  color: #fff;
+  border: none;
+  padding-left: 10px;
+  transition: all 0.3s;
+}
