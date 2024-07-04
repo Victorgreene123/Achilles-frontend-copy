@@ -13,6 +13,10 @@ const BlogItem= (props) =>{
             <h3 class="text-lg font-semibold">{props.title}</h3>
             <p class="leading-relaxed text-justify mt-2">{props.description}</p>
         </div>
+        <div class="leading-tight mt-2">
+          
+            <a class="leading-relaxed text-justify mt-2">Read More {">>>"}</a>
+        </div>
     </div>
         </>
     )
