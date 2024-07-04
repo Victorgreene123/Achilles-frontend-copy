@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const BlogItem= (props) =>{
     return(
@@ -15,7 +16,7 @@ const BlogItem= (props) =>{
         </div>
         <div class="leading-tight mt-2">
           
-            <a class="leading-relaxed text-justify mt-2">Read More {">>>"}</a>
+            <Link class="leading-relaxed text-justify mt-2" to=''>Read More {">>>"}</Link>
         </div>
     </div>
         </>

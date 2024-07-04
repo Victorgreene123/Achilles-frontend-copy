@@ -1,8 +1,23 @@
 // src/components/Footer.js
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const [formData,setFormData] = useState({
+    fullname : "",
+    email:"",
+  })
+  const handleChange = (event) =>{
+    setFormData(
+      (prevData) =>{
+        return({...prevData , [event.target.name] : event.target.value })
+      }
+    )
+    
+  }
+  const  handleSubmit = () =>{
+    
+  }
   return (
     <footer className="font-open-sans bg-[#080F24] text-white py-16 px-10 box-border bottom-0">
       <div className="flex flex-col lg:flex-row justify-center">
@@ -50,10 +65,16 @@ function Footer() {
             <input
                 className="w-4/5 py-2 px-4 text-sm text-black"
                 placeholder="Input your Full name"
+                name="fullname"
+                value={formData.fullname}
+                onChange={handleChange}
               />
               <input
                 className="w-4/5 py-2 px-4 text-sm mt-2 text-black"
                 placeholder="Input your email address"
+                name="email"
+                value={formData.email}
+                              onChange={handleChange}
               />
               <button
                 type="button"
