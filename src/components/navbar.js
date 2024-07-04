@@ -158,10 +158,19 @@ export default function Navbar() {
               <Link to="/about">About us</Link>
             </li>
 
-            <li>Products</li>
-            <li>Blog</li>
-            <li>FAQs</li>
+            <li className="text-blue-800">
+                <Link to="/productsPage" >
+                  Products
+                </Link>
+              </li>
+              <li className="text-blue-800">
+                <Link to='/blogs'>Blog</Link>
+              </li>
+              <li className="text-blue-800">
+                <Link to="/faq">FAQS</Link>
+              </li>
             <li className="flex items-center">
+              <Link to="/contactus" className="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -181,7 +190,7 @@ export default function Navbar() {
                   </clipPath>
                 </defs>
               </svg>
-              Contact
+              Contact</Link>
             </li>
             <li>
               <button class="flex items-center bg-blue-800 text-white border border-blue-800 rounded-full p-2.5 h-10 gap-1.5 w-full justify-center">
