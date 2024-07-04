@@ -2,13 +2,13 @@ import React from "react";
 import "./App.css";
 // import Footer from "./components/footer";
 // import Navbar from "./components/navbar";
-import HomePage from "./pages/Homepage";
-// import About from "./pages/About";
+
+import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import ProductsPage from "./pages/ProductsPage";
 import Faq from "./pages/Faq";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-// import HomePage from "./pages/homepage";
+import HomePage from "./pages/homepage";
 // import ContactUs from "./pages/ContactUs";
 import Layout from "./components/Layout";
 import BlogItem from "./components/blogitem";
@@ -21,11 +21,12 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<HomePage />} />
-            {/* <Route path='/about' element={<About />} /> */}
+            <Route path='/about' element={<About />} />
             <Route path='/contactus' element={<ContactUs />} />
             <Route path='/contactus' element={<ContactUs />} />
             <Route path='/Faq' element={<Faq />} />
             <Route path='/productsPage' element={<ProductsPage />} />
+            <Route path="blogs" element={<BlogPage />} />
           </Route>
         </Routes>
       </Router>

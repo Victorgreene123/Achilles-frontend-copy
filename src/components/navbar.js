@@ -150,15 +150,14 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-<<<<<<< HEAD
-          <ul className='flex flex-col gap-4 text-blue-800'>
-            <li>About us</li>
-=======
+
+          
+
           <ul className="flex flex-col gap-4 text-blue-800">
             <li>
               <Link to="/about">About us</Link>
             </li>
->>>>>>> 2720971bf390f9a088bc675388c5829febf0d056
+
             <li>Products</li>
             <li>Blog</li>
             <li>FAQs</li>
