@@ -48,11 +48,11 @@ function Footer() {
             </h3>
             <form className="block mt-2">
             <input
-                className="w-4/5 py-2 px-4 text-sm"
+                className="w-4/5 py-2 px-4 text-sm text-black"
                 placeholder="Input your Full name"
               />
               <input
-                className="w-4/5 py-2 px-4 text-sm mt-2"
+                className="w-4/5 py-2 px-4 text-sm mt-2 text-black"
                 placeholder="Input your email address"
               />
               <button
