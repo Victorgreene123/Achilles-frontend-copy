@@ -94,8 +94,8 @@ export default function BlogPage() {
 
     return (
         <>
-        <div className='bg-[#23449F] pt-32'>
-        <div className='max-w-[90%] mx-auto pb-12 sm:max-w-[85%] lg:pb-24'>
+        <div className='bg-[#23449F] pt-20 pb-20'>
+        <div className='max-w-[90%] mx-auto  sm:max-w-[85%] '>
        
 
           <div className='md:max-w-[78%] lg:max-w-[80%]'>

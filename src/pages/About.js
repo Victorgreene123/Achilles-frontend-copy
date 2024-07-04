@@ -6,12 +6,13 @@ import rectangle138 from "../Assets/Rectangle 138.png";
 import rectangle142 from "../Assets/Rectangle 142.png";
 import rectangle143 from "../Assets/Rectangle 143.png";
 import Team from "../components/Team";
+import Counter from "../components/counter";
 
 const About = () => {
   const result = [
-    { id: 1, rate: "90%", title: "Success rate" },
-    { id: 2, rate: "1,400", title: "Copies sold so far" },
-    { id: 3, rate: "24", title: "Schools reached" },
+    { id: 1, rate: "90", title: "Success rate", unit:"%"},
+    { id: 2, rate: "1400", title: "Copies sold so far" , unit:""},
+    { id: 3, rate: "24", title: "Schools reached" , unit:""},
   ];
 
   const images = [
@@ -35,11 +36,12 @@ const About = () => {
 
       <div className="py-20">
         <div className="text-center flex flex-col items-center">
-          <h2 className="font-semibold text-4xl lg:text-6xl lg:w-[50rem] text-blue-950 py-10">
+          <h2 className="font-semibold text-4xl lg:text-6xl lg:w-[50rem] text-blue-950 py-10 px-5">
             We finally hacked Med-school{" "}
             <span className="text-[#f18337]">for you</span>!
           </h2>
         </div>
+       
         <div className="lg:flex lg:items-center lg:justify-center">
           <div className="grid grid-cols-2">
             <img className="w-full" src={rectangle137} alt="" />
@@ -48,7 +50,7 @@ const About = () => {
             <img className="w-full" src={rectangle143} alt="" />
           </div>
 
-          <div className="grid grid-cols-2">
+          {/* <div className="grid grid-cols-2">
             <img className="w-full" src={rectangle137} alt="" />
             <img className="w-full" src={rectangle138} alt="" />
             <img className="w-full" src={rectangle142} alt="" />
@@ -60,7 +62,7 @@ const About = () => {
             <img className="w-full" src={rectangle138} alt="" />
             <img className="w-full" src={rectangle142} alt="" />
             <img className="w-full" src={rectangle143} alt="" />
-          </div>
+          </div> */}
         </div>
         {/* <div>
           {Array(4)
@@ -93,7 +95,8 @@ const About = () => {
                 className="border-b-2 text-center lg:text-left pb-5 w-44 lg:w-80"
               >
                 <p className="text-6xl  lg:text-[4rem] font-semibold">
-                  {item.rate}
+                  <Counter start={0} end={item.rate}/>{item.unit}
+                  
                 </p>
                 <p className="text-xs">{item.title}</p>
               </div>

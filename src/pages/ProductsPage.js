@@ -103,16 +103,9 @@ const ProductsPage = () => {
                   alt='PQ'
                   className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
                 />
-                <img
-                  src={prod}
-                  alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
-                />
-                <img
-                  src={prod}
-                  alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
-                />
+               
+            
+                
               </div>
 
               <div className='bg-blue-600 text-center rounded-full mt-4'>
