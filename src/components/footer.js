@@ -42,15 +42,23 @@ function Footer() {
       body: JSON.stringify(formData),
     })
       .then((response) => {
-        if (!response.ok) {
+        if (response.status === 200 || response.status === 300) {
+          return response.json().then((data) => ({
+            status: response.status,
+            message: data.message,
+          }));
+        } else {
           throw new Error("Network response was not ok");
         }
-        return response.json();
       })
       .then((data) => {
-        console.log("Success:", data);
-        setResponseMessage(data.message || "Form submitted successfully!");
-        setIsSuccess(true);
+        if (data.status === 200) {
+          setResponseMessage(data.message || "Form submitted successfully!");
+          setIsSuccess(true);
+        } else if (data.status === 300) {
+          setResponseMessage(data.message || "You have already subscribed to our newsletter!");
+          setIsSuccess(true);
+        }
         setShowModal(true);
         setFormData({
           fullname: "",
@@ -59,14 +67,14 @@ function Footer() {
         setLoading(false);
       })
       .catch((error) => {
-        console.log(error)
-        setResponseMessage( `An error occurred. Please try again.`);
+        console.log(error);
+        setResponseMessage("An error occurred. Please try again.");
         setIsSuccess(false);
         setShowModal(true);
         setLoading(false);
       });
   };
-
+  
   return (
     <footer className="font-open-sans bg-[#080F24] text-white py-16 px-10 box-border bottom-0">
       <div className="flex flex-col lg:flex-row justify-center">
@@ -96,7 +104,7 @@ function Footer() {
             <h3 className="text-sm font-bold">Contact Us</h3>
             <ul className="p-0 mt-2">
               <li className="text-[#D4D4D4] text-sm mb-2">
-                contact@achellisdrill.com
+                support@achellisdrill.com
               </li>
               <li className="text-[#D4D4D4] text-sm mb-2">+234-xxx-xxx-xxxx</li>
               <li className="text-[#D4D4D4] text-sm mb-2">+234-xxx-xxx-xxxx</li>
