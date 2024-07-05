@@ -1,23 +1,72 @@
-// src/components/Footer.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
+import {
+  faPhone,
+  faSpinner,
+  faTimes,
+  faCheckCircle,
+  faTimesCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
-  const [formData,setFormData] = useState({
-    fullname : "",
-    email:"",
-  })
-  const handleChange = (event) =>{
-    setFormData(
-      (prevData) =>{
-        return({...prevData , [event.target.name] : event.target.value })
-      }
-    )
-    
-  }
-  const  handleSubmit = () =>{
-    
-  }
+  const [responseMessage, setResponseMessage] = useState("");
+  const [showModal, setShowModal] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+  });
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
+  const handleChange = (event) => {
+    setFormData((prevData) => ({
+      ...prevData,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    fetch("https://achilles-web-be.onrender.com/newsletter/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Success:", data);
+        setResponseMessage(data.message || "Form submitted successfully!");
+        setIsSuccess(true);
+        setShowModal(true);
+        setFormData({
+          fullname: "",
+          email: "",
+        });
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.log(error)
+        setResponseMessage( `An error occurred. Please try again.`);
+        setIsSuccess(false);
+        setShowModal(true);
+        setLoading(false);
+      });
+  };
+
   return (
     <footer className="font-open-sans bg-[#080F24] text-white py-16 px-10 box-border bottom-0">
       <div className="flex flex-col lg:flex-row justify-center">
@@ -25,7 +74,9 @@ function Footer() {
           <div className="flex flex-col mb-10 lg:mb-0">
             <h3 className="text-sm font-bold">Company</h3>
             <ul className="p-0 mt-2">
-              <li className="text-[#D4D4D4] text-sm mb-2"><Link to='/productsPage'>Our Products</Link></li>
+              <li className="text-[#D4D4D4] text-sm mb-2">
+                <Link to="/productsPage">Our Products</Link>
+              </li>
               <li className="text-[#D4D4D4] text-sm mb-2">About us</li>
               <li className="text-[#D4D4D4] text-sm mb-2">Blogs</li>
               <li className="text-[#D4D4D4] text-sm mb-2">FAQs</li>
@@ -61,32 +112,80 @@ function Footer() {
             <h3 className="text-base mt-0 text-[#2C1403]">
               Subscribe to our Newsletter
             </h3>
-            <form className="block mt-2">
-            <input
+            <form className="block mt-2" onSubmit={handleSubmit}>
+              <input
                 className="w-4/5 py-2 px-4 text-sm text-black"
                 placeholder="Input your Full name"
                 name="fullname"
                 value={formData.fullname}
                 onChange={handleChange}
+                required
               />
               <input
                 className="w-4/5 py-2 px-4 text-sm mt-2 text-black"
                 placeholder="Input your email address"
                 name="email"
                 value={formData.email}
-                              onChange={handleChange}
+                onChange={handleChange}
+                required
               />
               <button
-                type="button"
+                type="submit"
                 className="block mt-1 bg-[#080F24] px-3 py-2 border border-[#080F24] rounded-r-md"
+                disabled={loading}
               >
-                Subscribe
+                {loading ? (
+                  <FontAwesomeIcon icon={faSpinner} spin />
+                ) : (
+                  "Subscribe"
+                )}
               </button>
             </form>
             <p className="text-sm text-[#230F01] my-2">
               Get latest exciting updates!
             </p>
           </div>
+          {showModal && (
+            <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-20">
+              <div className="relative bg-white w-[90%] max-w-lg mx-auto p-8 rounded-lg shadow-lg">
+                <button
+                  onClick={closeModal}
+                  className="absolute top-4 right-4 text-gray-600 hover:text-gray-900"
+                >
+                  <FontAwesomeIcon icon={faTimes} size="lg" />
+                </button>
+                <div
+                  className={`flex items-center justify-center mb-4 ${
+                    isSuccess ? "text-green-600" : "text-red-600"
+                  }`}
+                >
+                  <FontAwesomeIcon
+                    icon={isSuccess ? faCheckCircle : faTimesCircle}
+                    className={`text-6xl mr-4 ${
+                      isSuccess ? "bg-green-600" : "bg-red-600"
+                    } text-white p-3 rounded-full`}
+                  />
+                </div>
+                <p
+                  className={`text-lg text-center ${
+                    isSuccess ? "text-green-600" : "text-red-600"
+                  }`}
+                >
+                  {responseMessage}
+                </p>
+                <button
+                  onClick={closeModal}
+                  className={`mt-6 w-full py-2 rounded-lg ${
+                    isSuccess ? "bg-green-600" : "bg-red-600"
+                  } text-white text-lg hover:${
+                    isSuccess ? "bg-green-700" : "bg-red-700"
+                  } transition-colors duration-300`}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <hr className="border-t border-[#D4D4D4] my-5"></hr>
