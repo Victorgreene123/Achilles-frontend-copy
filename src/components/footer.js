@@ -106,8 +106,8 @@ function Footer() {
               <li className="text-[#D4D4D4] text-sm mb-2">
                 support@achellisdrill.com
               </li>
-              <li className="text-[#D4D4D4] text-sm mb-2">+234-xxx-xxx-xxxx</li>
-              <li className="text-[#D4D4D4] text-sm mb-2">+234-xxx-xxx-xxxx</li>
+              <li className="text-[#D4D4D4] text-sm mb-2">+234-910-218-4183</li>
+              <li className="text-[#D4D4D4] text-sm mb-2">+234-810-538-8080</li>
               <li className="text-[#D4D4D4] text-sm mb-2">
                 LUTH, Idiaraba, Lagos
               </li>
