@@ -29,7 +29,7 @@ const Hero = () => {
             <div className="flex items-center gap-1">
               <PiDownloadSimpleLight />
               <p className="text-sm text-blue-950 font-semibold">
-                Download Dr Drilles Mobile App
+                Download Dr Drills Mobile App
               </p>
               <PiCaretDownBold />
             </div>

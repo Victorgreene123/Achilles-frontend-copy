@@ -104,10 +104,10 @@ function Footer() {
             <h3 className="text-sm font-bold">Contact Us</h3>
             <ul className="p-0 mt-2">
               <li className="text-[#D4D4D4] text-sm mb-2">
-                support@achellisdrill.com
+                support@achilesdrill.com
               </li>
-              <li className="text-[#D4D4D4] text-sm mb-2">+234-910-218-4183</li>
-              <li className="text-[#D4D4D4] text-sm mb-2">+234-810-538-8080</li>
+              <li className="text-[#D4D4D4] text-sm mb-2">+234-906-955-6424</li>
+              <li className="text-[#D4D4D4] text-sm mb-2">+234-810-828-7800</li>
               <li className="text-[#D4D4D4] text-sm mb-2">
                 LUTH, Idiaraba, Lagos
               </li>
