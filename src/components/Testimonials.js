@@ -127,7 +127,7 @@ const Testimonials = () => {
   );
 
   return (
-    <div className='relative py-20 px-10 lg:px-44 gap-10'>
+    <div className='relative py-20 px-10 lg:px-10 gap-10'>
       {/* Top Arrows */}
       <div className='flex justify-end gap-2 pb-10'>
         <CustomLeftArrow onClick={() => carouselRef.current.previous()} className='ml-2 mt-2' />

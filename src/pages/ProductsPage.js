@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import React, { useState, useEffect } from "react";
 import prod from "../Assets/Rectangle 147.png";
+import Youtube from "../components/YoutubeVid";
 // import axios from "axios";
 
 const ProductsPage = () => {
@@ -184,44 +185,57 @@ const ProductsPage = () => {
         {activeSection === "YOUTUBE_VIDEOS" && (
           <div className='mb-10 z-0 lg:flex gap-4'>
             <div className='mb-8 flex-[3]'>
-              <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' />
+              {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' /> */}
+        <Youtube src="https://www.youtube.com/embed/xi1sKqM-QkA?si=Tuvagj4olryfeVWU" title="Welcome to achilles drill" style="w-full h-[200px] sm:aspect-[16/7] lg:h-full"/>
+
+              
             </div>
 
             <div className='flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
                 <div className='relative'>
                   <div className='py-6 px-3 bg-[#dcdcf5]'>
-                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                    {/* <video src='https://www.youtube.com/watch?v=gOhGsrayF18' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+            
+        <Youtube src="https://www.youtube.com/embed/ogBByvsk0VU?si=X3JvHjx-UI7DG1uX" title="Welcome to achilles drill" style="w-full h-[200px] sm:aspect-[16/7] lg:h-full"/>
+                    
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
 
                 <div className='relative'>
                   <div className='mt-8 lg:mt-0 py-6 px-3 bg-[#dcdcf5]'>
-                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+        <Youtube src="https://www.youtube.com/embed/P1NraMV6Ky8?si=I8UaLFoO_5JUOpj1" title="Welcome to achilles drill" style="w-full h-[200px] sm:aspect-[16/7] lg:h-full"/>
+
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
 
                 <div className='relative'>
                   <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
-                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+        <Youtube src="https://www.youtube.com/embed/tnADA37As6c?si=Sba7jAqEeX_Z4JyB" title="Welcome to achilles drill" style="w-full h-[200px] sm:aspect-[16/7] lg:h-full"/>
+                  
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
 
                 <div className='relative'>
                   <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
-                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+        <Youtube src="https://www.youtube.com/embed/lToIUS5ITp4?si=Zs4TX4KZuYO53-32" title="Welcome to achilles drill" style="w-full h-[200px] sm:aspect-[16/7] lg:h-full"/>
+                  
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
               </div>
 
               <div className='bg-blue-600 text-center rounded-full mt-10 lg:mt-6'>
+                <a href="https://www.youtube.com/@ACHILLESDRILL/videos">
                 <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
                   GO TO YOUTUBE
-                </button>
+                </button></a>
               </div>
             </div>
           </div>

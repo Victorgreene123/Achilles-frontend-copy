@@ -11,6 +11,8 @@ const Products = () => {
       id: 1,
       image: image1,
       title: "Lecture Banks",
+      badge:"Videos",
+
       description:
         "A compilation of tutorial videos that cover the entire syllabi for Anatomy, Physiology and Biochemistry.",
     },
@@ -18,6 +20,8 @@ const Products = () => {
       id: 2,
       image: image2,
       title: "Past Questions",
+      badge:"BOOKLETS",
+
       description:
         "Well-researched, proven and tested past questions alongside comprehensive, illustrated and easy-to understand past questions.",
     },
@@ -25,6 +29,7 @@ const Products = () => {
       id: 3,
       image: image4,
       title: "Youtube Videos",
+      badge:"Videos",
       description:
         "Free, compiled resource specially created by Achilles Drill tutors. Watch  and learn at your own pace. ",
     },
@@ -32,6 +37,8 @@ const Products = () => {
       id: 4,
       image:image3 ,
       title: "Dr Drills",
+      badge:"AI SOLUTION",
+
       description:
         "Your personal AI-buddy. Helps you remember important mnemonics and acronyms. Reminds you to study the right section of each topic.",
     },
@@ -47,6 +54,7 @@ const Products = () => {
               image={item.image}
               title={item.title}
               description={item.description}
+              badge={item.badge}
             />
           ))}
         </div>
