@@ -170,19 +170,19 @@ function Footer() {
                 </button>
                 <div
                   className={`flex items-center justify-center mb-4 ${
-                    isSuccess ?  "text-green-600" : isInfo ? "text-blue-300" :"text-red-600"
+                    isSuccess ?  "text-blue-600" : isInfo ? "text-red-300" :"text-red-600"
                   }`}
                 >
                   <FontAwesomeIcon
                     icon={isSuccess ? faCheckCircle : isInfo ? faInfoCircle : faTimesCircle}
                     className={`text-6xl mr-4 ${
-                      isSuccess ? "bg-green-600" : isInfo ? "bg-blue-600" :"bg-red-600"
+                      isSuccess ? "bg-blue-600" : isInfo ? "bg-red-600" :"bg-red-600"
                     } text-white p-3 rounded-full`}
                   />
                 </div>
                 <p
                   className={`text-lg text-center ${
-                    isSuccess ? "text-green-600" : isInfo ? "text-blue-600" : "text-red-600"
+                    isSuccess ? "text-blue-600" : isInfo ? "text-red-600" : "text-red-600"
                   }`}
                 >
                   {responseMessage}
@@ -190,9 +190,9 @@ function Footer() {
                 <button
                   onClick={closeModal}
                   className={`mt-6 w-full py-2 rounded-lg ${
-                    isSuccess ? "bg-green-600" : isInfo ? "bg-blue-600" :"bg-red-600"
+                    isSuccess ? "bg-blue-600" : isInfo ? "bg-red-600" :"bg-red-600"
                   } text-white text-lg hover:${
-                    isSuccess ? "bg-green-700" : isInfo ? "bg-blue-700" : "bg-red-700"
+                    isSuccess ? "bg-blue-700" : isInfo ? "bg-red-700" : "bg-red-700"
                   } transition-colors duration-300`}
                 >
                   Close

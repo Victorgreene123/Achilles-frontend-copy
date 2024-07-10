@@ -17,6 +17,10 @@ export default function Navbar() {
     window.scrollTo(0, 0);
   }, [location]);
 
+  const getNavLinkClass = (path) => {
+    return location.pathname === path ? 'text-blue-800 font-bold' : 'text-black-800';
+  };
+
   return (
     <>
       <nav className='bg-white sticky top-0 w-full p-2.5 flex items-center shadow z-10'>
@@ -26,17 +30,16 @@ export default function Navbar() {
         <div className='flex items-center justify-between w-full'>
           <div className='hidden md:flex items-center ml-5 w-full'>
             <ul className='flex justify-center w-3/5 gap-7 text-sm m-0 p-0'>
-              <li className='text-blue-800'></li>
-              <li className='text-blue-800'>
+              <li className={getNavLinkClass('/about')}>
                 <Link to='/about'>About us</Link>
               </li>
-              <li className='text-blue-800'>
+              <li className={getNavLinkClass('/productsPage')}>
                 <Link to='/productsPage'>Products</Link>
               </li>
-              <li className='text-blue-800'>
+              <li className={getNavLinkClass('/blogs')}>
                 <Link to='/blogs'>Blog</Link>
               </li>
-              <li className='text-blue-800'>
+              <li className={getNavLinkClass('/faq')}>
                 <Link to='/faq'>FAQS</Link>
               </li>
             </ul>

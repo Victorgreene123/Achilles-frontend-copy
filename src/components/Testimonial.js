@@ -14,8 +14,8 @@ const Testimonial = ({ head, logo, names, school, message, image }) => {
           <p>{names}</p>
           <p>{school}</p>
         </div>
-        <div className="border border-blue-400 px-5 py-3">
-          <p className="py-6 leading-8">{message}</p>
+        <div className="border rounded-b-md border-blue-400 px-5 py-3">
+          <p className="py-6 leading-8 text-left">{message}</p>
           <div className="flex items-center gap-2">
             <img src={image} alt="" />
             <div className="flex flex-col items-center">
