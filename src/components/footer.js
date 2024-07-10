@@ -8,12 +8,14 @@ import {
   faTimes,
   faCheckCircle,
   faTimesCircle,
+  faInfoCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Footer() {
   const [responseMessage, setResponseMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
   const [isSuccess, setIsSuccess] = useState(true);
+  const [isInfo , setisInfo] = useState(true)
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
@@ -55,9 +57,11 @@ function Footer() {
         if (data.status === 200) {
           setResponseMessage(data.message || "Form submitted successfully!");
           setIsSuccess(true);
+          
         } else if (data.status === 300) {
           setResponseMessage(data.message || "You have already subscribed to our newsletter!");
-          setIsSuccess(true);
+          setIsSuccess(false);
+          setisInfo(true);
         }
         setShowModal(true);
         setFormData({
@@ -70,6 +74,7 @@ function Footer() {
         console.log(error);
         setResponseMessage("An error occurred. Please try again.");
         setIsSuccess(false);
+        setisInfo(false)
         setShowModal(true);
         setLoading(false);
       });
@@ -165,19 +170,19 @@ function Footer() {
                 </button>
                 <div
                   className={`flex items-center justify-center mb-4 ${
-                    isSuccess ? "text-green-600" : "text-red-600"
+                    isSuccess ?  "text-green-600" : isInfo ? "text-blue-300" :"text-red-600"
                   }`}
                 >
                   <FontAwesomeIcon
-                    icon={isSuccess ? faCheckCircle : faTimesCircle}
+                    icon={isSuccess ? faCheckCircle : isInfo ? faInfoCircle : faTimesCircle}
                     className={`text-6xl mr-4 ${
-                      isSuccess ? "bg-green-600" : "bg-red-600"
+                      isSuccess ? "bg-green-600" : isInfo ? "bg-blue-600" :"bg-red-600"
                     } text-white p-3 rounded-full`}
                   />
                 </div>
                 <p
                   className={`text-lg text-center ${
-                    isSuccess ? "text-green-600" : "text-red-600"
+                    isSuccess ? "text-green-600" : isInfo ? "text-blue-600" : "text-red-600"
                   }`}
                 >
                   {responseMessage}
@@ -185,9 +190,9 @@ function Footer() {
                 <button
                   onClick={closeModal}
                   className={`mt-6 w-full py-2 rounded-lg ${
-                    isSuccess ? "bg-green-600" : "bg-red-600"
+                    isSuccess ? "bg-green-600" : isInfo ? "bg-blue-600" :"bg-red-600"
                   } text-white text-lg hover:${
-                    isSuccess ? "bg-green-700" : "bg-red-700"
+                    isSuccess ? "bg-green-700" : isInfo ? "bg-blue-700" : "bg-red-700"
                   } transition-colors duration-300`}
                 >
                   Close
@@ -200,7 +205,7 @@ function Footer() {
       <hr className="border-t border-[#D4D4D4] my-5"></hr>
       <div className="flex flex-col lg:flex-row items-center justify-between mt-5">
         <img
-          src="/images/achelis.png"
+          src="/images/achilleslogowhite.png"
           alt="logo"
           className="w-[97px] h-[42.083px] mb-5 lg:mb-0"
         ></img>
@@ -208,6 +213,7 @@ function Footer() {
           <ul className="flex gap-5 lg:gap-10 text-sm">
             <li>Terms</li>
             <li>Privacy</li>
+            
             <li>Copyright @2024 Achilles Drill</li>
           </ul>
         </div>

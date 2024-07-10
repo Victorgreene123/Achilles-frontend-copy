@@ -13,6 +13,7 @@ import HomePage from "./pages/homepage";
 import Layout from "./components/Layout";
 import BlogItem from "./components/blogitem";
 import BlogPage from "./pages/blogspage";
+import articles from "./article";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
             <Route path='/contactus' element={<ContactUs />} />
             <Route path='/Faq' element={<Faq />} />
             <Route path='/productsPage' element={<ProductsPage />} />
-            <Route path="blogs" element={<BlogPage />} />
+            <Route path="blogs" element={<BlogPage data={articles} />} />
+            
           </Route>
         </Routes>
       </Router>
