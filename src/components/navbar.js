@@ -24,7 +24,7 @@ export default function Navbar() {
           <img
             src="/images/achelis.png"
             alt="Achilles drill logo"
-            className="h-11 ml-2 w-20"
+            className="h-11 ml-2 w-23"
           />
         </Link>
         <div className="flex items-center justify-between w-full">
