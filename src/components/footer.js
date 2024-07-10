@@ -85,26 +85,27 @@ function Footer() {
               <li className="text-[#D4D4D4] text-sm mb-2">
                 <Link to="/productsPage">Our Products</Link>
               </li>
-              <li className="text-[#D4D4D4] text-sm mb-2">About us</li>
-              <li className="text-[#D4D4D4] text-sm mb-2">Blogs</li>
-              <li className="text-[#D4D4D4] text-sm mb-2">FAQs</li>
+              <li className="text-[#D4D4D4] text-sm mb-2"> <Link to="/about">About us</Link></li>
+              <li className="text-[#D4D4D4] text-sm mb-2"> <Link to="/blogs">Blogs</Link></li>
+              <li className="text-[#D4D4D4] text-sm mb-2"> <Link to="/faq">FAQs</Link></li>
             </ul>
           </div>
           <div className="flex flex-col mb-10 lg:mb-0">
             <h3 className="text-sm font-bold">Make a difference</h3>
             <ul className="p-0 mt-2">
               <li className="text-[#D4D4D4] text-sm mb-2">
-                Become an ambassador
+                <a href="https://forms.gle/7JkeQgKhpCNoZ6176">
+                Become an ambassador</a>
               </li>
-              <li className="text-[#D4D4D4] text-sm mb-2">Volunteer</li>
-              <li className="text-[#D4D4D4] text-sm mb-2">Sponsorship</li>
+              <li className="text-[#D4D4D4] text-sm mb-2"><a href="https://forms.gle/mnLB68U7Aam87VAU9">Volunteer</a></li>
+              <li className="text-[#D4D4D4] text-sm mb-2"><a href="https://forms.gle/kaK1sHc3TeA9ptSNA">Sponsorship</a></li>
             </ul>
           </div>
           <div className="flex flex-col mb-10 lg:mb-0">
             <h3 className="text-sm font-bold">Contact Us</h3>
             <ul className="p-0 mt-2">
               <li className="text-[#D4D4D4] text-sm mb-2">
-                support@achilesdrill.com
+                support@achillesdrill.com
               </li>
               <li className="text-[#D4D4D4] text-sm mb-2">+234-906-955-6424</li>
               <li className="text-[#D4D4D4] text-sm mb-2">+234-810-828-7800</li>

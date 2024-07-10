@@ -20,7 +20,7 @@ const Hero = () => {
         </p>
         <div className="flex flex-col lg:flex-row gap-3 items-center">
           <a
-            href="/"
+            href="https://wa.link/6lhnja"
             className="text-white text-sm bg-[#274CB2] rounded-full px-4 py-3"
           >
             Check out Responses

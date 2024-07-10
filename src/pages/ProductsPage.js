@@ -119,9 +119,10 @@ const ProductsPage = () => {
               </div>
 
               <div className='bg-blue-600 text-center rounded-full mt-4'>
+              <a href="https://wa.link/e7zjjh">
                 <button className='text-xs text-white font-bold py-3 sm:text-sm'>
                   BUY LECTURE BANK
-                </button>
+                </button></a>
               </div>
             </div>
           </div>
@@ -144,9 +145,10 @@ const ProductsPage = () => {
               <img src="/images/products/SAVE_20240708_183352_prev_ui.png" alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-150' />
 
               <div className='bg-blue-600 text-center rounded-full mt-4'>
+                <a href="https://wa.link/3iyw7j">
                 <button className='text-xs text-white font-bold py-3 sm:text-sm'>
                   BUY PAST QUESTIONS
-                </button>
+                </button></a>
               </div>
             </div>
           </div>
