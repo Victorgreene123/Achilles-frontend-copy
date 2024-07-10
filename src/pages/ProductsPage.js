@@ -97,42 +97,42 @@ const ProductsPage = () => {
 
             <div className='shrink flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-                <div className='bg-blue-800 bg-opacity-5 border border-blue-400 rounded-md'>
+                <div className='bg-[#dcdcf5] border border-blue-400 rounded-md'>
                   <img
                     src='/images/products/neuroatonomy.jpg'
                     alt='PQ'
-                    className='w-full sm:h-64 object-contain md:h-72'
+                    className='w-[70%] mx-auto sm:h-64 md:h-72'
                   />
                 </div>
 
-                <div className='bg-blue-800 bg-opacity-5 border border-blue-400 rounded-md'>
+                <div className='bg-[#dcdcf5] border border-blue-400 rounded-md'>
                   <img
                     src='/images/products/anatomyofthehead.jpg'
                     alt='PQ'
-                    className='w-full sm:h-64 object-contain md:h-72'
+                    className='w-[70%] mx-auto sm:h-64 md:h-72'
                   />
                 </div>
 
-                <div className='bg-blue-800 bg-opacity-5 border border-blue-400 rounded-md'>
+                <div className='bg-[#dcdcf5] border border-blue-400 rounded-md'>
                   <img
                     src='/images/products/1st Medical Lecture Bank Discount-01.jpg'
                     alt='PQ'
-                    className='w-full sm:h-64 object-contain md:h-72'
+                    className='w-[70%] mx-auto sm:h-64 md:h-72'
                   />
                 </div>
 
-                <div className='bg-blue-800 bg-opacity-5 border border-blue-400 rounded-md'>
+                <div className='bg-[#dcdcf5] border border-blue-400 rounded-md'>
                   <img
                     src='/images/products/embryology.jpg'
                     alt='PQ'
-                    className='w-full sm:h-64 object-contain md:h-72'
+                    className='w-[70%] mx-auto sm:h-64 md:h-72'
                   />
                 </div>
               </div>
 
               <div className='bg-blue-600 text-center rounded-full mt-4'>
                 <a href='https://wa.link/e7zjjh'>
-                  <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+                  <button className='text-xs text-white font-bold h-full w-full py-3 sm:text-sm'>
                     BUY LECTURE BANK
                   </button>
                 </a>
@@ -148,7 +148,7 @@ const ProductsPage = () => {
               <img
                 src='/images/products/Pastquestion1 (1) (2)_prev_ui.png'
                 alt='pq'
-                className='w-full sm:h-64 md:h-72 lg:h-auto lg:py-20'
+                className='w-full sm:h-64 md:h-72 lg:h-full'
               />
             </div>
 
@@ -171,7 +171,7 @@ const ProductsPage = () => {
 
               <div className='bg-blue-600 text-center rounded-full mt-4'>
                 <a href='https://wa.link/3iyw7j'>
-                  <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+                  <button className='text-xs text-white font-bold h-full w-full py-3 sm:text-sm'>
                     BUY PAST QUESTIONS
                   </button>
                 </a>
@@ -185,33 +185,40 @@ const ProductsPage = () => {
           <div className='mb-10 z-0 lg:flex gap-4'>
             <div className='mb-8 flex-[3]'>
               <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' />
-              <p className='text-xs mt-2'>Main video caption</p>
             </div>
 
             <div className='flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-                <div className='mb-8 lg:mb-2'>
-                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                  <p className='text-xs mt-2'>Caption for video 1</p>
+                <div className='relative'>
+                  <div className='py-6 px-3 bg-[#dcdcf5]'>
+                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
 
-                <div className='mb-8 lg:mb-2'>
-                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                  <p className='text-xs mt-2'>Caption for video 2</p>
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-0 py-6 px-3 bg-[#dcdcf5]'>
+                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
 
-                <div className='mb-8 lg:mb-2'>
-                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                  <p className='text-xs mt-2'>Caption for video 3</p>
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
+                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
 
-                <div className='mb-6 lg:mb-2'>
-                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                  <p className='text-xs mt-2'>Caption for video 4</p>
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
+                    <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
                 </div>
               </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-4 lg:mt-6'>
+              <div className='bg-blue-600 text-center rounded-full mt-10 lg:mt-6'>
                 <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
                   GO TO YOUTUBE
                 </button>
