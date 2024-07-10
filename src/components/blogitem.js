@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 const BlogItem = (props) => {
   const location = useLocation();
   return (
-    <div className='max-w-md box-border text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm p-4 '>
+    <div className='w-[90%] mx-auto box-border text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm p-4 '>
       <img src={`/images/${props.image}`} className='w-full h-auto rounded-lg' alt={props.title} />
       <div className='w-full flex items-center justify-between mt-2'>
         <span className='text-gray-600'>{props.category}</span>
