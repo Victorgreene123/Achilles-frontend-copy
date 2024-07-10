@@ -94,14 +94,24 @@ const ProductsPage = () => {
             <div className='shrink flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
                 <img
-                  src={prod}
+                  src="/images/products/neuroatonomy.jpg"
                   alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
+                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
                 />
                 <img
-                  src={prod}
+                  src="/images/products/anatomyofthehead.jpg"
                   alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
+                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
+                />
+                  <img
+                  src="/images/products/1st Medical Lecture Bank Discount-01.jpg"
+                  alt='PQ'
+                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
+                />
+                  <img
+                  src="/images/products/embryology.jpg"
+                  alt='PQ'
+                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
                 />
                
             
@@ -120,17 +130,18 @@ const ProductsPage = () => {
         {/* PAST QUESTIONS */}
         {activeSection === "PAST_QUESTIONS" && (
           <div className='lg:flex lg:gap-4 mb-10'>
-            <div className='mb-2'>
-              <img src={prod} alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-full' />
+            <div className='mb-2 bg-[#fdede3] lg:w-598 lg:h-590 justify-center items-center '>
+              <img src="/images/products/Pastquestion1 (1) (2)_prev_ui.png" alt='pq' className='w-full sm:h-64 justify-center md:h-72 lg:h-auto lg:py-20' />
             </div>
 
             <div>
+              
               <img
-                src={prod}
+                src="/images/products/Pastquestion1 (1) (3)_prev_ui.png"
                 alt='pq'
-                className='mb-1 w-full sm:h-64 object-cover md:h-72 lg:h-auto'
+                className='mb-1 w-full sm:h-64 object-cover md:h-72 lg:h-150'
               />
-              <img src={prod} alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-auto' />
+              <img src="/images/products/SAVE_20240708_183352_prev_ui.png" alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-150' />
 
               <div className='bg-blue-600 text-center rounded-full mt-4'>
                 <button className='text-xs text-white font-bold py-3 sm:text-sm'>
