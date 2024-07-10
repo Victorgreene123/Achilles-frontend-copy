@@ -6,6 +6,7 @@ import image3 from "../Assets/Rectangle 293.png";
 import image4 from "../Assets/Rectangle 391.png";
 import image5 from "../Assets/Rectangle 392.png";
 import image6 from "../Assets/Rectangle 393.png";
+import { Link } from "react-router-dom";
 
 const Accordion = () => {
   const [openItemId, setOpenItemId] = useState(null);
@@ -67,7 +68,7 @@ const Accordion = () => {
 
   return (
     <div className="bg-[#F0F2F5]">
-      <div className="container mx-auto p-10 flex flex-col items-center lg:flex-row gap-20 lg:gap-56">
+      <div className="container mx-auto px-20 py-20 flex flex-col items-center lg:flex-row gap-20 lg:gap-20">
         <div className="text-center lg:text-left flex flex-col gap-10 w-full">
           <h2 className="uppercase text-blue-950 font-semibold text-3xl lg:text-4xl">
             we are here to answer all your questions
@@ -86,7 +87,7 @@ const Accordion = () => {
             <img src={image3} alt="" />
           </div>
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 ">
           {accordion.map((item) => (
             <AccordionItem
               key={item.id}
@@ -108,9 +109,10 @@ const Accordion = () => {
             <p className="text-[#2547A7]">
               Check out some of the resources today
             </p>
+            <Link to='/productsPage'>
             <button className="bg-[#274CB2] text-gray-100 rounded-full px-16 py-3">
               Get Started
-            </button>
+            </button></Link>
             <div className="flex justify-center lg:justify-start">
               <div className="bg-blue-700 w-48 h-1"></div>
               <div className="bg-red-400 w-32 h-1"></div>

@@ -92,7 +92,7 @@ const About = () => {
                   <Counter start={0} end={item.rate} />
                   {item.unit}
                 </p>
-                <p className="text-xs">{item.title}</p>
+                <p className="text-1.5xl">{item.title}</p>
               </div>
             ))}
           </div>

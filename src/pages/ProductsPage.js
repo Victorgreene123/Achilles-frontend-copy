@@ -88,7 +88,7 @@ const ProductsPage = () => {
         {activeSection === "LECTURE_BANKS" && (
           <div className='mb-10 lg:flex gap-4 align-stretch'>
             <div className='mb-6 lg:mb-0 flex-[3]'>
-              <img src={prod} alt='PQ' className='w-full object-cover sm:h-64 md:h-72 lg:h-full' />
+              <img src="/images/lecturebank.png" alt='PQ' className='w-full object-contain sm:h-64 md:h-72 lg:h-full' />
             </div>
 
             <div className='shrink flex-[3]'>
@@ -96,22 +96,22 @@ const ProductsPage = () => {
                 <img
                   src="/images/products/neuroatonomy.jpg"
                   alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
                 />
                 <img
                   src="/images/products/anatomyofthehead.jpg"
                   alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
                 />
                   <img
                   src="/images/products/1st Medical Lecture Bank Discount-01.jpg"
                   alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
                 />
                   <img
                   src="/images/products/embryology.jpg"
                   alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-263'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
                 />
                
             
@@ -214,7 +214,7 @@ const ProductsPage = () => {
         {activeSection === "DR_DRILLS" && (
           <div className='mb-10 md:flex gap-8 items-stretch'>
             <div className='grow-0'>
-              <img src={prod} alt='Dr Drills' className='w-full sm:h-64 object-cover md:h-full' />
+              <img src="/images/drdrills.png" alt='Dr Drills' className='w-full sm:h-64 object-cover md:h-full' />
             </div>
 
             <div className='grow self-stretch'>

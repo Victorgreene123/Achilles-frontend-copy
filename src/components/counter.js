@@ -7,7 +7,7 @@ const Counter = ({ start, end }) => {
     if (count < end) {
       const timer = setTimeout(() => {
         setCount(count + 1);
-      }, 20); // Update count every 1 second
+      }, 0.9); // Update count every 1 second
       return () => clearTimeout(timer); // Clear the timer on component unmount
     }
   }, [count, end]);

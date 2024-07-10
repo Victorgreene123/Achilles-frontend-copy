@@ -23,14 +23,14 @@ const Products = () => {
     },
     {
       id: 3,
-      image: image3,
+      image: image4,
       title: "Youtube Videos",
       description:
         "Free, compiled resource specially created by Achilles Drill tutors. Watch  and learn at your own pace. ",
     },
     {
       id: 4,
-      image: image4,
+      image:image3 ,
       title: "Dr Drills",
       description:
         "Your personal AI-buddy. Helps you remember important mnemonics and acronyms. Reminds you to study the right section of each topic.",
