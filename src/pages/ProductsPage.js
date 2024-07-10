@@ -23,7 +23,7 @@ const ProductsPage = () => {
 
   return (
     <div>
-      <div className='bg-gray-200 pt-32'>
+      <div className='bg-gray-200 pt-12'>
         <div className='max-w-[90%] mx-auto pb-12 sm:max-w-[85%] lg:pb-24'>
           <p className='text-xs text-white font-bold bg-blue-800 py-2 px-5 inline-block mb-4 lg:text-sm'>
             PRODUCTS
@@ -86,30 +86,35 @@ const ProductsPage = () => {
 
         {/* LECTURE BANKS */}
         {activeSection === "LECTURE_BANKS" && (
-          <div className='mb-10 lg:flex gap-4 align-stretch'>
-            <div className='mb-6 lg:mb-0 flex-[3]'>
+          <div className='mb-10 lg:flex gap-4'>
+            <div className='self-stretch mb-8 md:mb-6 lg:mb-0 flex-[3]'>
               <img src={prod} alt='PQ' className='w-full object-cover sm:h-64 md:h-72 lg:h-full' />
+              <p className='text-xs mt-2'>Some pictures</p>
             </div>
 
-            <div className='shrink flex-[3]'>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-                <img
-                  src={prod}
-                  alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
-                />
-                <img
-                  src={prod}
-                  alt='PQ'
-                  className='w-full sm:h-64 object-cover md:h-72 lg:h-auto'
-                />
-               
-            
-                
+            <div className='flex flex-col flex-[3]'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 flex-grow'>
+                <div className='mb-6'>
+                  <img
+                    src={prod}
+                    alt='PQ'
+                    className='w-full sm:h-64 object-cover md:h-72 lg:h-full'
+                  />
+                  <p className='text-xs mt-2'>Some pictures</p>
+                </div>
+
+                <div className='mb-6'>
+                  <img
+                    src={prod}
+                    alt='PQ'
+                    className='w-full sm:h-64 object-cover md:h-72 lg:h-full'
+                  />
+                  <p className='text-xs mt-2'>Some video</p>
+                </div>
               </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-4'>
-                <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+              <div className='bg-blue-600 text-center rounded-full mt-8'>
+                <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
                   BUY LECTURE BANK
                 </button>
               </div>
@@ -119,21 +124,25 @@ const ProductsPage = () => {
 
         {/* PAST QUESTIONS */}
         {activeSection === "PAST_QUESTIONS" && (
-          <div className='lg:flex lg:gap-4 mb-10'>
-            <div className='mb-2'>
+          <div className='mb-10 w-full lg:flex lg:gap-4'>
+            <div className='mb-8 flex-1'>
               <img src={prod} alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-full' />
+              <p className='text-xs mt-2'>A picture</p>
             </div>
 
-            <div>
-              <img
-                src={prod}
-                alt='pq'
-                className='mb-1 w-full sm:h-64 object-cover md:h-72 lg:h-auto'
-              />
-              <img src={prod} alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-auto' />
+            <div className='flex-1'>
+              <div className='mb-8'>
+                <img src={prod} alt='pq' className='w-full object-cover sm:h-64 md:h-72 lg:h-52' />
+                <p className='text-xs mt-2'>Caption for the first image</p>
+              </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-4'>
-                <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+              <div className='mb-8'>
+                <img src={prod} alt='pq' className='w-full object-cover sm:h-64 md:h-72 lg:h-52' />
+                <p className='text-xs mt-2'>Caption for the second image</p>
+              </div>
+
+              <div className='bg-blue-600 text-center rounded-full mt-2'>
+                <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
                   BUY PAST QUESTIONS
                 </button>
               </div>
@@ -144,20 +153,36 @@ const ProductsPage = () => {
         {/* YOUTUBE VIDEOS */}
         {activeSection === "YOUTUBE_VIDEOS" && (
           <div className='mb-10 z-0 lg:flex gap-4'>
-            <div className='mb-2 flex-[3]'>
+            <div className='mb-8 flex-[3]'>
               <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' />
+              <p className='text-xs mt-2'>Main video caption</p>
             </div>
 
             <div className='flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-                <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
-                <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                <div className='mb-8 lg:mb-2'>
+                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  <p className='text-xs mt-2'>Caption for video 1</p>
+                </div>
+
+                <div className='mb-8 lg:mb-2'>
+                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  <p className='text-xs mt-2'>Caption for video 2</p>
+                </div>
+
+                <div className='mb-8 lg:mb-2'>
+                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  <p className='text-xs mt-2'>Caption for video 3</p>
+                </div>
+
+                <div className='mb-6 lg:mb-2'>
+                  <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' />
+                  <p className='text-xs mt-2'>Caption for video 4</p>
+                </div>
               </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-4 lg:mt-8'>
-                <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+              <div className='bg-blue-600 text-center rounded-full mt-4 lg:mt-6'>
+                <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
                   GO TO YOUTUBE
                 </button>
               </div>
@@ -168,7 +193,7 @@ const ProductsPage = () => {
         {/* YOUTUBE VIDEOS */}
         {/* {activeSection === "YOUTUBE_VIDEOS" && (
           <div className='mb-10 z-0 lg:flex gap-4'>
-            <div className='mb-2 flex-[3]'>
+            <div className='mb-8 flex-[3]'>
               <video
                 src={videos.length > 0 ? videos[0].url : ""}
                 controls
@@ -214,7 +239,7 @@ const ProductsPage = () => {
               </h3>
 
               <div className='bg-blue-600 text-center rounded-full mt-4 md:mt-20'>
-                <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+                <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
                   GET STARTED
                 </button>
               </div>

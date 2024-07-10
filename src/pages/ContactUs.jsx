@@ -63,7 +63,7 @@ const ContactUs = () => {
 
   return (
     <>
-      <div className='mt-24 mb-12 max-w-[80%] mx-auto relative sm:max-w-[75%] lg:max-w-[90%] lg:flex gap-14 justify-between'>
+      <div className='mt-12 mb-12 max-w-[80%] mx-auto relative sm:max-w-[75%] lg:max-w-[90%] lg:flex gap-14 justify-between'>
         <div className='mb-24 lg:mb-0 grow'>
           <div>
             <h1 className='text-gray-800 text-2xl font-bold mb-2 sm:text-4xl md:text-5xl lg:text-3xl xl:text-5xl'>
