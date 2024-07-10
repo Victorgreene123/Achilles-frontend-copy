@@ -210,7 +210,7 @@ function Footer() {
           className="w-[97px] h-[42.083px] mb-5 lg:mb-0"
         ></img>
         <div className="mb-5 lg:mb-0">
-          <ul className="flex gap-5 lg:gap-10 text-sm">
+          <ul className="flex gap-3 lg:gap-10 text-sm">
             <li>Terms</li>
             <li>Privacy</li>
             
