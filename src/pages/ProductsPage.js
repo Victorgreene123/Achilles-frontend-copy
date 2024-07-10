@@ -86,37 +86,45 @@ const ProductsPage = () => {
 
         {/* LECTURE BANKS */}
         {activeSection === "LECTURE_BANKS" && (
-          <div className='mb-10 lg:flex gap-4'>
-            <div className='self-stretch mb-8 md:mb-6 lg:mb-0 flex-[3]'>
-              <img src={prod} alt='PQ' className='w-full object-cover sm:h-64 md:h-72 lg:h-full' />
-              <p className='text-xs mt-2'>Some pictures</p>
+          <div className='mb-10 lg:flex gap-4 align-stretch'>
+            <div className='mb-6 lg:mb-0 flex-[3]'>
+              <img
+                src='/images/lecturebank.png'
+                alt='PQ'
+                className='w-full object-contain sm:h-64 md:h-72 lg:h-full'
+              />
             </div>
 
-            <div className='flex flex-col flex-[3]'>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-2 flex-grow'>
-                <div className='mb-6'>
-                  <img
-                    src={prod}
-                    alt='PQ'
-                    className='w-full sm:h-64 object-cover md:h-72 lg:h-full'
-                  />
-                  <p className='text-xs mt-2'>Some pictures</p>
-                </div>
-
-                <div className='mb-6'>
-                  <img
-                    src={prod}
-                    alt='PQ'
-                    className='w-full sm:h-64 object-cover md:h-72 lg:h-full'
-                  />
-                  <p className='text-xs mt-2'>Some video</p>
-                </div>
+            <div className='shrink flex-[3]'>
+              <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
+                <img
+                  src='/images/products/neuroatonomy.jpg'
+                  alt='PQ'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
+                />
+                <img
+                  src='/images/products/anatomyofthehead.jpg'
+                  alt='PQ'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
+                />
+                <img
+                  src='/images/products/1st Medical Lecture Bank Discount-01.jpg'
+                  alt='PQ'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
+                />
+                <img
+                  src='/images/products/embryology.jpg'
+                  alt='PQ'
+                  className='w-full sm:h-64  md:h-72 lg:h-231'
+                />
               </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-8'>
-                <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
-                  BUY LECTURE BANK
-                </button>
+              <div className='bg-blue-600 text-center rounded-full mt-4'>
+                <a href='https://wa.link/e7zjjh'>
+                  <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+                    BUY LECTURE BANK
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -124,27 +132,33 @@ const ProductsPage = () => {
 
         {/* PAST QUESTIONS */}
         {activeSection === "PAST_QUESTIONS" && (
-          <div className='mb-10 w-full lg:flex lg:gap-4'>
-            <div className='mb-8 flex-1'>
-              <img src={prod} alt='pq' className='w-full sm:h-64 object-cover md:h-72 lg:h-full' />
-              <p className='text-xs mt-2'>A picture</p>
+          <div className='lg:flex lg:gap-4 mb-10'>
+            <div className='mb-2 bg-[#fdede3] lg:w-598 lg:h-590 justify-center items-center '>
+              <img
+                src='/images/products/Pastquestion1 (1) (2)_prev_ui.png'
+                alt='pq'
+                className='w-full sm:h-64 justify-center md:h-72 lg:h-auto lg:py-20'
+              />
             </div>
 
-            <div className='flex-1'>
-              <div className='mb-8'>
-                <img src={prod} alt='pq' className='w-full object-cover sm:h-64 md:h-72 lg:h-52' />
-                <p className='text-xs mt-2'>Caption for the first image</p>
-              </div>
+            <div>
+              <img
+                src='/images/products/Pastquestion1 (1) (3)_prev_ui.png'
+                alt='pq'
+                className='mb-1 w-full sm:h-64 object-cover md:h-72 lg:h-150'
+              />
+              <img
+                src='/images/products/SAVE_20240708_183352_prev_ui.png'
+                alt='pq'
+                className='w-full sm:h-64 object-cover md:h-72 lg:h-150'
+              />
 
-              <div className='mb-8'>
-                <img src={prod} alt='pq' className='w-full object-cover sm:h-64 md:h-72 lg:h-52' />
-                <p className='text-xs mt-2'>Caption for the second image</p>
-              </div>
-
-              <div className='bg-blue-600 text-center rounded-full mt-2'>
-                <button className='text-xs text-white font-bold py-3 w-full h-full sm:text-sm'>
-                  BUY PAST QUESTIONS
-                </button>
+              <div className='bg-blue-600 text-center rounded-full mt-4'>
+                <a href='https://wa.link/3iyw7j'>
+                  <button className='text-xs text-white font-bold py-3 sm:text-sm'>
+                    BUY PAST QUESTIONS
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -226,7 +240,11 @@ const ProductsPage = () => {
         {activeSection === "DR_DRILLS" && (
           <div className='mb-10 md:flex gap-8 items-stretch'>
             <div className='grow-0'>
-              <img src={prod} alt='Dr Drills' className='w-full sm:h-64 object-cover md:h-full' />
+              <img
+                src='/images/drdrills.png'
+                alt='Dr Drills'
+                className='w-full sm:h-64 object-cover md:h-full'
+              />
             </div>
 
             <div className='grow self-stretch'>

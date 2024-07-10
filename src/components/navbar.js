@@ -21,23 +21,23 @@ export default function Navbar() {
     <>
       <nav className='bg-white sticky top-0 w-full p-2.5 flex items-center shadow z-10'>
         <Link to='/'>
-          <img src='/images/achelis.png' alt='Achilles drill logo' className='h-11 ml-2 w-20' />
+          <img src='/images/achelis.png' alt='Achilles drill logo' className='h-11 ml-2 w-23' />
         </Link>
-        <div className="flex items-center justify-between w-full">
-          <div className="hidden md:flex items-center ml-5 w-full">
-            <ul className="flex justify-center w-3/5 gap-7 text-sm m-0 p-0">
-              <li className="text-blue-800"></li>
-              <li className="text-blue-800">
-                <Link to="/about">About us</Link>
+        <div className='flex items-center justify-between w-full'>
+          <div className='hidden md:flex items-center ml-5 w-full'>
+            <ul className='flex justify-center w-3/5 gap-7 text-sm m-0 p-0'>
+              <li className='text-blue-800'></li>
+              <li className='text-blue-800'>
+                <Link to='/about'>About us</Link>
               </li>
-              <li className="text-blue-800">
-                <Link to="/productsPage">Products</Link>
+              <li className='text-blue-800'>
+                <Link to='/productsPage'>Products</Link>
               </li>
-              <li className="text-blue-800">
-                <Link to="/blogs">Blog</Link>
+              <li className='text-blue-800'>
+                <Link to='/blogs'>Blog</Link>
               </li>
-              <li className="text-blue-800">
-                <Link to="/faq">FAQS</Link>
+              <li className='text-blue-800'>
+                <Link to='/faq'>FAQS</Link>
               </li>
             </ul>
             <div className='flex items-center justify-center gap-10 ml-10 w-1/3'>
@@ -79,33 +79,29 @@ export default function Navbar() {
                     fill='white'
                   />
                   <path
-                    d="M21 13.5V19.5C21 19.6989 20.921 19.8897 20.7803 20.0303C20.6397 20.171 20.4489 20.25 20.25 20.25H3.75C3.55109 20.25 3.36032 20.171 3.21967 20.0303C3.07902 19.8897 3 19.6989 3 19.5V13.5C3 13.3011 3.07902 13.1103 3.21967 12.9697C3.36032 12.829 3.55109 12.75 3.75 12.75C3.94891 12.75 4.13968 12.829 4.28033 12.9697C4.42098 13.1103 4.5 13.3011 4.5 13.5V18.75H19.5V13.5C19.5 13.3011 19.579 13.1103 19.7197 12.9697C19.8603 12.829 20.0511 12.75 20.25 12.75C20.4489 12.75 20.6397 12.829 20.7803 12.9697C20.921 13.1103 21 13.3011 21 13.5ZM11.4694 14.0306C11.539 14.1004 11.6217 14.1557 11.7128 14.1934C11.8038 14.2312 11.9014 14.2506 12 14.2506C12.0986 14.2506 12.1962 14.2312 12.2872 14.1934C12.3783 14.1557 12.461 14.1004 12.5306 14.0306L16.2806 10.2806C16.3503 10.2109 16.4056 10.1282 16.4433 10.0372C16.481 9.94613 16.5004 9.84855 16.5004 9.75C16.5004 9.65145 16.481 9.55387 16.4433 9.46283C16.4056 9.37178 16.3503 9.28906 16.2806 9.21937C16.2109 9.14969 16.1282 9.09442 16.0372 9.0567C15.9461 9.01899 15.8485 8.99958 15.75 8.99958C15.6515 8.99958 15.5539 9.01899 15.4628 9.0567C15.3718 9.09442 15.2891 9.14969 15.2194 9.21937L12.75 11.6897V3C12.75 2.80109 12.671 2.61032 12.5303 2.46967C12.3897 2.32902 12.1989 2.25 12 2.25C11.8011 2.25 11.6103 2.32902 11.4697 2.46967C11.329 2.61032 11.25 2.80109 11.25 3V11.6897L8.78066 9.21937C8.71098 9.14969 8.62826 9.09442 8.53721 9.0567C8.44616 9.01899 8.34858 8.99958 8.25 8.99958C8.15145 8.99958 8.05387 9.01899 7.96283 9.0567C7.87178 9.09442 7.78906 9.14969 7.71937 9.21937C7.64969 9.28906 7.59442 9.37178 7.5567 9.46283C7.51899 9.55387 7.49958 9.65145 7.49958 9.75C7.49958 9.84855 7.51899 9.94613 7.5567 10.0372C7.59442 10.1282 7.64969 10.2109 7.71937 10.2806L11.4694 14.0306Z"
-                    fill="white"
+                    d='M21 13.5V19.5C21 19.6989 20.921 19.8897 20.7803 20.0303C20.6397 20.171 20.4489 20.25 20.25 20.25H3.75C3.55109 20.25 3.36032 20.171 3.21967 20.0303C3.07902 19.8897 3 19.6989 3 19.5V13.5C3 13.3011 3.07902 13.1103 3.21967 12.9697C3.36032 12.829 3.55109 12.75 3.75 12.75C3.94891 12.75 4.13968 12.829 4.28033 12.9697C4.42098 13.1103 4.5 13.3011 4.5 13.5V18.75H19.5V13.5C19.5 13.3011 19.579 13.1103 19.7197 12.9697C19.8603 12.829 20.0511 12.75 20.25 12.75C20.4489 12.75 20.6397 12.829 20.7803 12.9697C20.921 13.1103 21 13.3011 21 13.5ZM11.4694 14.0306C11.539 14.1004 11.6217 14.1557 11.7128 14.1934C11.8038 14.2312 11.9014 14.2506 12 14.2506C12.0986 14.2506 12.1962 14.2312 12.2872 14.1934C12.3783 14.1557 12.461 14.1004 12.5306 14.0306L16.2806 10.2806C16.3503 10.2109 16.4056 10.1282 16.4433 10.0372C16.481 9.94613 16.5004 9.84855 16.5004 9.75C16.5004 9.65145 16.481 9.55387 16.4433 9.46283C16.4056 9.37178 16.3503 9.28906 16.2806 9.21937C16.2109 9.14969 16.1282 9.09442 16.0372 9.0567C15.9461 9.01899 15.8485 8.99958 15.75 8.99958C15.6515 8.99958 15.5539 9.01899 15.4628 9.0567C15.3718 9.09442 15.2891 9.14969 15.2194 9.21937L12.75 11.6897V3C12.75 2.80109 12.671 2.61032 12.5303 2.46967C12.3897 2.32902 12.1989 2.25 12 2.25C11.8011 2.25 11.6103 2.32902 11.4697 2.46967C11.329 2.61032 11.25 2.80109 11.25 3V11.6897L8.78066 9.21937C8.71098 9.14969 8.62826 9.09442 8.53721 9.0567C8.44616 9.01899 8.34858 8.99958 8.25 8.99958C8.15145 8.99958 8.05387 9.01899 7.96283 9.0567C7.87178 9.09442 7.78906 9.14969 7.71937 9.21937C7.64969 9.28906 7.59442 9.37178 7.5567 9.46283C7.51899 9.55387 7.49958 9.65145 7.49958 9.75C7.49958 9.84855 7.51899 9.94613 7.5567 10.0372C7.59442 10.1282 7.64969 10.2109 7.71937 10.2806L11.4694 14.0306Z'
+                    fill='white'
                   />
                 </svg>
                 Get started
               </button>
             </div>
           </div>
-          <div className="md:hidden ml-auto">
+          <div className='md:hidden ml-auto'>
             <button
-              type="button"
-              className="text-blue-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none"
+              type='button'
+              className='text-blue-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none'
               onClick={toggleMobileMenu}
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-6 w-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
                 strokeWidth={2}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
+                <path strokeLinecap='round' strokeLinejoin='round' d='M4 6h16M4 12h16m-7 6h7' />
               </svg>
             </button>
           </div>
@@ -117,57 +113,53 @@ export default function Navbar() {
           isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <nav className="p-8">
-          <div className="flex justify-end mb-5">
+        <nav className='p-8'>
+          <div className='flex justify-end mb-5'>
             <button
-              type="button"
-              className="text-blue-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none"
+              type='button'
+              className='text-blue-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none'
               onClick={closeMobileMenu}
             >
               <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+                xmlns='http://www.w3.org/2000/svg'
+                className='h-6 w-6'
+                fill='none'
+                viewBox='0 0 24 24'
+                stroke='currentColor'
                 strokeWidth={2}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
+                <path strokeLinecap='round' strokeLinejoin='round' d='M6 18L18 6M6 6l12 12' />
               </svg>
             </button>
           </div>
-          <ul className="flex flex-col space-y-5 text-center text-blue-800 text-2xl">
+          <ul className='flex flex-col space-y-5 text-center text-blue-800 text-2xl'>
             <li>
-              <Link to="/" onClick={closeMobileMenu}>
+              <Link to='/' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/about" onClick={closeMobileMenu}>
+              <Link to='/about' onClick={closeMobileMenu}>
                 About us
               </Link>
             </li>
             <li>
-              <Link to="/productsPage" onClick={closeMobileMenu}>
+              <Link to='/productsPage' onClick={closeMobileMenu}>
                 Products
               </Link>
             </li>
             <li>
-              <Link to="/blogs" onClick={closeMobileMenu}>
+              <Link to='/blogs' onClick={closeMobileMenu}>
                 Blog
               </Link>
             </li>
             <li>
-              <Link to="/faq" onClick={closeMobileMenu}>
+              <Link to='/faq' onClick={closeMobileMenu}>
                 FAQS
               </Link>
             </li>
             <li>
-              <Link to="/contactus" onClick={closeMobileMenu}>
+              <Link to='/contactus' onClick={closeMobileMenu}>
                 Contact
               </Link>
             </li>
