@@ -1,4 +1,3 @@
-// src/article.js
 export const articles = [
   {
     id: 1,
@@ -17,7 +16,6 @@ export const articles = [
       6️. Test yourself with Past Questions, Mock exams, quizzes, games etc. All these help with active recall. The more you task your brain to remember something, the more it slide into your long term memory. 
       7️. Reward and celebrate yourself when you achieve any set goal no matter how small. This makes your brain crave more achievements.`,
   },
-
   {
     id: 2,
     image: "sec-blog.jpg",
@@ -34,7 +32,6 @@ export const articles = [
     5. Sleep at your alloted time and don't let it be shorter or longer. 6-7hrs sleep is optimal. Don't try to cut it short, you'd only render other sessions of your day not too productive. So sleep well and sleep right my dear.
 `,
   },
-
   {
     id: 3,
     image: "third-blog.jpg",

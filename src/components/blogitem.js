@@ -6,14 +6,17 @@ const BlogItem = (props) => {
   return (
     <div className='w-[90%] mx-auto box-border text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm p-4 '>
       <img src={`/images/${props.image}`} className='w-full h-auto rounded-lg' alt={props.title} />
-      <div className='w-full flex items-center justify-between mt-2'>
+
+      <div className='w-full flex items-center justify-between my-4'>
         <span className='text-gray-600'>{props.category}</span>
         <span className='text-gray-600'>{props.date}</span>
       </div>
+
       <div className='leading-tight mt-2'>
-        <h3 className='text-lg font-semibold'>{props.title}</h3>
+        <h3 className='text-[1.4rem] font-semibold mb-3'>{props.title}</h3>
         <p className='leading-relaxed text-justify mt-2'>{props.description}</p>
       </div>
+
       <div className='leading-tight mt-2'>
         <Link
           className='leading-relaxed text-justify mt-2'

@@ -41,14 +41,21 @@ export default function BlogPage({ data }) {
       <div className='bg-[#23449F] pt-20 pb-20'>
         <div className='max-w-[90%] mx-auto sm:max-w-[85%]'>
           <div className='md:max-w-[78%] lg:max-w-[80%]'>
-            <h1 className='text-3xl text-white font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight'>
+            <h1 className='text-4xl text-white font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight'>
               From the desk of <span className='text-orange-600'>Achilles Drill</span>
             </h1>
           </div>
         </div>
       </div>
+
+      <div className='flex gap-6 justify-between items-center w-[90%] mx-auto mt-8 mb-4'>
+        <h3 className='flex-none font-semibold md:text-2xl'>Feature Articles</h3>
+
+        <div className='w-full h-0.5 bg-slate-300'></div>
+      </div>
+
       <div className='container mx-auto p-4'>
-        <div className='grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+        <div className='grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-2'>
           {getCurrentData().map((item) => (
             <BlogItem
               key={item.id}
