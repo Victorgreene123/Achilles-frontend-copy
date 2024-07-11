@@ -152,7 +152,7 @@ const Testimonials = () => {
         customRightArrow={<CustomRightArrow onClick={() => carouselRef.current.next()} />}
       >
         {testimonial.map((item) => (
-          <div key={item.id} className='mx-5'>
+          <div key={item.id} className='mx-1 lg:mx-5'>
             <Testimonial
               key={item.id}
               head={item.head}

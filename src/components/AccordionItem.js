@@ -48,7 +48,7 @@ const AccordionItem = ({ id, text, content, isOpen, onToggle }) => {
     //   </div>
     // </div>
 
-    <div className="bg-white w-full mx-auto lg:mx-0">
+    <div className="bg-white w-full mx-auto lg:mx-0 mb-2 items-center">
       <button
         className="w-full flex justify-between gap-10 text-left p-4 font-semibold text-blue-950"
         onClick={() => onToggle(id)}

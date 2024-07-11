@@ -25,7 +25,7 @@ export default function Navbar() {
     <>
       <nav className='bg-white sticky top-0 w-full p-2.5 flex items-center shadow z-10'>
         <Link to='/'>
-          <img src='/images/achelis.png' alt='Achilles drill logo' className='h-11 ml-2 w-23' />
+          <img src='/images/achelis.png' alt='Achilles drill logo' className='h-11 ml-2 w-23 lg:ml-10' />
         </Link>
         <div className='flex items-center justify-between w-full'>
           <div className='hidden md:flex items-center ml-5 w-full'>
@@ -68,7 +68,7 @@ export default function Navbar() {
                   Contact
                 </li>
               </Link>
-              <button className='flex items-center bg-blue-800 text-white border border-blue-800 rounded-full p-2.5 h-10 gap-1.5'>
+              <button className='flex items-center bg-blue-800  text-sm text-white border border-blue-800 rounded-full p-2.5 h-10 gap-1.5'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
@@ -86,14 +86,14 @@ export default function Navbar() {
                     fill='white'
                   />
                 </svg>
-                Get started
+                Download App
               </button>
             </div>
           </div>
           <div className='md:hidden ml-auto'>
             <button
               type='button'
-              className='text-blue-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none'
+              className='text-black-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none'
               onClick={toggleMobileMenu}
             >
               <svg
