@@ -15,6 +15,9 @@ export const articles = [
       5️. Teach what you’ve learnt to someone. This helps solidify your understanding through active recall. 
       6️. Test yourself with Past Questions, Mock exams, quizzes, games etc. All these help with active recall. The more you task your brain to remember something, the more it slide into your long term memory. 
       7️. Reward and celebrate yourself when you achieve any set goal no matter how small. This makes your brain crave more achievements.`,
+
+    articleNoteHead: `There, you have it!`,
+    articleNote: `By following these seven practical strategies, you’ll find it much easier to tackle even the most challenging topics. Remember, breaking down complex subjects, engaging multiple senses, using spaced repetition, applying knowledge creatively, teaching others, testing yourself, and celebrating your achievements can transform your learning experience. Stay consistent, keep pushing forward, and you’ll be amazed at how much you can accomplish. Good luck!`,
   },
   {
     id: 2,
@@ -31,6 +34,8 @@ export const articles = [
     4. Minimize distractions and stay focused during study sessions. If you have to lock up certain apps on your phone so you can have maximal focus, do it. Some mobile apps such as Screen time, AppBlock can temporary help you lock some apps during your productivity hours.
     5. Sleep at your alloted time and don't let it be shorter or longer. 6-7hrs sleep is optimal. Don't try to cut it short, you'd only render other sessions of your day not too productive. So sleep well and sleep right my dear.
 `,
+    articleNoteHead: `There, you have it!`,
+    articleNote: `By incorporating these five tips into your daily routine, you’ll see a significant boost in your productivity and overall efficiency. Remember, effective time management isn’t just about studying; it’s about organizing every aspect of your day. Master time blocking, identify your peak productivity hours, be realistic with your goals, minimize distractions, and ensure you get the right amount of sleep. With these strategies, you’ll be well on your way to achieving your academic and personal goals. Good luck!`,
   },
   {
     id: 3,
@@ -47,6 +52,8 @@ export const articles = [
     4. Challenge yourself with Quizzes and Practice Questions. The act of tasking your brain to recollect something strengthens neural link associated with that memory.
     5. Teach what you’ve learnt and teach it often. Doing this helps with active recall which is fundamental for memory retention. It is one simplest way to remember what you’ve learnt through the act of “Saying”
 `,
+    articleNoteHead: `There, you have it!`,
+    articleNote: `By implementing these practical steps, you can effectively transform your short-term memories into long-term knowledge. Remember, the key to studying smarter lies in engaging multiple senses, reviewing material promptly, using flashcards, challenging yourself with quizzes, and teaching others. These strategies not only make learning more efficient but also more enjoyable. Embrace these methods, and you’ll be well on your way to mastering any subject. Good luck!`,
   },
 ];
 
