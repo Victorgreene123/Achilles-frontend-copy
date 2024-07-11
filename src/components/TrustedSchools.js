@@ -15,11 +15,11 @@ import Youtube from "./YoutubeVid";
 const TrustedSchools = () => {
   return (
     <div>
-      <div className="lg:flex items-center justify-evenly  space-y-5 border-l-2 border-b-2">
-        <div className="text-center  py-8">
+      <div className="lg:flex items-center justify-evenly   space-y-5 border-l-2 border-b-2">
+        <div className="  py-8">
           <p className="">Trusted by:</p>
         </div>
-        <div className="place-items-center border-l-2  grid grid-cols-3 lg:grid-cols-9 gap-3 lg:space-x-16 py-5">
+        <div className="place-items-center border-box border-l-2  grid grid-cols-3 lg:grid-cols-9 gap-3 lg:space-x-16 py-5 lg:px-10">
           <img src={image1} alt="" />
           <img src={image2} alt="" />
           <img src={image3} alt="" />
