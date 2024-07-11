@@ -10,9 +10,9 @@ import Counter from "../components/counter";
 
 const About = () => {
   const result = [
-    { id: 1, rate: "90", title: "Success rate", unit: "%" },
-    { id: 2, rate: "1400", title: "Copies sold so far", unit: "" },
-    { id: 3, rate: "24", title: "Schools reached", unit: "" },
+    { id: 1, rate: "90", title: "Success rate", unit: "%" , icon:"successicon.png",},
+    { id: 2, rate: "1400", title: "Copies sold so far", unit: "" , icon:"copies.png",},
+    { id: 3, rate: "24", title: "Schools reached", unit: "" , icon:"schools.png",},
   ];
 
   const images = [
@@ -86,13 +86,13 @@ const About = () => {
             {result.map((item) => (
               <div
                 key={item.id}
-                className="border-b-2 text-center lg:text-left pb-5 w-44 lg:w-80"
+                className="border-b-2 items-center text-left lg:text-left pb-5 w-44 lg:w-80"
               >
                 <p className="text-6xl lg:text-[4rem] font-semibold">
                   <Counter start={0} end={item.rate} />
                   {item.unit}
                 </p>
-                <p className="text-1.5xl">{item.title}</p>
+                <p className="text-1.5xl flex items-center"><img src={`/images/${item.icon}`}></img><span>{item.title}</span></p>
               </div>
             ))}
           </div>

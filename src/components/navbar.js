@@ -93,7 +93,7 @@ export default function Navbar() {
           <div className='md:hidden ml-auto'>
             <button
               type='button'
-              className='text-blue-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none'
+              className='text-black-800 hover:text-gray-300 focus:text-gray-300 focus:outline-none'
               onClick={toggleMobileMenu}
             >
               <svg

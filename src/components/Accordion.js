@@ -68,7 +68,7 @@ const Accordion = () => {
 
   return (
     <div className="bg-[#F0F2F5]">
-      <div className="container mx-auto px-20 py-20 flex flex-col items-center lg:flex-row gap-20 lg:gap-20">
+      <div className="container mx-auto px-8 lg:px-20 py-20 flex flex-col items-center lg:flex-row gap-20 lg:gap-20">
         <div className="text-center lg:text-left flex flex-col gap-10 w-full">
           <h2 className="uppercase text-blue-950 font-semibold text-3xl lg:text-4xl">
             we are here to answer all your questions

@@ -5,12 +5,12 @@ const Testimonial = ({ head, logo, names, school, message, image }) => {
   const icons = Array.from({ length: 5 });
   return (
     <div>
-      <div className="w-full">
-        <div className="flex justify-between items-center rounded-t-md border border-blue-400 px-5 py-3">
+      <div className="w-full bg-[#fbfcfe]">
+        <div className="flex justify-between items-center rounded-t-md border border-blue-400 px-5 py-2">
           <p className="font-bold italic">"{head}"</p>
           <img className="rounded-full w-8" src={logo} alt="" />
         </div>
-        <div className="flex justify-between border border-blue-400 px-5 py-3">
+        <div className="flex justify-between border border-blue-400 px-5 py-2">
           <p>{names}</p>
           <p>{school}</p>
         </div>
