@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 // import Footer from "./components/footer";
 // import Navbar from "./components/navbar";
 
@@ -16,6 +18,15 @@ import ArticlePage from "./pages/ArticlePage";
 import { articles } from "./components/article";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      // Global settings for aos
+      duration: 1000, // Animation duration
+      easing: "ease-in-out", // Easing type
+      // once: true, // Whether animation should happen only once - while scrolling down
+    });
+  }, []);
+
   return (
     <div className='App'>
       <Router>

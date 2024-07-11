@@ -67,27 +67,27 @@ const Accordion = () => {
   };
 
   return (
-    <div className="bg-[#F0F2F5]">
-      <div className="container mx-auto px-8 lg:px-20 py-20 flex flex-col items-center lg:flex-row gap-20 lg:gap-20">
-        <div className="text-center lg:text-left flex flex-col gap-10 w-full">
-          <h2 className="uppercase text-blue-950 font-semibold text-3xl lg:text-4xl">
+    <div className='bg-[#F0F2F5]'>
+      <div className='container mx-auto px-8 lg:px-20 py-20 flex flex-col items-center lg:flex-row gap-20 lg:gap-20'>
+        <div className='text-center lg:text-left flex flex-col gap-10 w-full'>
+          <h2 className='uppercase text-blue-950 font-semibold text-3xl lg:text-4xl'>
             we are here to answer all your questions
           </h2>
-          <div className="flex justify-center lg:justify-start">
-            <div className="bg-blue-700 w-48 h-1"></div>
-            <div className="bg-red-400 w-32 h-1"></div>
+          <div className='flex justify-center lg:justify-start'>
+            <div className='bg-blue-700 w-48 h-1'></div>
+            <div className='bg-red-400 w-32 h-1'></div>
           </div>
-          <p className="text-blue-900 opacity-80">
-            If you’re ready to super-charge your knowledge and career, this
-            section will help you answer most questions that you might have
+          <p className='text-blue-900 opacity-80'>
+            If you’re ready to super-charge your knowledge and career, this section will help you
+            answer most questions that you might have
           </p>
-          <div className="flex gap-px items-center justify-center lg:justify-start">
-            <img src={image1} alt="" />
-            <img src={image2} alt="" />
-            <img src={image3} alt="" />
+          <div className='flex gap-px items-center justify-center lg:justify-start'>
+            <img src={image1} alt='' />
+            <img src={image2} alt='' />
+            <img src={image3} alt='' />
           </div>
         </div>
-        <div className="flex flex-col gap-1 ">
+        <div className='flex flex-col gap-1 '>
           {accordion.map((item) => (
             <AccordionItem
               key={item.id}
@@ -100,28 +100,27 @@ const Accordion = () => {
           ))}
         </div>
       </div>
-      <div className="bg-white lg:p-10">
-        <div className="container mx-auto p-10 lg:p-10 flex flex-col lg:flex-row lg:justify-between items-center gap-5">
-          <div className="text-center lg:text-left items-center lg:items-start flex flex-col gap-5">
-            <h1 className="lg:w-4/5  text-3xl lg:text-5xl font-semibold text-blue-600">
+      <div className='bg-white lg:p-10'>
+        <div className='container mx-auto p-10 lg:p-10 flex flex-col lg:flex-row lg:justify-between items-center gap-5'>
+          <div className='text-center lg:text-left items-center lg:items-start flex flex-col gap-5'>
+            <h1 className='lg:w-4/5  text-3xl lg:text-5xl font-semibold text-blue-600'>
               Take the first step towards academic excellence
             </h1>
-            <p className="text-[#2547A7]">
-              Check out some of the resources today
-            </p>
+            <p className='text-[#2547A7]'>Check out some of the resources today</p>
             <Link to='/productsPage'>
-            <button className="bg-[#274CB2] text-gray-100 rounded-full px-16 py-3">
-              Get Started
-            </button></Link>
-            <div className="flex justify-center lg:justify-start">
-              <div className="bg-blue-700 w-48 h-1"></div>
-              <div className="bg-red-400 w-32 h-1"></div>
+              <button className='bg-[#274CB2] text-gray-100 rounded-full px-16 py-3'>
+                Get Started
+              </button>
+            </Link>
+            <div className='flex justify-center lg:justify-start'>
+              <div className='bg-blue-700 w-48 h-1'></div>
+              <div className='bg-red-400 w-32 h-1'></div>
             </div>
           </div>
-          <div className="flex gap-px">
-            <img className="object-contain w-1/3" src={image6} alt="" />
-            <img className="object-contain w-1/3" src={image4} alt="" />
-            <img className="object-contain w-1/3" src={image5} alt="" />
+          <div className='flex gap-px'>
+            <img className='object-contain w-1/3' src={image6} alt='' data-aos='fade-right' />
+            <img className='object-contain w-1/3' src={image4} alt='' data-aos='fade-up' />
+            <img className='object-contain w-1/3' src={image5} alt='' data-aos='fade-left' />
           </div>
         </div>
       </div>
