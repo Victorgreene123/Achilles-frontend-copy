@@ -69,23 +69,24 @@ const Team = () => {
         </div>
         <div className="grid lg:grid-cols-3 gap-10 container mx-auto">
           {team.map((item) => (
-            <div key={item.id} className="bg-white">
-              <img src={item.image} alt="" className="w-full" />
-              <div className="px-7 py-10 flex justify-between">
-                <div>
-                  <p className="font-semibold text-xl">{item.name}</p>
-                  <p>{item.role}</p>
-                </div>
-                <div className="flex flex-col text-2xl text-blue-700">
-                  <a href="">
-                    <BiLogoInstagram />
-                  </a>
-                  <a href="">
-                    <BiLogoTwitter />
-                  </a>
-                </div>
+            <div key={item.id} className="bg-white hover:bg-blue-500 hover:text-white transition duration-300">
+            <img src={item.image} alt="" className="w-full" />
+            <div className="px-7 py-10 flex justify-between">
+              <div>
+                <p className="font-semibold text-xl">{item.name}</p>
+                <p>{item.role}</p>
+              </div>
+              <div className="flex flex-col text-2xl text-blue-700 hover:text-white">
+                <a href="">
+                  <BiLogoInstagram />
+                </a>
+                <a href="">
+                  <BiLogoTwitter />
+                </a>
               </div>
             </div>
+          </div>
+          
           ))}
         </div>
 

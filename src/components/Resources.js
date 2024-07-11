@@ -1,6 +1,7 @@
 import React from "react";
 import image5 from "../Assets/Rectangle 291 (1).png";
 import image6 from "../Assets/Rectangle 292right.png";
+import { Link } from "react-router-dom";
 
 const Resources = () => {
   return (
@@ -17,9 +18,10 @@ const Resources = () => {
           <p className="text-blue-900 leading-8 lg:w-full text-sm">
             Your one-stop place for go-to destination for exam prep resources tailored for Nigerian medical students. Your one-stop place for go-to destination for exam prep resources tailored for Nigerian medical students.
           </p>
+          <Link to='/productsPage'>
           <button className="bg-blue-900 text-white text-sm px-6 py-3 rounded-full transition duration-300 hover:bg-blue-800">
             Check out Resources
-          </button>
+          </button></Link>
         </div>
       </div>
     </div>

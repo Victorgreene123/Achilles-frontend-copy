@@ -193,7 +193,7 @@ const ProductsPage = () => {
               />
               <div className='bg-black text-center py-4'>
                 <p className='text-white'>
-                  Diagnose any clinical condition under 1 minute using ChatGPT
+                Learn FASTER in MED SCHOOL with ChatGPT 
                 </p>
               </div>
             </div>
