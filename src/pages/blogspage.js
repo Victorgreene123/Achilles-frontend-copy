@@ -10,7 +10,7 @@ export default function BlogPage({ data }) {
   const initialPage = parseInt(searchParams.get("page")) || 1;
 
   const [currentPage, setCurrentPage] = useState(initialPage);
-  const itemsPerPage = 3;
+  const itemsPerPage = 9;
 
   useEffect(() => {
     navigate(`?page=${currentPage}`, { replace: true });
