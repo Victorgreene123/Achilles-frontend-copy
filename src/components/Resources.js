@@ -31,7 +31,7 @@ const Resources = () => {
             tailored for Nigerian medical students.
           </p>
           <Link to='/productsPage'>
-            <button className='bg-blue-900 text-white text-sm px-6 py-3 rounded-full transition duration-300 hover:bg-blue-800'>
+            <button className='bg-blue-900 mt-4 text-white text-sm px-6 py-3 rounded-full transition duration-300 hover:bg-blue-800'>
               Check out Resources
             </button>
           </Link>
