@@ -41,8 +41,8 @@ export default function BlogPage({ data }) {
       <div className='bg-[#23449F] pt-20 pb-20'>
         <div className='max-w-[90%] mx-auto sm:max-w-[85%]'>
           <div className='md:max-w-[78%] lg:max-w-[80%]'>
-            <h1 className='text-4xl text-white font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight'>
-              From the desk of <span className='text-orange-600'>Achilles Drill</span>
+            <h1 className='text-3xl text-white font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight'>
+              From the desk of <br></br> <span className='text-orange-600'>Achilles Drill</span>
             </h1>
           </div>
         </div>

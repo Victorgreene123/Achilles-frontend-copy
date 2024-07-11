@@ -24,15 +24,17 @@ const About = () => {
 
   return (
     <div className="">
-      <div className="relative w-full">
-        <img className="w-full" src={hero} alt="" />
-        <div className="px-10 absolute inset-0 flex items-center justify-center">
-          <h1 className="lg:w-4/5 text-center lg:text-left text-white text-3xl lg:text-7xl md:text-5xl font-semibold">
-            We are <span className="text-[#f18337]">Africa's foremost</span>{" "}
-            resource hub for medical students
-          </h1>
-        </div>
-      </div>
+      
+      
+      <div className="relative w-full h-screen">
+  <video className="absolute inset-0 w-full h-full object-cover z-0" src="/images/loopvid.mp4" autoPlay loop muted />
+  <div className="relative px-10 flex items-center justify-center h-full z-10">
+    <h1 className="lg:w-4/5 text-center lg:text-left text-white text-3xl lg:text-7xl md:text-5xl font-semibold">
+      We are <span className="text-[#f18337]">Africa's foremost</span>{" "}
+      resource hub for medical students
+    </h1>
+  </div>
+</div>
 
       <div className="py-20">
         <div className="text-center flex flex-col items-center">

@@ -218,35 +218,35 @@ function Footer() {
           </ul>
         </div>
         <div className="flex gap-5">
-          <a href="https://achilles-web-be.onrender.com/docs">
+          <a href="https://www.linkedin.com/company/achilles-drill/">
             <img
               src="/images/linkedin.svg"
               alt="LinkedIn"
               className="w-6 h-6 p-1 border border-[#D4D4D4] rounded-full"
             ></img>
           </a>
-          <a href="https://achilles-web-be.onrender.com/docs">
+          <a href="https://www.facebook.com/profile.php?id=61550556556677&mibextid=LQQJ4d">
             <img
               src="/images/facebook.svg"
               alt="Facebook"
               className="w-6 h-6 p-1 border border-[#D4D4D4] rounded-full"
             ></img>
           </a>
-          <a href="https://achilles-web-be.onrender.com/docs">
+          <a href="https://x.com/AchillesDrill?t=tV_ZBZQDe4oJvJ-9TYP8Ww&s=09">
             <img
-              src="/images/x.svg"
+              src="/images/twitter.png"
               alt="X"
               className="w-6 h-6 p-1 border border-[#D4D4D4] rounded-full"
             ></img>
           </a>
-          <a href="https://achilles-web-be.onrender.com/docs">
+          <a href="https://www.instagram.com/achilles_drill?igsh=MW1qZ2o4ZzFjZWtpYg%3D%3D&utm_source=qr">
             <img
               src="/images/instagram.svg"
               alt="Instagram"
               className="w-6 h-6 p-1 border border-[#D4D4D4] rounded-full"
             ></img>
           </a>
-          <a href="https://achilles-web-be.onrender.com/docs">
+          <a href="https://youtube.com/@achillesdrill?si=kgnIUGYSTutwdQRj">
             <img
               src="/images/youtube.svg"
               alt="YouTube"
