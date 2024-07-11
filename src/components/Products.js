@@ -9,7 +9,7 @@ const Products = () => {
   const ProductList = [
     {
       id: 1,
-      image: image1,
+      image: image4,
       title: "Lecture Banks",
       badge: "Videos",
 
@@ -18,7 +18,7 @@ const Products = () => {
     },
     {
       id: 2,
-      image: image2,
+      image: image1,
       title: "Past Questions",
       badge: "BOOKLETS",
 
@@ -27,7 +27,7 @@ const Products = () => {
     },
     {
       id: 3,
-      image: image4,
+      image: image2,
       title: "Youtube Videos",
       badge: "Videos",
       description:
