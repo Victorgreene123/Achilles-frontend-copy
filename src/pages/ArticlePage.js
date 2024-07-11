@@ -53,16 +53,9 @@ const ArticlePage = ({ data }) => {
         </div> */}
 
         <div className='mt-24 bg-gray-200 py-6 px-8 rounded-md text-left'>
-          <h1 className='text-2xl font-bold mb-6 md:text-4xl'>
-            <span className='text-[3xl]'>There</span>, you have it!
-          </h1>
+          <h1 className='text-2xl font-bold mb-6 md:text-4xl'>{article.articleNoteHead}</h1>
 
-          <p className='text-sm leading-6 text-[#2f2f58f1] md:text-base'>
-            By following these strategies, you can build a strong and supportive network that will
-            empower you to excel in Nigerian medical school and pave the way for a successful
-            medical career. Remember, networking is a two-key street, so be prepared to offer your
-            support and expertise in return. Good luck!
-          </p>
+          <p className='text-sm leading-6 text-[#2f2f58f1] md:text-base'>{article.articleNote}</p>
         </div>
       </div>
     </div>

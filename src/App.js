@@ -20,11 +20,11 @@ import { articles } from "./components/article";
 function App() {
   useEffect(() => {
     AOS.init({
-      // Global settings for aos
-      duration: 1000, // Animation duration
-      easing: "ease-in-out", // Easing type
-      // once: true, // Whether animation should happen only once - while scrolling down
+      duration: 1300,
+      easing: "ease-in-out",
+      once: false,
     });
+    AOS.refresh();
   }, []);
 
   return (
