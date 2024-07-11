@@ -11,6 +11,7 @@ const ArticlePage = ({ data }) => {
   }
 
   const from = location.state?.from || "/blogs";
+  const points = article.fullText.split(/(?=\d️?\.)/);
 
   return (
     <div>
@@ -23,26 +24,29 @@ const ArticlePage = ({ data }) => {
           <div className=''>
             <img
               src={`/images/${article.image}`}
-              className='w-full h-full object-cover md:h-1/2 lg:h-1/3'
+              className='w-full object-cover h-48 sm:h-[16rem] md:h-[20rem] lg:h-[25rem] xl:h-[30rem]'
               alt={article.title}
             />
           </div>
         </div>
       </div>
 
-      <div className='mt-8 w-[80%] mx-auto mb-8'>
-        {/* <div className='flex items-center justify-between mt-2'>
-          <span className='text-gray-600'>{article.category}</span>
-          <span className='text-gray-600'>{article.datePosted}</span>
-        </div> */}
+      <div className='mt-8 w-[80%] mx-auto mb-8 text-justify md:w-[70%] lg:w-[50%]'>
+        <div>
+          <p>{article.description}</p>
+        </div>
 
         <div>
-          <p className='mt-4'>{article.fullText}</p>
+          {points.map((point, index) => (
+            <p key={index} className='mt-10'>
+              {point.trim()}
+            </p>
+          ))}
         </div>
 
         <div>
           <Link to={from}>
-            <button className='mt-4 px-4 py-2 bg-blue-500 text-white rounded'>Back to Blog</button>
+            <button className='mt-8 px-4 py-2 bg-blue-500 text-white rounded'>Back to Blog</button>
           </Link>
         </div>
       </div>
