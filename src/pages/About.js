@@ -25,14 +25,15 @@ const About = () => {
   return (
     <div className="overflow-x-hidden">
       <div className="relative w-full lg:h-screen h-[50vh]">
-        <video className="absolute inset-0 w-full h-full object-cover z-0" src="/images/loopvid.mp4" autoPlay loop muted />
-        <div className="absolute inset-0 bg-[#080F24B2] ">
-        <div className="relative px-4 md:px-10 flex items-center justify-center h-full ">
-          <h1 className="w-full text-center md:text-left text-white text-2xl md:text-3xl lg:text-7xl md:text-5xl font-semibold">
-            We are <span className="text-[#f18337]">Africa's foremost</span>{" "}
-            resource hub for medical students
-          </h1>
-        </div></div>
+        <video playsInline className="absolute inset-0 w-full h-full object-cover z-0" src="/images/loopvid.mp4" autoPlay loop muted />
+        <div className="absolute inset-0 bg-[#080F24B2] "></div>
+          <div className="relative px-4 md:px-10 flex items-center justify-center h-full ">
+            <h1 className="w-full text-center md:text-left text-white text-2xl md:text-3xl lg:text-7xl md:text-5xl font-semibold">
+              We are <span className="text-[#f18337]">Africa's foremost</span>{" "}
+              resource hub for medical students
+            </h1>
+          
+        </div>
       </div>
 
       <div className="py-20">
@@ -108,3 +109,4 @@ const About = () => {
 };
 
 export default About;
+

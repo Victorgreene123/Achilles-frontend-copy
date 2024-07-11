@@ -2,7 +2,7 @@ export const articles = [
   {
     id: 1,
     image: "first-blog.jpg",
-    category: "ANATOMY",
+    category: "EFFECTIVE STUDY",
     datePosted: "2024-05-16",
     title: "7 proven strategies to learn the most difficult topics!",
     description:
@@ -22,7 +22,7 @@ export const articles = [
   {
     id: 2,
     image: "sec-blog.jpg",
-    category: "ANATOMY",
+    category: "EFFECTIVE STUDY",
     datePosted: "2024-05-16",
     title: "Cover more grounds in your study with these 6 Time Management Tips",
     description:
@@ -40,7 +40,7 @@ export const articles = [
   {
     id: 3,
     image: "third-blog.jpg",
-    category: "ANATOMY",
+    category: "EFFECTIVE STUDY",
     datePosted: "2024-05-16",
     title: "Remember ALL you read 5 these study techniques",
     description:
