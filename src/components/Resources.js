@@ -12,13 +12,13 @@ const Resources = () => {
             className='w-1/2 lg:w-auto lg:h-[338px]'
             src={image5}
             alt='Resource 1'
-            data-aos='fade-right'
+          
           />
           <img
             className='w-1/2 lg:w-auto lg:h-[338px]'
             src={image6}
             alt='Resource 2'
-            data-aos='fade-left'
+           
           />
         </div>
         <div className='text-center lg:text-left space-y-7 lg:w-1/2'>

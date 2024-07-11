@@ -16,7 +16,7 @@ const TrustedSchools = () => {
   return (
     <div>
       <div className="lg:flex items-center justify-evenly   space-y-5 border-l-2 border-b-2">
-        <div className="lg:px-10 lg:w-60 py-8">
+        <div className="lg:px-10 lg:w-60 py-8 text-center">
           <span className="">Trusted by:</span>
         </div>
         <div className="place-items-center border-box border-l-2  grid grid-cols-3 lg:grid-cols-9 gap-3 lg:space-x-16 py-5 lg:px-[80px]">
