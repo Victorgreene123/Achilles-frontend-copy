@@ -1,6 +1,12 @@
 import React, { useRef, useState } from "react";
 // import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import image1 from "../Assets/schools logos/image 19-1.png";
+import unilag from "../Assets/schools logos/UNILAG.png"
+import ui from "../Assets/schools logos/UI.png"
+import uniben from "../Assets/schools logos/UNIBEN.png"
+import oou from "../Assets/schools logos/OOU.svg"
+import Lasu from "../Assets/schools logos/LASU.png"
+import aifunai from '../Assets/schools logos/AE-FUNAI.jpg'
 import eclipse1 from "../Assets/Ellipse 1.png";
 import eclipse2 from "../Assets/Ellipse 1 (1).png";
 import eclipse3 from "../Assets/Ellipse 1 (2).png";
@@ -15,7 +21,7 @@ const Testimonials = () => {
     {
       id: 1,
       head: "Totally Worth It",
-      logo: image1,
+      logo: unilag,
       names: "Victoire",
       school: "MLS , Unilag",
       message:
@@ -25,7 +31,7 @@ const Testimonials = () => {
     {
       id: 2,
       head: "Totally Worth It",
-      logo: image1,
+      logo: ui,
       names: "Olabimpe",
       school: "Pharmacy , UI",
       message:
@@ -35,7 +41,7 @@ const Testimonials = () => {
     {
       id: 3,
       head: "Totally Worth It",
-      logo: image1,
+      logo: unilag,
       names: "Bukola",
       school: "Pharmacology , Unilag",
       message:
@@ -45,7 +51,7 @@ const Testimonials = () => {
     {
       id: 4,
       head: "Totally Worth It",
-      logo: image1,
+      logo: aifunai,
       names: "Ruyina Eteng",
       school: "MBBS, AE-FUNAI",
       message:
@@ -55,7 +61,7 @@ const Testimonials = () => {
     {
       id: 5,
       head: "Totally Worth It",
-      logo: image1,
+      logo: unilag,
       names: "Emmanuel K.",
       school: "MBBS, Unilag",
       message:
@@ -65,7 +71,7 @@ const Testimonials = () => {
     {
       id: 6,
       head: "Totally Worth It",
-      logo: image1,
+      logo: unilag,
       names: "Emmanuel K.",
       school: "MBBS, Unilag",
       message:
