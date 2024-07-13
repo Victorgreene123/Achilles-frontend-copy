@@ -20,7 +20,7 @@ const Resources = () => {
           </p>
           <Link to='/productsPage'>
             <button className='bg-blue-900 mt-6 text-white text-sm px-6 py-3 rounded-full transition duration-300 hover:bg-blue-800'>
-              Check out our products
+              Check out Resources
             </button>
           </Link>
         </div>

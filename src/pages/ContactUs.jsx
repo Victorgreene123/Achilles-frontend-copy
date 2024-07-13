@@ -231,23 +231,23 @@ const ContactUs = () => {
             </button>
             <div
               className={`flex items-center justify-center mb-4 ${
-                isSuccess ? "text-blue-600" : "text-red-600"
+                isSuccess ? "text-[#214198]" : "text-red-600"
               }`}
             >
               <FontAwesomeIcon
                 icon={isSuccess ? faCheckCircle : faTimesCircle}
                 className={`text-6xl mr-4 ${
-                  isSuccess ? "bg-blue-600" : "bg-red-600"
+                  isSuccess ? "bg-[#214198]" : "bg-red-600"
                 } text-white p-3 rounded-full`}
               />
             </div>
-            <p className={`text-lg text-center ${isSuccess ? "text-blue-600" : "text-red-600"}`}>
+            <p className={`text-lg text-center ${isSuccess ? "text-[#214198]" : "text-red-600"}`}>
               {responseMessage}
             </p>
             <button
               onClick={closeModal}
               className={`mt-6 w-full py-2 rounded-lg ${
-                isSuccess ? "bg-blue-600" : "bg-red-600"
+                isSuccess ? "bg-[#214198]" : "bg-red-600"
               } text-white text-lg hover:${
                 isSuccess ? "bg-blue-700" : "bg-red-700"
               } transition-colors duration-300`}
