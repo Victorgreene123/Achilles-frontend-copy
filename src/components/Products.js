@@ -38,8 +38,7 @@ const Products = () => {
       image: image3,
       title: "Dr Drills",
       badge: "AI SOLUTION",
-
-      description: `Your companion through medical school.Your personal AI buddy that will help you remember important mnemonics and acronyms. Reminds you to study the right sections of each topic. `,
+      description: `Your personal AI buddy that will help you remember important mnemonics and acronyms. Reminds you to study the right sections of each topic. `,
     },
   ];
   return (
