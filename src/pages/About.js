@@ -23,18 +23,18 @@ const About = () => {
   ];
 
   return (
-    <div className="">
-      
-      
-      <div className="relative w-full h-screen">
-  <video className="absolute inset-0 w-full h-full object-cover z-0" src="/images/loopvid.mp4" autoPlay loop muted />
-  <div className="relative px-10 flex items-center justify-center h-full z-10">
-    <h1 className="lg:w-4/5 text-center lg:text-left text-white text-3xl lg:text-7xl md:text-5xl font-semibold">
-      We are <span className="text-[#f18337]">Africa's foremost</span>{" "}
-      resource hub for medical students
-    </h1>
-  </div>
-</div>
+    <div className="overflow-x-hidden">
+      <div className="relative w-full lg:h-screen h-[50vh]">
+        <video playsInline className="absolute inset-0 w-full h-full object-cover z-0" src="/images/loopvid.mp4" autoPlay loop muted />
+        <div className="absolute inset-0 bg-[#080F24B2] "></div>
+          <div className="relative px-4 md:px-10 flex items-center justify-center h-full ">
+            <h1 className="w-full text-center md:text-left text-white text-2xl md:text-3xl lg:text-7xl md:text-5xl font-semibold">
+              We are <span className="text-[#f18337]">Africa's foremost</span>{" "}
+              resource hub for medical students
+            </h1>
+          
+        </div>
+      </div>
 
       <div className="py-20">
         <div className="text-center flex flex-col items-center">
@@ -56,7 +56,6 @@ const About = () => {
             ))}
           </div>
 
-          {/* The following grid of images will only appear on large screens and above */}
           <div className="hidden lg:block">
             <div className="grid grid-cols-2 gap-4">
               {images.map((image) => (
@@ -94,7 +93,7 @@ const About = () => {
                   <Counter start={0} end={item.rate} />
                   {item.unit}
                 </p>
-                <p className="text-1.5xl flex items-center"><img src={`/images/${item.icon}`}></img><span>{item.title}</span></p>
+                <p className="text-1.5xl flex items-center"><img src={`/images/${item.icon}`} alt={item.title} /><span>{item.title}</span></p>
               </div>
             ))}
           </div>
@@ -110,3 +109,4 @@ const About = () => {
 };
 
 export default About;
+

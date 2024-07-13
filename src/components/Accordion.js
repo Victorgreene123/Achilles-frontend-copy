@@ -118,9 +118,9 @@ const Accordion = () => {
             </div>
           </div>
           <div className='flex gap-px'>
-            <img className='object-contain w-1/3' src={image6} alt='' data-aos='fade-right' />
-            <img className='object-contain w-1/3' src={image4} alt='' data-aos='fade-up' />
-            <img className='object-contain w-1/3' src={image5} alt='' data-aos='fade-left' />
+            <img className='object-contain w-1/3' src={image6} alt=''  />
+            <img className='object-contain w-1/3' src={image4} alt=''  />
+            <img className='object-contain w-1/3' src={image5} alt=''  />
           </div>
         </div>
       </div>

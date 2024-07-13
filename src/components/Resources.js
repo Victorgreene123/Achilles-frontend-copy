@@ -12,13 +12,13 @@ const Resources = () => {
             className='w-1/2 lg:w-auto lg:h-[338px]'
             src={image5}
             alt='Resource 1'
-            data-aos='fade-right'
+          
           />
           <img
             className='w-1/2 lg:w-auto lg:h-[338px]'
             src={image6}
             alt='Resource 2'
-            data-aos='fade-left'
+           
           />
         </div>
         <div className='text-center lg:text-left space-y-7 lg:w-1/2'>
@@ -31,7 +31,7 @@ const Resources = () => {
             tailored for Nigerian medical students.
           </p>
           <Link to='/productsPage'>
-            <button className='bg-blue-900 text-white text-sm px-6 py-3 rounded-full transition duration-300 hover:bg-blue-800'>
+            <button className='bg-blue-900 mt-6 text-white text-sm px-6 py-3 rounded-full transition duration-300 hover:bg-blue-800'>
               Check out Resources
             </button>
           </Link>

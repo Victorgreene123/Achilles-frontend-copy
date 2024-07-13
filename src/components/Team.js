@@ -6,7 +6,7 @@ import team1 from "../Assets/teams.png";
 // import { BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
 
 import "react-multi-carousel/lib/styles.css";
-import { BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
+import { BiLogoInstagram, BiLogoLinkedin, BiLogoTwitter } from "react-icons/bi";
 
 
 const Team = () => {
@@ -69,23 +69,24 @@ const Team = () => {
         </div>
         <div className="grid lg:grid-cols-3 gap-10 container mx-auto">
           {team.map((item) => (
-            <div key={item.id} className="bg-white hover:bg-blue-500 hover:text-white transition duration-300">
+            <div key={item.id} className="bg-white hover:bg-[#1D3B8A] hover:text-white transition duration-300 group">
             <img src={item.image} alt="" className="w-full" />
             <div className="px-7 py-10 flex justify-between">
               <div>
-                <p className="font-semibold text-xl">{item.name}</p>
-                <p>{item.role}</p>
+                <p className="font-semibold text-xl group-hover:text-white">{item.name}</p>
+                <p className="group-hover:text-white">{item.role}</p>
               </div>
-              <div className="flex flex-col text-2xl text-blue-700 hover:text-white">
+              <div className="flex flex-col text-2xl text-blue-700 group-hover:text-white">
                 <a href="">
                   <BiLogoInstagram />
                 </a>
                 <a href="">
-                  <BiLogoTwitter />
+                  <BiLogoLinkedin />
                 </a>
               </div>
             </div>
           </div>
+          
           
           ))}
         </div>
