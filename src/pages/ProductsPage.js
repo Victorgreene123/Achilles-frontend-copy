@@ -46,7 +46,7 @@ const ProductsPage = () => {
             className={`text-xs text-center font-bold py-3 w-full lg:text-base ${
               activeSection === "LECTURE_BANKS"
                 ? "active"
-                : "text-blue-600 border-b-2 border-blue-200"
+                : "text-[#214198] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("LECTURE_BANKS")}
           >
