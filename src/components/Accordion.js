@@ -14,51 +14,67 @@ const Accordion = () => {
   const accordion = [
     {
       id: 1,
-      text: "How much is the lecture bank?",
+      text: "What is the Lecture Bank?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "The Lecture Bank is a compilation of tutorial videos and other resources that cover your syllabus in your different courses of Anatomy, Physiology and Biochemistry. The resources in it are simplified and designed to help you study any topic of your choice anywhere and anytime.",
     },
     {
       id: 2,
-      text: "What topics are covered in the lecture banks?",
+      text: "What topics or courses are covered in the Lecture Bank? ",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "The Lecture Bank covers topics in your Anatomy, Physiology and Biochemistry curricula.",
     },
     {
       id: 3,
-      text: "Are the past questions sourced from actual exams?",
+      text: "Does the Lecture Bank get updated?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "Yes. The Lecture Bank is updated regularly to provide you with the most relevant and current information.",
     },
     {
       id: 4,
-      text: "How can the past questions help with exam preparation?",
+      text: "What are the payment options for the Lecture Bank?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "You get access to the Lecture Bank in one single purchase. Payment does not need to be renewed. ",
     },
     {
       id: 5,
-      text: "What is the format of the YouTube videos?",
+      text: "How much is the Lecture Bank?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "The price depends on how many of the Lecture Banks you're buying. You can visit our store to see our resources with their prices. There are discounts for buying more than one material too.",
     },
     {
       id: 6,
-      text: "Are the YouTube videos aligned with the lecture banks?",
+      text: "How do I access the Lecture Bank after purchase?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "The Lecture Banks are hosted on private Telegram channels. They have been sequentially arranged and properly bookmarked for easy access.",
     },
     {
       id: 7,
-      text: "Can I access the material offline?",
+      text: "What format does the Lecture Bank come in?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "The Lecture Bank comes in form of videos. It is a compilation of over 700 recorded tutorial videos created by our instructors. It also contains review questions and answers, and other bonus materials.",
     },
     {
       id: 8,
-      text: "Is there a support team available for questions and technical issues?",
+      text: "Can I share the Lecture Bank with someone?",
       content:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci obcaecati repellendus dolore consequatur neque molestias voluptatum nemo cupiditate voluptas, sed possimus quis explicabo alias, tempore sapiente, voluptatibus saepe laboriosam facilis",
+        "The Lecture Bank is strictly personalized and cannot be shared. The security in place does not allow sharing.",
+    },
+    {
+      id: 9,
+      text: "What is the past question like? ",
+      content:
+        "The past question is a hard copy material that contains real past in-course and exam questions with detailed solutions and explanations.",
+    },
+    {
+      id: 10,
+      text: "Do I pay for delivery?",
+      content: "Yes. Delivery fee varies based on your location.",
+    },
+    {
+      id: 11,
+      text: "How long does delivery take?",
+      content: "Delivery typically takes 3-4 working days.",
     },
   ];
 
@@ -118,9 +134,9 @@ const Accordion = () => {
             </div>
           </div>
           <div className='flex gap-px'>
-            <img className='object-contain w-1/3' src={image6} alt=''  />
-            <img className='object-contain w-1/3' src={image4} alt=''  />
-            <img className='object-contain w-1/3' src={image5} alt=''  />
+            <img className='object-contain w-1/3' src={image6} alt='' />
+            <img className='object-contain w-1/3' src={image4} alt='' />
+            <img className='object-contain w-1/3' src={image5} alt='' />
           </div>
         </div>
       </div>
