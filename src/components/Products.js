@@ -14,7 +14,7 @@ const Products = () => {
       badge: "Videos",
 
       description:
-        "A compilation of tutorial videos that cover the entire syllabi for Anatomy, Physiology and Biochemistry.",
+        "A compilation of tutorial videos and other resources that cover your syllabus in your different courses of Anatomy, Physiology and Biochemistry.",
     },
     {
       id: 2,
@@ -23,7 +23,7 @@ const Products = () => {
       badge: "BOOKLETS",
 
       description:
-        "Well-researched, proven and tested past questions alongside comprehensive, illustrated and easy-to understand past questions.",
+        "Hard copy material that contains real past in-course and exam questions with detailed solutions and explanations.",
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Products = () => {
       title: "Youtube Videos",
       badge: "Videos",
       description:
-        "Free, compiled resource specially created by Achilles Drill tutors. Watch  and learn at your own pace. ",
+        "Free video resources created by Achilles Drill instructors, available on our YouTube page.",
     },
     {
       id: 4,
@@ -39,8 +39,7 @@ const Products = () => {
       title: "Dr Drills",
       badge: "AI SOLUTION",
 
-      description:
-        "Your personal AI-buddy. Helps you remember important mnemonics and acronyms. Reminds you to study the right section of each topic.",
+      description: `Your companion through medical school.Your personal AI buddy that will help you remember important mnemonics and acronyms. Reminds you to study the right sections of each topic. `,
     },
   ];
   return (
