@@ -17,9 +17,9 @@ const Testimonials = () => {
       head: "Totally Worth It",
       logo: image1,
       names: "Victoire",
-      school: "Medical Laboratory Science student, Unilag",
+      school: "MLS , Unilag",
       message:
-        "“…Achilles Drill made life so much easier for me, especially during the online semester. There were times I just felt like throwing my books away and giving up, I felt so choked, but somehow Achilles Drill made it easy to cope. I had As in all my Anatomy courses, first and second semester, you had a big hand in that. Thank you so much, I’m really grateful for all you did.”",
+        "“...There were times I just felt like throwing my books away and giving up, I felt so choked, but somehow Achilles Drill made it easy to cope. I had As in all my Anatomy courses, first and second semester, you had a big hand in that. Thank you so much, I’m really grateful for all you did.”",
       image: eclipse1,
     },
     {
@@ -27,7 +27,7 @@ const Testimonials = () => {
       head: "Totally Worth It",
       logo: image1,
       names: "Olabimpe",
-      school: "Pharmacy student, UI",
+      school: "Pharmacy , UI",
       message:
         "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
       image: eclipse2,
@@ -37,7 +37,7 @@ const Testimonials = () => {
       head: "Totally Worth It",
       logo: image1,
       names: "Bukola",
-      school: "Pharmacology student, Unilag",
+      school: "Pharmacology , Unilag",
       message:
         "“…for real your first clip on Anatomical terms motivated me. The first time I read a slide on anatomy, it was on femoral artery during the holidays, it felt like I was reading Chinese because I couldn’t understand anything. I’m so glad I checked out the Telegram GC for your lectures…”",
       image: eclipse3,
