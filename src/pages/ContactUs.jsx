@@ -41,20 +41,20 @@ const ContactUs = () => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       const response = await axios.post(endPoint, values);
-      console.log("Response:", response.data);
+      // console.log("Response:", response.data);
       setResponseMessage(response.data.message || "Form submitted successfully!");
       setIsSuccess(true);
       setShowModal(true);
       resetForm();
     } catch (error) {
-      console.error("Error submitting form:", error);
+      // console.error("Error submitting form:", error);
       setResponseMessage("There was an error submitting the form.");
       setIsSuccess(false);
       setShowModal(true);
     } finally {
       setSubmitting(false);
     }
-    console.log(values);
+    // console.log(values);
   };
 
   const closeModal = () => {
