@@ -23,15 +23,15 @@ const ProductsPage = () => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       const response = await axios.post(endPoint, values);
-      console.log(response.data);
+      // console.log(response.data);
       setSubmissionResponse(response.data.message);
       setIsSuccess(true);
       resetForm();
       closeFormModal();
       openResponseModal();
     } catch (error) {
-      console.error("Error submitting form:", error);
-      setSubmissionResponse("An error occurred while submitting the form. Please try again.");
+      // console.error(error);
+      setSubmissionResponse(error.response.data.message);
       setIsSuccess(false);
       closeFormModal();
       openResponseModal();
@@ -146,10 +146,10 @@ const ProductsPage = () => {
       </div>
 
       {/* NAVIGATION BUTTONS */}
-      <div className='max-w-[90%] mx-auto sm:max-w-[80%]'>
+      <div className='max-w-[90%] mx-auto sm:max-w-[85%]'>
         <div className='mt-8 mb-8 flex flex-col gap-6 lg:justify-between lg:flex-row lg:mt-10'>
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "LECTURE_BANKS"
                 ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
@@ -160,11 +160,10 @@ const ProductsPage = () => {
           </button>
 
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "PAST_QUESTIONS"
                 ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
-
             }`}
             onClick={() => setActiveSection("PAST_QUESTIONS")}
           >
@@ -172,9 +171,9 @@ const ProductsPage = () => {
           </button>
 
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "YOUTUBE_VIDEOS"
-                 ? "active text-white border-b-2 border-blue-200"
+                ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("YOUTUBE_VIDEOS")}
@@ -183,9 +182,9 @@ const ProductsPage = () => {
           </button>
 
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "DR_DRILLS"
-                 ? "active text-white border-b-2 border-blue-200"
+                ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("DR_DRILLS")}
@@ -194,7 +193,7 @@ const ProductsPage = () => {
           </button>
         </div>
 
-        {/* CONTENT SECTIONS */}
+        {/* LECTURE BANKS */}
         {activeSection === "LECTURE_BANKS" && (
           <div className='mb-40 lg:flex gap-4 align-stretch'>
             <div className='mb-6 lg:flex-[3]'>
@@ -251,6 +250,7 @@ const ProductsPage = () => {
           </div>
         )}
 
+        {/* PAST QUESTIONS */}
         {activeSection === "PAST_QUESTIONS" && (
           <div className='lg:flex gap-4 mb-40'>
             <div className='mb-2 bg-[#fdede3] flex-1'>
@@ -289,6 +289,7 @@ const ProductsPage = () => {
           </div>
         )}
 
+        {/* YOUTUBE VIDEOS */}
         {activeSection === "YOUTUBE_VIDEOS" && (
           <div className='mb-40 z-0 lg:flex gap-4'>
             <div className='mb-8 lg:flex-[3]'>
@@ -340,6 +341,7 @@ const ProductsPage = () => {
           </div>
         )}
 
+        {/* DR DRILLS */}
         {activeSection === "DR_DRILLS" && (
           <div className='mb-40 md:flex gap-8 items-end'>
             <div className='grow-0'>
@@ -355,16 +357,16 @@ const ProductsPage = () => {
                 <p className='text-xs text-red-500 font-bold py-2 px-4'>COMING SOON</p>
               </div>
 
-              <div className='lg:w-[80%]'>
-                <h3 className='text-blue-800 text-xl font-bold md:text-3xl lg:text-4xl lg:leading-normal'>
+              <div className='lg:w-[90%]'>
+                <h3 className='text-blue-800 text-xl font-bold md:text-2xl lg:text-4xl lg:leading-normal'>
                   Your personal <span className='text-orange-600'>smart AI study buddy</span>.
                 </h3>
               </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-4 transition-all duration-300 hover:bg-blue-800 md:mt-20'>
+              <div className='bg-blue-600 text-center rounded-full mt-4 transition-all duration-300 hover:bg-blue-800 md:mt-10 lg:mt-20'>
                 <button
                   className='text-xs text-white font-bold py-5 w-full h-full sm:text-sm'
-                  onClick={openModal}
+                  onClick={openFormModal}
                 >
                   GET NOTIFIED
                 </button>
@@ -390,15 +392,19 @@ const ProductsPage = () => {
           </div>
         )}
 
-        <FormModal isVisible={isFormModalVisible} onClose={closeFormModal} />
-
-        {/* RESPONSE MODAL */}
-        <ResponseModal
-          isVisible={isResponseModalVisible}
-          onClose={closeResponseModal}
-          message={submissionResponse}
-          isSuccess={isSuccess}
-        />
+        <div className='relative'>
+          {isFormModalVisible && (
+            <FormModal isVisible={isFormModalVisible} onClose={closeFormModal} />
+          )}
+          {submissionResponse && (
+            <ResponseModal
+              isVisible={!!submissionResponse}
+              message={submissionResponse}
+              isSuccess={isSuccess}
+              onClose={() => setSubmissionResponse(null)}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
