@@ -292,10 +292,11 @@ const ProductsPage = () => {
         {/* YOUTUBE VIDEOS */}
         {activeSection === "YOUTUBE_VIDEOS" && (
           <div className='mb-40 z-0 lg:flex gap-4'>
-            <div className='mb-8 lg:flex-[3]'>
+            <div className='mb-8 flex-[3]'>
+              {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' /> */}
               <Youtube
                 src='https://www.youtube.com/embed/xi1sKqM-QkA?si=Tuvagj4olryfeVWU'
-                title='Welcome to Achilles Drill'
+                title='Welcome to achilles drill'
                 style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
               />
               <div className='bg-black text-center py-4'>
@@ -303,31 +304,56 @@ const ProductsPage = () => {
               </div>
             </div>
 
-            <div className='lg:flex-[3]'>
+            <div className='flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-                <Youtube
-                  src='https://www.youtube.com/embed/ogBByvsk0VU?si=X3JvHjx-UI7DG1uX'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                <div className='relative'>
+                  <div className='py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='https://www.youtube.com/watch?v=gOhGsrayF18' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
 
-                <Youtube
-                  src='https://www.youtube.com/embed/P1NraMV6Ky8?si=I8UaLFoO_5JUOpj1'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                    <Youtube
+                      src='https://www.youtube.com/embed/ogBByvsk0VU?si=X3JvHjx-UI7DG1uX'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
 
-                <Youtube
-                  src='https://www.youtube.com/embed/tnADA37As6c?si=Sba7jAqEeX_Z4JyB'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-0 py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+                    <Youtube
+                      src='https://www.youtube.com/embed/P1NraMV6Ky8?si=I8UaLFoO_5JUOpj1'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
 
-                <Youtube
-                  src='https://www.youtube.com/embed/lToIUS5ITp4?si=Zs4TX4KZuYO53-32'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+                    <Youtube
+                      src='https://www.youtube.com/embed/tnADA37As6c?si=Sba7jAqEeX_Z4JyB'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
+
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+                    <Youtube
+                      src='https://www.youtube.com/embed/lToIUS5ITp4?si=Zs4TX4KZuYO53-32'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
               </div>
 
               <div className='bg-blue-600 text-center rounded-full mt-10 transition-all duration-300 hover:bg-blue-800 lg:mt-12'>
