@@ -66,7 +66,7 @@ const About = () => {
             {images.map((image) => (
               <img
                 key={image.id}
-                className='w-full fade-in hover-lively'
+                className='w-full lg:[h-175px] fade-in hover-lively'
                 src={image.src}
                 alt={image.alt}
               />
