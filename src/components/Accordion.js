@@ -20,7 +20,7 @@ const Accordion = () => {
     },
     {
       id: 2,
-      text: "What topics or courses are covered in the Lecture Bank? ",
+      text: "What topics or courses are covered in the Lecture Bank?",
       content:
         "The Lecture Bank covers topics in your Anatomy, Physiology and Biochemistry curricula.",
     },
@@ -34,7 +34,7 @@ const Accordion = () => {
       id: 4,
       text: "What are the payment options for the Lecture Bank?",
       content:
-        "You get access to the Lecture Bank in one single purchase. Payment does not need to be renewed. ",
+        "You get access to the Lecture Bank in one single purchase. Payment does not need to be renewed.",
     },
     {
       id: 5,
@@ -62,7 +62,7 @@ const Accordion = () => {
     },
     {
       id: 9,
-      text: "What is the past question like? ",
+      text: "What is the past question like?",
       content:
         "The past question is a hard copy material that contains real past in-course and exam questions with detailed solutions and explanations.",
     },

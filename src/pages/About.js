@@ -35,7 +35,7 @@ const About = () => {
         />
         <div className='absolute inset-0 bg-[#080F24B2] '></div>
         <div className='relative px-4 md:px-10 flex items-center justify-center h-full '>
-          <h1 className='w-full text-center md:text-left text-white text-2xl md:text-3xl lg:text-7xl md:text-5xl font-semibold'>
+          <h1 className='w-full text-center md:text-left text-white text-2xl lg:text-7xl md:text-5xl font-semibold'>
             We are <span className='text-[#f18337]'>Africa's foremost</span> resource hub for
             medical students
           </h1>

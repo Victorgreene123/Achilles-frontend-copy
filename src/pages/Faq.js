@@ -2,7 +2,63 @@ import React from "react";
 import { Link } from "react-router-dom";
 import faqImg from "../Assets/faq.PNG";
 
-const faq = () => {
+const faqs = [
+  {
+    contentHead: "What is the Lecture Bank?",
+    content:
+      "The Lecture Bank is a compilation of tutorial videos and other resources that cover your syllabus in your different courses of Anatomy, Physiology and Biochemistry. The resources in it are simplified and designed to help you study any topic of your choice anywhere and anytime.",
+  },
+  {
+    contentHead: "What topics or courses are covered in the Lecture Bank?",
+    content:
+      "The Lecture Bank covers topics in your Anatomy, Physiology and Biochemistry curricula.",
+  },
+  {
+    contentHead: "Does the Lecture Bank get updated?",
+    content:
+      "Yes. The Lecture Bank is updated regularly to provide you with the most relevant and current information.",
+  },
+  {
+    contentHead: "What are the payment options for the Lecture Bank?",
+    content:
+      "You get access to the Lecture Bank in one single purchase. Payment does not need to be renewed.",
+  },
+  {
+    contentHead: "How much is the Lecture Bank?",
+    content:
+      "The price depends on how many of the Lecture Banks you're buying. You can visit our store to see our resources with their prices. There are discounts for buying more than one material too.",
+  },
+  {
+    contentHead: "How do I access the Lecture Bank after purchase?",
+    content:
+      "The Lecture Banks are hosted on private Telegram channels. They have been sequentially arranged and properly bookmarked for easy access.",
+  },
+  {
+    contentHead: "What format does the Lecture Bank come in?",
+    content:
+      "The Lecture Bank comes in form of videos. It is a compilation of over 700 recorded tutorial videos created by our instructors. It also contains review questions and answers, and other bonus materials.",
+  },
+  {
+    contentHead: "Can I share the Lecture Bank with someone?",
+    content:
+      "The Lecture Bank is strictly personalized and cannot be shared. The security in place does not allow sharing.",
+  },
+  {
+    contentHead: "How long does delivery take?",
+    content: "Delivery typically takes 3-4 working days.",
+  },
+  {
+    contentHead: "What is the past question like?",
+    content:
+      "The past question is a hard copy material that contains real past in-course and exam questions with detailed solutions and explanations.",
+  },
+  {
+    contentHead: "Do I pay for delivery?",
+    content: "Yes. Delivery fee varies based on your location.",
+  },
+];
+
+const FAQ = () => {
   return (
     <>
       <div className=''>
@@ -14,161 +70,16 @@ const faq = () => {
         </div>
 
         <div className='pt-8 pb-16 max-w-[85%] mx-auto grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:justify-between'>
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-300'>
-              <p>What topics are covered in the lecture banks?</p>
+          {faqs.map((faq, index) => (
+            <div key={index} className='bg-gray-100 p-2 border border-gray-300 rounded'>
+              <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-300'>
+                <p>{faq.contentHead}</p>
+              </div>
+              <div className='my-4 text-sm'>
+                <p>{faq.content}</p>
+              </div>
             </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-300'>
-              <p>How frequently are the lecture banks updated?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks are updated regularly to ensure they include the most current
-                information and medical guidelines.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>Are the past questions sourced from actual exams?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                Yes, the past questions compiled from previous exams to provide a realistic practice
-                experience.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>How can the past questions help with exam preparation?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                They offer a practical way to test your knowledge and familiarize yourself with the
-                format and types of questions you'll encounter in exams.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
-
-          <div className='bg-gray-100 p-2 border border-gray-300 rounded'>
-            <div className='mb-1 pb-1 text-sm font-bold border-b-2 border-gray-200'>
-              <p>What topics are covered in the lecture banks?</p>
-            </div>
-
-            <div className='my-4 text-sm'>
-              <p>
-                The lecture banks cover a wide range of topics, including basic sciences, clinical
-                rotations, pharmacology, pathology and more.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* GET IN TOUCH BUTTON AND IMAGE */}
@@ -183,13 +94,11 @@ const faq = () => {
 
               <div className='hidden lg:block'>
                 <h1 className='text-6xl font-bold'>Got more</h1>
-
                 <h1 className='text-6xl font-bold text-[#f18337]'>questions?</h1>
               </div>
 
               <div className='mt-1 lg:mt-3 text-center'>
                 <p className='text-sm mb-8'>We are on standby to answer all your questions.</p>
-
                 <div>
                   <Link
                     to='/contactus'
@@ -201,7 +110,7 @@ const faq = () => {
               </div>
             </div>
 
-            <div className=''>
+            <div>
               <img src={faqImg} alt='Woman' className='mt-10 max-w-[85%] mx-auto lg:mt-0' />
             </div>
           </div>
@@ -211,4 +120,4 @@ const faq = () => {
   );
 };
 
-export default faq;
+export default FAQ;
