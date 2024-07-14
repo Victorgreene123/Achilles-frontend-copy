@@ -3,6 +3,13 @@ import rectangle137 from "../Assets/Rectangle 137.png";
 import rectangle138 from "../Assets/Rectangle 138.png";
 import rectangle142 from "../Assets/Rectangle 142.png";
 import rectangle143 from "../Assets/Rectangle 143.png";
+
+import rectangle141 from "../Assets/Rectangle 141.png";
+
+import reactangle140 from "../Assets/Rectangle 140.png"
+import reactangle139 from "../Assets/teams.png"
+import reactangle144 from "../Assets/Rectangle144.png"
+
 import { PiDownloadSimpleLight } from "react-icons/pi";
 import { PiCaretDownBold } from "react-icons/pi";
 
@@ -36,12 +43,20 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className="grid grid-cols-2 justify-center">
-        <img className="md:w-full" src={rectangle137} alt="" />
-        <img className="md:w-full" src={rectangle138} alt="" />
-        <img className="md:w-full" src={rectangle142} alt="" />
-        <img className="md:w-full" src={rectangle143} alt="" />
+      <div className='lg:flex lg:items-start lg:justify-center w-1/2  lg:h-[350px] h-[325px]   overflow-hidden'>
+      <div className="grid grid-cols-2 justify-center scrolling  ">
+        <img className="w-full" src={rectangle137} alt="" />
+        <img className="w-full" src={rectangle138} alt="" />
+        <img className="w-full" src={rectangle142} alt="" />
+        <img className="w-full" src={rectangle143} alt="" />
+        <img className="w-full" src={reactangle139} alt="" />
+        <img className="w-full" src={reactangle140} alt="" />
+        <img className="w-full" src={reactangle144} alt="" />
+        <img className="w-full" src={rectangle141} alt="" />
+        
       </div>
+      </div>
+ 
     </div>
   );
 };

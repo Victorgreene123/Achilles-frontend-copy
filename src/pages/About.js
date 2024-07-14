@@ -61,7 +61,7 @@ const About = () => {
           </h2>
         </div>
 
-        <div className='lg:flex lg:items-center lg:justify-center  lg:h-[400px] h-[325px]   overflow-hidden'>
+        <div className='lg:flex lg:items-start lg:justify-center lg:h-[350px] h-[325px]   overflow-hidden'>
           <div className='grid grid-cols-2 gap-1 scrolling'>
             {images.map((image) => (
               <img
