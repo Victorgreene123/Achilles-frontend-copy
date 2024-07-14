@@ -8,12 +8,16 @@ import Youtube from "../components/YoutubeVid";
 
 const ProductsPage = () => {
   const [activeSection, setActiveSection] = useState("LECTURE_BANKS");
-  const [isModalVisible, setModalVisible] = useState(false);
+  const [isFormModalVisible, setFormModalVisible] = useState(false);
+  const [isResponseModalVisible, setResponseModalVisible] = useState(false);
   const [submissionResponse, setSubmissionResponse] = useState(null);
   const [isSuccess, setIsSuccess] = useState(true);
 
-  const openModal = () => setModalVisible(true);
-  const closeModal = () => setModalVisible(false);
+  const openFormModal = () => setFormModalVisible(true);
+  const closeFormModal = () => setFormModalVisible(false);
+  const openResponseModal = () => setResponseModalVisible(true);
+  const closeResponseModal = () => setResponseModalVisible(false);
+
   const endPoint = "https://achilles-web-be.onrender.com/waitlist/join";
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
@@ -23,10 +27,14 @@ const ProductsPage = () => {
       setSubmissionResponse(response.data.message);
       setIsSuccess(true);
       resetForm();
-      openModal();
+      closeFormModal();
+      openResponseModal();
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmissionResponse("An error occurred while submitting the form. Please try again.");
       setIsSuccess(false);
+      closeFormModal();
+      openResponseModal();
     } finally {
       setSubmitting(false);
     }
@@ -37,12 +45,12 @@ const ProductsPage = () => {
     name: Yup.string().required("Full name is required"),
   });
 
-  const Modal = ({ isVisible, onClose }) => {
+  const FormModal = ({ isVisible, onClose }) => {
     if (!isVisible) return null;
 
     return (
       <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-20'>
-        <div className='bg-white p-8 rounded-md w-[80%] mx-auto'>
+        <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%]'>
           <div className='relative mb-6'>
             <h2 className='font-bold'>Dr. Drills Waitlist</h2>
             <button className='absolute top-0 right-0' onClick={onClose}>
@@ -90,6 +98,31 @@ const ProductsPage = () => {
               </Form>
             )}
           </Formik>
+        </div>
+      </div>
+    );
+  };
+
+  const ResponseModal = ({ isVisible, onClose, message, isSuccess }) => {
+    if (!isVisible) return null;
+
+    return (
+      <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
+        <div
+          className={`bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%] ${
+            !isSuccess ? "border border-red-500" : ""
+          }`}
+        >
+          <div className='text-center'>
+            <p className={`text-lg ${!isSuccess ? "text-red-500" : "text-green-500"}`}>{message}</p>
+          </div>
+
+          <button
+            className='bg-blue-600 text-white text-center py-2 mt-4 w-full rounded'
+            onClick={onClose}
+          >
+            Close
+          </button>
         </div>
       </div>
     );
@@ -340,10 +373,10 @@ const ProductsPage = () => {
         )}
 
         {submissionResponse && (
-          <div className='fixed inset-0 w-[80%] flex items-center justify-center bg-black bg-opacity-80 z-30'>
-            <div className='bg-white p-8 rounded-md'>
-              <div>
-                <p>{submissionResponse}</p>
+          <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
+            <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%]'>
+              <div className='text-center'>
+                <p className='text-lg'>{submissionResponse}</p>
               </div>
 
               <button
@@ -356,7 +389,15 @@ const ProductsPage = () => {
           </div>
         )}
 
-        {isModalVisible && <Modal isVisible={isModalVisible} onClose={closeModal} />}
+        <FormModal isVisible={isFormModalVisible} onClose={closeFormModal} />
+
+        {/* RESPONSE MODAL */}
+        <ResponseModal
+          isVisible={isResponseModalVisible}
+          onClose={closeResponseModal}
+          message={submissionResponse}
+          isSuccess={isSuccess}
+        />
       </div>
     </div>
   );
