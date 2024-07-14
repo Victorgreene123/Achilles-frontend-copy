@@ -228,19 +228,7 @@ const Testimonials = () => {
         ))}
       </Carousel>
     
-      <div className="flex justify-end gap-1 pb-10">
-
-        <CustomLeftArrow
-          onClick={() => carouselRef.current.previous()}
-          className="left-arrow"
-          disabled={currentSlide === 0}
-        />
-        <CustomRightArrow
-          onClick={() => carouselRef.current.next()}
-          className="right-arrow"
-          disabled={currentSlide === testimonial.length - 1}
-        />
-      </div>
+     
     </div>
   );
 };
