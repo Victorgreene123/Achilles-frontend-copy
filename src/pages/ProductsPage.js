@@ -97,16 +97,16 @@ const ProductsPage = () => {
 
   return (
     <div className='relative'>
-      <div className='bg-gray-200 pt-12'>
+      <div className='bg-[#F3F5FA] pt-12'>
         <div className='max-w-[90%] mx-auto pb-12 sm:max-w-[85%] lg:pb-24'>
-          <p className='text-xs text-white font-bold bg-blue-800 py-2 px-8 inline-block mb-8 rounded-sm lg:text-sm'>
+          <p className='text-xs text-white font-bold bg-[#214198] py-2 px-8 inline-block mb-8 rounded-sm lg:text-sm'>
             PRODUCTS
           </p>
 
           <div className='md:max-w-[78%] lg:max-w-[80%] xl:max-w-[60%]'>
-            <h1 className='text-3xl text-blue-800 font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-tight xl:text-[3.5rem]'>
-              Shaping Africa's <span className='text-orange-600'>med excellence</span> with our{" "}
-              <span className='text-orange-600'>product lines</span>
+            <h1 className='text-3xl text-[#081640] font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[72px] xl:text-[3.5rem]'>
+              Shaping Africa's <span className='text-[#f18337]'>med excellence</span> with our{" "}
+              <span className='text-[#f18337]'>product lines</span>
             </h1>
           </div>
         </div>
@@ -118,8 +118,8 @@ const ProductsPage = () => {
           <button
             className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
               activeSection === "LECTURE_BANKS"
-                ? "active text-blue-600 border-b-2 border-blue-200"
-                : "text-blue-600 border-b-2 border-blue-200"
+                ? "active text-white border-b-2 border-blue-200"
+                : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("LECTURE_BANKS")}
           >
@@ -129,8 +129,9 @@ const ProductsPage = () => {
           <button
             className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
               activeSection === "PAST_QUESTIONS"
-                ? "active text-blue-600 border-b-2 border-blue-200"
-                : "text-blue-600 border-b-2 border-blue-200"
+                ? "active text-white border-b-2 border-blue-200"
+                : "text-[#535353] border-b-2 border-blue-200"
+
             }`}
             onClick={() => setActiveSection("PAST_QUESTIONS")}
           >
@@ -140,8 +141,8 @@ const ProductsPage = () => {
           <button
             className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
               activeSection === "YOUTUBE_VIDEOS"
-                ? "active text-blue-600 border-b-2 border-blue-200"
-                : "text-blue-600 border-b-2 border-blue-200"
+                 ? "active text-white border-b-2 border-blue-200"
+                : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("YOUTUBE_VIDEOS")}
           >
@@ -151,12 +152,12 @@ const ProductsPage = () => {
           <button
             className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
               activeSection === "DR_DRILLS"
-                ? "active text-blue-600 border-b-2 border-blue-200"
-                : "text-blue-600 border-b-2 border-blue-200"
+                 ? "active text-white border-b-2 border-blue-200"
+                : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("DR_DRILLS")}
           >
-            DR. DRILLS <i>&#40;coming soon&#41;</i>
+            DR. DRILLS &#40;coming soon&#41;
           </button>
         </div>
 

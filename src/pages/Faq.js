@@ -6,7 +6,7 @@ const faq = () => {
   return (
     <>
       <div className=''>
-        <div className='bg-gray-200 pt-16 pb-20'>
+        <div className='bg-[#F3F5FA] pt-16 pb-20'>
           <div className='max-w-[85%] mx-auto'>
             <h1 className='text-[#f18337] text-3xl sm:text-4xl lg:text-6xl'>Frequently</h1>
             <h1 className='text-3xl sm:text-4xl lg:text-6xl'>Asked Questions</h1>

@@ -15,10 +15,10 @@ const ArticlePage = ({ data }) => {
 
   return (
     <div>
-      <div className='bg-[#efeff3] mb-4'>
+      <div className='bg-[#F3F5FA] mb-4'>
         <div className='pt-8 pb-12 w-[90%] mx-auto'>
           <div>
-            <h1 className='text-center text-xl font-bold mb-6 tracking-tight md:text-2xl md:my-10 lg:text-4xl'>
+            <h1 className='text-center text-[#040C25] text-xl font-bold mb-6 tracking-tight md:text-2xl md:my-10 lg:text-2xl'>
               {article.title}
             </h1>
           </div>

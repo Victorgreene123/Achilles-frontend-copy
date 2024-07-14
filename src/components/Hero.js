@@ -23,7 +23,7 @@ const Hero = () => {
             href="https://wa.link/6lhnja"
             className="text-white text-sm bg-[#274CB2] rounded-full px-4 py-3"
           >
-            Check out Responses
+            Check out Resources
           </a>
           <a href="/" className="flex flex-col items-center">
             <div className="flex items-center gap-1">
