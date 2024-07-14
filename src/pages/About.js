@@ -24,7 +24,7 @@ const About = () => {
 
   return (
     <div className='overflow-x-hidden'>
-      <div className='relative w-full lg:h-screen h-[50vh]'>
+      <div className='relative w-full lg:h-screen h-[50vh] sm:h-[70vh] md:h-[50vh]'>
         <video
           playsInline
           className='absolute inset-0 w-full h-full object-cover z-0'

@@ -102,7 +102,7 @@ const Team = () => {
 
   return (
     <div className='bg-[#274CB2]'>
-      <div className='container mx-auto p-10 space-y-20'>
+      <div className='w-[95%] mx-auto p-10 space-y-20'>
         <div className='space-y-5'>
           <div className='flex justify-start'>
             <div className='bg-slate-300 w-44 h-1'></div>
@@ -112,14 +112,18 @@ const Team = () => {
           <h2 className='text-3xl text-white font-semibold'>Meet the team</h2>
         </div>
 
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 container mx-auto'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto'>
           {team.map((item) => (
             <div
               key={item.id}
               className='bg-white hover:bg-[#1D3B8A] hover:text-white transition duration-300 group md:w-full'
             >
               <div>
-                <img src={item.image} alt='' className='w-full h-64 object-cover object-top' />
+                <img
+                  src={item.image}
+                  alt=''
+                  className='w-full h-64 object-cover object-top lg:h-80 xl:h-96'
+                />
               </div>
 
               <div className='px-5 py-10 flex justify-between items-center'>
