@@ -112,19 +112,18 @@ const Team = () => {
           <h2 className='text-3xl text-white font-semibold'>Meet the team</h2>
         </div>
 
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto'>
+        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto lg:gap-6 xl:gap-10'>
           {team.map((item) => (
             <div
               key={item.id}
               className='bg-white hover:bg-[#1D3B8A] hover:text-white transition duration-300 group md:w-full'
             >
               <div>
-              <img
-  src={item.image}
-  alt=''
-  className='w-full h-64 object-cover lg:object-top object-top lg:h-80 xl:h-96'
-/>
-
+                <img
+                  src={item.image}
+                  alt=''
+                  className='w-full h-64 object-cover lg:object-top object-top lg:h-80 xl:h-96'
+                />
               </div>
 
               <div className='px-5 py-10 flex justify-between items-center'>
