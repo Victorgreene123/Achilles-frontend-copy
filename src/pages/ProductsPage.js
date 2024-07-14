@@ -8,25 +8,33 @@ import Youtube from "../components/YoutubeVid";
 
 const ProductsPage = () => {
   const [activeSection, setActiveSection] = useState("LECTURE_BANKS");
-  const [isModalVisible, setModalVisible] = useState(false);
+  const [isFormModalVisible, setFormModalVisible] = useState(false);
+  const [isResponseModalVisible, setResponseModalVisible] = useState(false);
   const [submissionResponse, setSubmissionResponse] = useState(null);
   const [isSuccess, setIsSuccess] = useState(true);
 
-  const openModal = () => setModalVisible(true);
-  const closeModal = () => setModalVisible(false);
+  const openFormModal = () => setFormModalVisible(true);
+  const closeFormModal = () => setFormModalVisible(false);
+  const openResponseModal = () => setResponseModalVisible(true);
+  const closeResponseModal = () => setResponseModalVisible(false);
+
   const endPoint = "https://achilles-web-be.onrender.com/waitlist/join";
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
       const response = await axios.post(endPoint, values);
-      console.log(response.data);
+      // console.log(response.data);
       setSubmissionResponse(response.data.message);
       setIsSuccess(true);
       resetForm();
-      openModal();
+      closeFormModal();
+      openResponseModal();
     } catch (error) {
-      console.error("Error submitting form:", error);
+      // console.error(error);
+      setSubmissionResponse(error.response.data.message);
       setIsSuccess(false);
+      closeFormModal();
+      openResponseModal();
     } finally {
       setSubmitting(false);
     }
@@ -37,12 +45,12 @@ const ProductsPage = () => {
     name: Yup.string().required("Full name is required"),
   });
 
-  const Modal = ({ isVisible, onClose }) => {
+  const FormModal = ({ isVisible, onClose }) => {
     if (!isVisible) return null;
 
     return (
       <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-20'>
-        <div className='bg-white p-8 rounded-md w-[80%] mx-auto'>
+        <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%]'>
           <div className='relative mb-6'>
             <h2 className='font-bold'>Dr. Drills Waitlist</h2>
             <button className='absolute top-0 right-0' onClick={onClose}>
@@ -95,6 +103,31 @@ const ProductsPage = () => {
     );
   };
 
+  const ResponseModal = ({ isVisible, onClose, message, isSuccess }) => {
+    if (!isVisible) return null;
+
+    return (
+      <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
+        <div
+          className={`bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%] ${
+            !isSuccess ? "border border-red-500" : ""
+          }`}
+        >
+          <div className='text-center'>
+            <p className={`text-lg ${!isSuccess ? "text-red-500" : "text-green-500"}`}>{message}</p>
+          </div>
+
+          <button
+            className='bg-blue-600 text-white text-center py-2 mt-4 w-full rounded'
+            onClick={onClose}
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className='relative'>
       <div className='bg-[#F3F5FA] pt-12'>
@@ -113,10 +146,10 @@ const ProductsPage = () => {
       </div>
 
       {/* NAVIGATION BUTTONS */}
-      <div className='max-w-[90%] mx-auto sm:max-w-[80%]'>
+      <div className='max-w-[90%] mx-auto sm:max-w-[85%]'>
         <div className='mt-8 mb-8 flex flex-col gap-6 lg:justify-between lg:flex-row lg:mt-10'>
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "LECTURE_BANKS"
                 ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
@@ -127,11 +160,10 @@ const ProductsPage = () => {
           </button>
 
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "PAST_QUESTIONS"
                 ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
-
             }`}
             onClick={() => setActiveSection("PAST_QUESTIONS")}
           >
@@ -139,9 +171,9 @@ const ProductsPage = () => {
           </button>
 
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "YOUTUBE_VIDEOS"
-                 ? "active text-white border-b-2 border-blue-200"
+                ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("YOUTUBE_VIDEOS")}
@@ -150,9 +182,9 @@ const ProductsPage = () => {
           </button>
 
           <button
-            className={`text-xs font-bold text-center py-3 w-full lg:text-base lg:text-left ${
+            className={`text-xs font-bold text-center py-3 w-full lg:text-sm lg:text-left ${
               activeSection === "DR_DRILLS"
-                 ? "active text-white border-b-2 border-blue-200"
+                ? "active text-white border-b-2 border-blue-200"
                 : "text-[#535353] border-b-2 border-blue-200"
             }`}
             onClick={() => setActiveSection("DR_DRILLS")}
@@ -161,7 +193,7 @@ const ProductsPage = () => {
           </button>
         </div>
 
-        {/* CONTENT SECTIONS */}
+        {/* LECTURE BANKS */}
         {activeSection === "LECTURE_BANKS" && (
           <div className='mb-40 lg:flex gap-4 align-stretch'>
             <div className='mb-6 lg:flex-[3]'>
@@ -218,6 +250,7 @@ const ProductsPage = () => {
           </div>
         )}
 
+        {/* PAST QUESTIONS */}
         {activeSection === "PAST_QUESTIONS" && (
           <div className='lg:flex gap-4 mb-40'>
             <div className='mb-2 bg-[#fdede3] flex-1'>
@@ -256,12 +289,14 @@ const ProductsPage = () => {
           </div>
         )}
 
+        {/* YOUTUBE VIDEOS */}
         {activeSection === "YOUTUBE_VIDEOS" && (
           <div className='mb-40 z-0 lg:flex gap-4'>
-            <div className='mb-8 lg:flex-[3]'>
+            <div className='mb-8 flex-[3]'>
+              {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' /> */}
               <Youtube
                 src='https://www.youtube.com/embed/xi1sKqM-QkA?si=Tuvagj4olryfeVWU'
-                title='Welcome to Achilles Drill'
+                title='Welcome to achilles drill'
                 style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
               />
               <div className='bg-black text-center py-4'>
@@ -269,31 +304,56 @@ const ProductsPage = () => {
               </div>
             </div>
 
-            <div className='lg:flex-[3]'>
+            <div className='flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
-                <Youtube
-                  src='https://www.youtube.com/embed/ogBByvsk0VU?si=X3JvHjx-UI7DG1uX'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                <div className='relative'>
+                  <div className='py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='https://www.youtube.com/watch?v=gOhGsrayF18' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
 
-                <Youtube
-                  src='https://www.youtube.com/embed/P1NraMV6Ky8?si=I8UaLFoO_5JUOpj1'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                    <Youtube
+                      src='https://www.youtube.com/embed/ogBByvsk0VU?si=X3JvHjx-UI7DG1uX'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
 
-                <Youtube
-                  src='https://www.youtube.com/embed/tnADA37As6c?si=Sba7jAqEeX_Z4JyB'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-0 py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+                    <Youtube
+                      src='https://www.youtube.com/embed/P1NraMV6Ky8?si=I8UaLFoO_5JUOpj1'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
 
-                <Youtube
-                  src='https://www.youtube.com/embed/lToIUS5ITp4?si=Zs4TX4KZuYO53-32'
-                  title='Welcome to Achilles Drill'
-                  style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
-                />
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+                    <Youtube
+                      src='https://www.youtube.com/embed/tnADA37As6c?si=Sba7jAqEeX_Z4JyB'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
+
+                <div className='relative'>
+                  <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
+                    {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
+                    <Youtube
+                      src='https://www.youtube.com/embed/lToIUS5ITp4?si=Zs4TX4KZuYO53-32'
+                      title='Welcome to achilles drill'
+                      style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
+                    />
+                  </div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                </div>
               </div>
 
               <div className='bg-blue-600 text-center rounded-full mt-10 transition-all duration-300 hover:bg-blue-800 lg:mt-12'>
@@ -307,6 +367,7 @@ const ProductsPage = () => {
           </div>
         )}
 
+        {/* DR DRILLS */}
         {activeSection === "DR_DRILLS" && (
           <div className='mb-40 md:flex gap-8 items-end'>
             <div className='grow-0'>
@@ -322,16 +383,16 @@ const ProductsPage = () => {
                 <p className='text-xs text-red-500 font-bold py-2 px-4'>COMING SOON</p>
               </div>
 
-              <div className='lg:w-[80%]'>
-                <h3 className='text-blue-800 text-xl font-bold md:text-3xl lg:text-4xl lg:leading-normal'>
+              <div className='lg:w-[90%]'>
+                <h3 className='text-blue-800 text-xl font-bold md:text-2xl lg:text-4xl lg:leading-normal'>
                   Your personal <span className='text-orange-600'>smart AI study buddy</span>.
                 </h3>
               </div>
 
-              <div className='bg-blue-600 text-center rounded-full mt-4 transition-all duration-300 hover:bg-blue-800 md:mt-20'>
+              <div className='bg-blue-600 text-center rounded-full mt-4 transition-all duration-300 hover:bg-blue-800 md:mt-10 lg:mt-20'>
                 <button
                   className='text-xs text-white font-bold py-5 w-full h-full sm:text-sm'
-                  onClick={openModal}
+                  onClick={openFormModal}
                 >
                   GET NOTIFIED
                 </button>
@@ -341,10 +402,10 @@ const ProductsPage = () => {
         )}
 
         {submissionResponse && (
-          <div className='fixed inset-0 w-[80%] flex items-center justify-center bg-black bg-opacity-80 z-30'>
-            <div className='bg-white p-8 rounded-md'>
-              <div>
-                <p>{submissionResponse}</p>
+          <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
+            <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%]'>
+              <div className='text-center'>
+                <p className='text-lg'>{submissionResponse}</p>
               </div>
 
               <button
@@ -357,7 +418,19 @@ const ProductsPage = () => {
           </div>
         )}
 
-        {isModalVisible && <Modal isVisible={isModalVisible} onClose={closeModal} />}
+        <div className='relative'>
+          {isFormModalVisible && (
+            <FormModal isVisible={isFormModalVisible} onClose={closeFormModal} />
+          )}
+          {submissionResponse && (
+            <ResponseModal
+              isVisible={!!submissionResponse}
+              message={submissionResponse}
+              isSuccess={isSuccess}
+              onClose={() => setSubmissionResponse(null)}
+            />
+          )}
+        </div>
       </div>
     </div>
   );
