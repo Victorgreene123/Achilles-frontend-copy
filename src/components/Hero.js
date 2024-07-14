@@ -43,7 +43,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className='lg:flex lg:items-start lg:justify-center w-1/2  lg:h-[350px] h-[325px]   overflow-hidden'>
+      <div className='lg:flex lg:items-start lg:justify-center lg:w-1/2  lg:h-[350px] h-[325px]   overflow-hidden'>
       <div className="grid grid-cols-2 justify-center scrolling  ">
         <img className="w-full" src={rectangle137} alt="" />
         <img className="w-full" src={rectangle138} alt="" />
