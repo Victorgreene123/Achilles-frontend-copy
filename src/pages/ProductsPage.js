@@ -3,7 +3,13 @@ import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faSpinner,
+  faTimes,
+  faCheckCircle,
+  faTimesCircle,
+  faExclamationCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import Youtube from "../components/YoutubeVid";
 
 const ProductsPage = () => {
@@ -30,8 +36,11 @@ const ProductsPage = () => {
       closeFormModal();
       openResponseModal();
     } catch (error) {
-      // console.error(error);
-      setSubmissionResponse(error.response.data.message);
+      if (error.message === "Network Error") {
+        setSubmissionResponse("Please Check Your Network and Try Again!");
+      } else {
+        setSubmissionResponse(error.response?.data.message || "An error occurred");
+      }
       setIsSuccess(false);
       closeFormModal();
       openResponseModal();
@@ -50,7 +59,7 @@ const ProductsPage = () => {
 
     return (
       <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-20'>
-        <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%]'>
+        <div className='bg-white p-8 rounded-md w-[80%] mx-auto md:w-[70%] lg:w-[40%]'>
           <div className='relative mb-6'>
             <h2 className='font-bold'>Dr. Drills Waitlist</h2>
             <button className='absolute top-0 right-0' onClick={onClose}>
@@ -70,7 +79,7 @@ const ProductsPage = () => {
                     type='email'
                     name='email'
                     placeholder='Email'
-                    className='w-full p-2 border border-gray-300 rounded'
+                    className='w-full text-sm p-2 border border-gray-300 rounded outline-none'
                   />
                   <ErrorMessage
                     name='email'
@@ -84,12 +93,12 @@ const ProductsPage = () => {
                     type='text'
                     name='name'
                     placeholder='Full Name'
-                    className='w-full p-2 border border-gray-300 rounded'
+                    className='w-full p-2 text-sm border border-gray-300 rounded outline-none'
                   />
                   <ErrorMessage name='name' component='div' className='text-red-500 text-sm mt-1' />
                 </div>
 
-                <div className='bg-blue-600 text-white text-center transition-all duration-[0.3s] hover:bg-blue-900'>
+                <div className='bg-blue-600 text-white text-center rounded transition-all duration-[0.3s] hover:bg-blue-900'>
                   <button type='submit' disabled={isSubmitting} className='w-full py-2'>
                     {isSubmitting && <FontAwesomeIcon icon={faSpinner} className='animate-spin' />}
                     &nbsp; SUBMIT
@@ -106,19 +115,46 @@ const ProductsPage = () => {
   const ResponseModal = ({ isVisible, onClose, message, isSuccess }) => {
     if (!isVisible) return null;
 
+    const getTextColor = () => {
+      if (
+        message === "You are already on the Dr. Drills Wait-List! Keep watching out!" ||
+        message === "You have just joined the Dr. Drills Wait-List. Watch out for more information!"
+      ) {
+        return "text-[#214198]";
+      } else if (message === "Network Error") {
+        return "text-red-500";
+      }
+      return isSuccess ? "text-[#214198]" : "text-red-500";
+    };
+
+    const getIcon = () => {
+      if (message === "You are already on the Dr. Drills Wait-List! Keep watching out!") {
+        return <FontAwesomeIcon icon={faExclamationCircle} className='mr-2' />;
+      } else if (message === "Network Error") {
+        return <FontAwesomeIcon icon={faTimesCircle} className='mr-2' />;
+      }
+      return isSuccess ? (
+        <FontAwesomeIcon icon={faCheckCircle} className='mr-2' />
+      ) : (
+        <FontAwesomeIcon icon={faTimesCircle} className='mr-2' />
+      );
+    };
+
     return (
       <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
-        <div
-          className={`bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%] ${
-            !isSuccess ? "border border-red-500" : ""
-          }`}
-        >
+        <div className='bg-white p-8 rounded-md w-[80%] mx-auto md:w-[70%] lg:w-[40%] shadow-lg transform transition-all'>
           <div className='text-center'>
-            <p className={`text-lg ${!isSuccess ? "text-red-500" : "text-green-500"}`}>{message}</p>
+            <div className={`${getTextColor()} text-6xl mb-8`}>{getIcon()}</div>
+
+            <div
+              className={`text-lg flex flex-col items-center justify-center mb-10 ${getTextColor()}`}
+            >
+              {message}
+            </div>
           </div>
 
           <button
-            className='bg-blue-600 text-white text-center py-2 mt-4 w-full rounded'
+            className='bg-blue-600 text-white text-center py-2 mt-4 w-full rounded transition-transform transform hover:scale-105'
             onClick={onClose}
           >
             Close
@@ -403,7 +439,7 @@ const ProductsPage = () => {
 
         {submissionResponse && (
           <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
-            <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[50%]'>
+            <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[40%]'>
               <div className='text-center'>
                 <p className='text-lg'>{submissionResponse}</p>
               </div>
