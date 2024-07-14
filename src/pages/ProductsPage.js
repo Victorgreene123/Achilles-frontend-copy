@@ -438,7 +438,7 @@ const ProductsPage = () => {
         )}
 
         {submissionResponse && (
-          <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
+          <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-30'>
             <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[40%]'>
               <div className='text-center'>
                 <p className='text-lg'>{submissionResponse}</p>

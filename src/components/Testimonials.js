@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import image1 from "../Assets/schools logos/image 19-1.png";
 import unilag from "../Assets/schools logos/UNILAG.png"
 import ui from "../Assets/schools logos/UI.png"
@@ -16,6 +15,7 @@ import "react-multi-carousel/lib/styles.css";
 
 const Testimonials = () => {
   const carouselRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const testimonial = [
     {
@@ -78,6 +78,56 @@ const Testimonials = () => {
         "This product has been amazing for my medical school journey. The comprehensive lecture banks cover everything from basic sciences to clinical rotations. The past questions are invaluable for exam prep, providing practical knowledge tests. The YouTube videos are engaging and perfect for visual learners. I highly recommend it to any medical student aiming to excel.",
       image: eclipse1,
     },
+    {
+      id: 7,
+      head: "Life-changing Experience",
+      logo: uniben,
+      names: "Chinedu O.",
+      school: "Engineering, Uniben",
+      message:
+        "Achilles Drill has completely transformed my study habits. The structured lessons and interactive content have made learning much more engaging and effective. I couldn't have asked for a better study tool.",
+      image: eclipse1,
+    },
+    {
+      id: 8,
+      head: "Remarkable Improvement",
+      logo: oou,
+      names: "Fatimah S.",
+      school: "Law, OOU",
+      message:
+        "The impact Achilles Drill has had on my academic performance is remarkable. The resources are top-notch, and the support from the team is unparalleled. I've seen a significant improvement in my grades.",
+      image: eclipse2,
+    },
+    {
+      id: 9,
+      head: "Exceptional Resource",
+      logo: Lasu,
+      names: "Segun A.",
+      school: "Business Administration, LASU",
+      message:
+        "Achilles Drill is an exceptional resource for students. The breadth and depth of the material are impressive, and it's tailored to meet the needs of students at all levels. Highly recommended!",
+      image: eclipse3,
+    },
+    {
+      id: 10,
+      head: "Outstanding Support",
+      logo: ui,
+      names: "Ifeoma N.",
+      school: "Computer Science, UI",
+      message:
+        "The support from the Achilles team has been outstanding. They are always available to help and provide guidance. The tutorials are clear, concise, and very helpful for understanding complex concepts.",
+      image: eclipse2,
+    },
+    {
+      id: 11,
+      head: "Highly Effective",
+      logo: unilag,
+      names: "James T.",
+      school: "Medicine, Unilag",
+      message:
+        "Achilles Drill is a highly effective study tool. The combination of video lectures, practice questions, and study guides has made my preparation for exams much more efficient. I highly recommend it to all students.",
+      image: eclipse3,
+    },
   ];
 
   const responsive = {
@@ -98,84 +148,98 @@ const Testimonials = () => {
     },
   };
 
-  const CustomLeftArrow = ({ onClick, className }) => (
-    <button onClick={onClick} className={`bg-white p-2 rounded-full ${className}`}>
+  const CustomLeftArrow = ({ onClick, className, disabled }) => (
+    <button
+      onClick={onClick}
+      className={`bg-white p-2 rounded-full ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+      disabled={disabled}
+    >
       <svg
-        width='47'
-        height='35'
+        width='30'
+        height='22'
         viewBox='0 0 47 35'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
           d='M0.0876923 16.9026C0.165405 16.4946 0.349976 16.1546 0.641399 15.8826L17.3983 0L20.1377 3.20566L7.37329 15.2998H46.6572V19.642H7.37329L20.1377 31.7652L17.3983 35L0.641399 19.0883C0.349976 18.7968 0.165405 18.4666 0.0876923 18.0974C-0.0288773 17.6894 -0.0288773 17.2911 0.0876923 16.9026Z'
-          fill='#C1C1C1'
+          fill={ `${disabled ? '#C1C1C1' : "#EE6B11"}`}
         />
       </svg>
     </button>
   );
 
-  const CustomRightArrow = ({ onClick, className }) => (
-    <button onClick={onClick} className={`bg-white p-2 rounded-full ${className}`}>
+  const CustomRightArrow = ({ onClick, className, disabled }) => (
+    <button
+      onClick={onClick}
+      className={`bg-white p-2 rounded-full ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+      disabled={disabled}
+    >
       <svg
-        width='48'
-        height='35'
+        width='30'
+        height='22'
         viewBox='0 0 48 35'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
           d='M47.1018 16.9026C47.024 16.4946 46.8395 16.1546 46.5481 15.8826L29.7912 0L27.0518 3.20566L39.8162 15.2998H0.532227V19.642H39.8162L27.0518 31.7652L29.7912 35L46.5481 19.0883C46.8395 18.7968 47.024 18.4666 47.1018 18.0974C47.2183 17.6894 47.2183 17.2911 47.1018 16.9026Z'
-          fill='#EE6B11'
+          fill={ `${disabled ? '#C1C1C1' : "#EE6B11"}`}
         />
       </svg>
     </button>
   );
 
-  return (
-    <div className='relative py-20 px-10 lg:px-10 gap-10'>
-      {/* Top Arrows */}
-      <div className='flex justify-end gap-2 pb-10'>
-        <CustomLeftArrow onClick={() => carouselRef.current.previous()} className='ml-2 mt-2' />
-        <CustomRightArrow onClick={() => carouselRef.current.next()} className='mr-2 mt-2' />
-      </div>
+  const beforeChange = (nextSlide) => {
+    setCurrentSlide(nextSlide);
+  };
 
+  const afterChange = (previousSlide, { currentSlide }) => {
+    setCurrentSlide(currentSlide);
+  };
+
+  return (
+    <div className="relative py-20 px-10 lg:px-10 gap-10">
+      <div className="flex justify-end gap-1 pb-10">
+        <CustomLeftArrow
+          onClick={() => carouselRef.current.previous()}
+          className="left-arrow"
+          disabled={currentSlide === 0}
+        />
+        <CustomRightArrow
+          onClick={() => carouselRef.current.next()}
+          className="right-arrow"
+          disabled={currentSlide === testimonial.length - 1}
+        />
+      </div>
       <Carousel
         ref={carouselRef}
-        swipeable={true}
-        draggable={true}
-        showDots={false}
         responsive={responsive}
-        ssr={true}
-        infinite={true}
-        keyBoardControl={true}
-        customTransition='transform 0.7s ease'
-        transitionDuration={500}
-        containerClass='carousel-container'
-        dotListClass='custom-dot-list-style'
-        itemClass='carousel-item-padding-40-px'
-        customLeftArrow={<CustomLeftArrow onClick={() => carouselRef.current.previous()} />}
-        customRightArrow={<CustomRightArrow onClick={() => carouselRef.current.next()} />}
+        beforeChange={beforeChange}
+        afterChange={afterChange}
+        arrows={false}
+        
+      
+        infinite
       >
         {testimonial.map((item) => (
-          <div key={item.id} className='mx-1 lg:mx-5'>
-            <Testimonial
-              key={item.id}
-              head={item.head}
-              logo={item.logo}
-              names={item.names}
-              school={item.school}
-              message={item.message}
-              image={item.image}
-            />
-          </div>
+           <div key={item.id} className='mx-1 lg:mx-5'>
+          <Testimonial key={item.id} {...item} /></div>
         ))}
       </Carousel>
+    
+      <div className="flex justify-end gap-1 pb-10">
 
-      {/* Bottom Arrows */}
-      <div className='flex justify-end gap-2 pt-10'>
-        <CustomLeftArrow onClick={() => carouselRef.current.previous()} className='ml-2 mb-2' />
-        <CustomRightArrow onClick={() => carouselRef.current.next()} className='mr-2 mb-2' />
+        <CustomLeftArrow
+          onClick={() => carouselRef.current.previous()}
+          className="left-arrow"
+          disabled={currentSlide === 0}
+        />
+        <CustomRightArrow
+          onClick={() => carouselRef.current.next()}
+          className="right-arrow"
+          disabled={currentSlide === testimonial.length - 1}
+        />
       </div>
     </div>
   );
