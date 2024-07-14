@@ -119,11 +119,12 @@ const Team = () => {
               className='bg-white hover:bg-[#1D3B8A] hover:text-white transition duration-300 group md:w-full'
             >
               <div>
-                <img
-                  src={item.image}
-                  alt=''
-                  className='w-full h-64 object-cover object-top lg:h-80 xl:h-96'
-                />
+              <img
+  src={item.image}
+  alt=''
+  className='w-full h-64 object-cover lg:object-top object-top lg:h-80 xl:h-96'
+/>
+
               </div>
 
               <div className='px-5 py-10 flex justify-between items-center'>
