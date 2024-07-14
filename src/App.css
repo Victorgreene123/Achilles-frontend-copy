@@ -22,7 +22,17 @@ body {
     transform: scale(1);
   }
 }
-
+@keyframes scrollVertical {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-25%); }
+  50% { transform: translateY(-50%); }
+  75% { transform: translateY(-75%); }
+  100% { transform: translateY(0); }
+ 
+}
+.scrolling {
+  animation: scrollVertical 10s infinite;
+}
 .fade-in {
   animation: fadeIn 1.2s ease-out forwards;
 }
