@@ -1,14 +1,15 @@
 import React, { useRef, useState } from "react";
 import image1 from "../Assets/schools logos/image 19-1.png";
-import unilag from "../Assets/schools logos/UNILAG.png"
-import ui from "../Assets/schools logos/UI.png"
-import uniben from "../Assets/schools logos/UNIBEN.png"
-import oou from "../Assets/schools logos/OOU.svg"
-import Lasu from "../Assets/schools logos/LASU.png"
-import aifunai from '../Assets/schools logos/AE-FUNAI.jpg'
+import unilag from "../Assets/schools logos/UNILAG.png";
+import ui from "../Assets/schools logos/UI.png";
+import uniben from "../Assets/schools logos/UNIBEN.png";
+import oou from "../Assets/schools logos/OOU.svg";
+import Lasu from "../Assets/schools logos/LASU.png";
+import aifunai from "../Assets/schools logos/AE-FUNAI.jpg";
 import eclipse1 from "../Assets/Ellipse 1.png";
 import eclipse2 from "../Assets/Ellipse 1 (1).png";
 import eclipse3 from "../Assets/Ellipse 1 (2).png";
+import eclipse4 from "../Assets/test.JPG";
 import Testimonial from "./Testimonial";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -20,7 +21,7 @@ const Testimonials = () => {
   const testimonial = [
     {
       id: 1,
-      head: "Achilles Deill made it easy",
+      head: "Achilles Drill made it easy",
       logo: unilag,
       names: "Victoire",
       school: "MLS , Unilag",
@@ -36,7 +37,7 @@ const Testimonials = () => {
       school: "Pharmacy , UI",
       message:
         "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
-      image: eclipse2,
+      image: eclipse3,
     },
     {
       id: 3,
@@ -46,13 +47,9 @@ const Testimonials = () => {
       school: "Pharmacology , Unilag",
       message:
         "“…for real your first clip on Anatomical terms motivated me. The first time I read a slide on anatomy, it was on femoral artery during the holidays, it felt like I was reading Chinese because I couldn’t understand anything. I’m so glad I checked out the Telegram GC for your lectures…”",
-      image: eclipse3,
+      image: eclipse4,
     },
- 
-    
-    
-    
-   
+
     {
       id: 11,
       head: "From having 40-50% into having 70-75%",
@@ -61,7 +58,7 @@ const Testimonials = () => {
       school: "Medicine, AE-FUNIA",
       message:
         "…please don’t stop what you are doing, your videos helped me jump from having 40-50% into having 70-75% in steeplechase anatomy exam…I have dragged many of my coursemates and YouTube fam to see the gold you’ve uploaded on your channel…",
-      image: eclipse3,
+      image: eclipse2,
     },
   ];
 
@@ -86,7 +83,9 @@ const Testimonials = () => {
   const CustomLeftArrow = ({ onClick, className, disabled }) => (
     <button
       onClick={onClick}
-      className={`bg-white p-2 rounded-full ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+      className={`bg-white p-2 rounded-full ${className} ${
+        disabled ? "opacity-50 cursor-not-allowed" : ""
+      }`}
       disabled={disabled}
     >
       <svg
@@ -98,7 +97,7 @@ const Testimonials = () => {
       >
         <path
           d='M0.0876923 16.9026C0.165405 16.4946 0.349976 16.1546 0.641399 15.8826L17.3983 0L20.1377 3.20566L7.37329 15.2998H46.6572V19.642H7.37329L20.1377 31.7652L17.3983 35L0.641399 19.0883C0.349976 18.7968 0.165405 18.4666 0.0876923 18.0974C-0.0288773 17.6894 -0.0288773 17.2911 0.0876923 16.9026Z'
-          fill={ `${disabled ? '#C1C1C1' : "#EE6B11"}`}
+          fill={`${disabled ? "#C1C1C1" : "#EE6B11"}`}
         />
       </svg>
     </button>
@@ -107,7 +106,9 @@ const Testimonials = () => {
   const CustomRightArrow = ({ onClick, className, disabled }) => (
     <button
       onClick={onClick}
-      className={`bg-white p-2 rounded-full ${className} ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+      className={`bg-white p-2 rounded-full ${className} ${
+        disabled ? "opacity-50 cursor-not-allowed" : ""
+      }`}
       disabled={disabled}
     >
       <svg
@@ -119,7 +120,7 @@ const Testimonials = () => {
       >
         <path
           d='M47.1018 16.9026C47.024 16.4946 46.8395 16.1546 46.5481 15.8826L29.7912 0L27.0518 3.20566L39.8162 15.2998H0.532227V19.642H39.8162L27.0518 31.7652L29.7912 35L46.5481 19.0883C46.8395 18.7968 47.024 18.4666 47.1018 18.0974C47.2183 17.6894 47.2183 17.2911 47.1018 16.9026Z'
-          fill={ `${disabled ? '#C1C1C1' : "#EE6B11"}`}
+          fill={`${disabled ? "#C1C1C1" : "#EE6B11"}`}
         />
       </svg>
     </button>
@@ -134,16 +135,16 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative py-20 px-10 lg:px-10 gap-10">
-      <div className="flex justify-end gap-1 pb-10">
+    <div className='relative py-20 px-10 lg:px-10 gap-10'>
+      <div className='flex justify-end gap-1 pb-10'>
         <CustomLeftArrow
           onClick={() => carouselRef.current.previous()}
-          className="left-arrow"
+          className='left-arrow'
           disabled={currentSlide === 0}
         />
         <CustomRightArrow
           onClick={() => carouselRef.current.next()}
-          className="right-arrow"
+          className='right-arrow'
           disabled={currentSlide === testimonial.length - 1}
         />
       </div>
@@ -153,20 +154,13 @@ const Testimonials = () => {
         beforeChange={beforeChange}
         afterChange={afterChange}
         arrows={false}
-
       >
-
-
         {testimonial.map((item) => (
-           <div key={item.id} className='mx-1 lg:mx-5'>
-          <Testimonial key={item.id} {...item} /></div>
+          <div key={item.id} className='mx-1 lg:mx-5'>
+            <Testimonial key={item.id} {...item} />
+          </div>
         ))}
-
-
-
       </Carousel>
-    
-     
     </div>
   );
 };
