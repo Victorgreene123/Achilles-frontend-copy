@@ -28,56 +28,28 @@ const Testimonials = () => {
         "“...There were times I just felt like throwing my books away and giving up, I felt so choked, but somehow Achilles Drill made it easy to cope. I had As in all my Anatomy courses, first and second semester, you had a big hand in that. Thank you so much, I’m really grateful for all you did.”",
       image: eclipse1,
     },
-    {
-      id: 2,
-      head: "Totally Worth It",
-      logo: ui,
-      names: "Olabimpe",
-      school: "Pharmacy , UI",
-      message:
-        "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
-      image: eclipse2,
-    },
-    {
-      id: 3,
-      head: "Totally Worth It",
-      logo: unilag,
-      names: "Bukola",
-      school: "Pharmacology , Unilag",
-      message:
-        "“…for real your first clip on Anatomical terms motivated me. The first time I read a slide on anatomy, it was on femoral artery during the holidays, it felt like I was reading Chinese because I couldn’t understand anything. I’m so glad I checked out the Telegram GC for your lectures…”",
-      image: eclipse3,
-    },
-    {
-      id: 4,
-      head: "Totally Worth It",
-      logo: aifunai,
-      names: "Ruyina Eteng",
-      school: "MBBS, AE-FUNAI",
-      message:
-        "“…please don’t stop what you are doing, your videos helped me jump from having 40-50% into having 70-75% in steeplechase anatomy exam…I have dragged many of my coursemates and YouTube fam to see the gold you’ve uploaded on your channel…”",
-      image: eclipse2,
-    },
-    {
-      id: 5,
-      head: "Totally Worth It",
-      logo: unilag,
-      names: "Emmanuel K.",
-      school: "MBBS, Unilag",
-      message:
-        "This product has been amazing for my medical school journey. The comprehensive lecture banks cover everything from basic sciences to clinical rotations. The past questions are invaluable for exam prep, providing practical knowledge tests. The YouTube videos are engaging and perfect for visual learners. I highly recommend it to any medical student aiming to excel.",
-      image: eclipse3,
-    },
-    {
-      id: 6,
-      head: "Totally Worth It",
-      logo: unilag,
-      names: "Emmanuel K.",
-      school: "MBBS, Unilag",
-      message:
-        "This product has been amazing for my medical school journey. The comprehensive lecture banks cover everything from basic sciences to clinical rotations. The past questions are invaluable for exam prep, providing practical knowledge tests. The YouTube videos are engaging and perfect for visual learners. I highly recommend it to any medical student aiming to excel.",
-      image: eclipse1,
-    },
+    // {
+    //   id: 2,
+    //   head: "Totally Worth It",
+    //   logo: ui,
+    //   names: "Olabimpe",
+    //   school: "Pharmacy , UI",
+    //   message:
+    //     "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
+    //   image: eclipse2,
+    // },
+    // {
+    //   id: 3,
+    //   head: "Totally Worth It",
+    //   logo: unilag,
+    //   names: "Bukola",
+    //   school: "Pharmacology , Unilag",
+    //   message:
+    //     "“…for real your first clip on Anatomical terms motivated me. The first time I read a slide on anatomy, it was on femoral artery during the holidays, it felt like I was reading Chinese because I couldn’t understand anything. I’m so glad I checked out the Telegram GC for your lectures…”",
+    //   image: eclipse3,
+    // },
+ 
+    
     {
       id: 7,
       head: "Life-changing Experience",
@@ -218,14 +190,17 @@ const Testimonials = () => {
         beforeChange={beforeChange}
         afterChange={afterChange}
         arrows={false}
-        
-      
-        infinite
+
       >
+
+        
         {testimonial.map((item) => (
            <div key={item.id} className='mx-1 lg:mx-5'>
           <Testimonial key={item.id} {...item} /></div>
         ))}
+
+
+
       </Carousel>
     
      

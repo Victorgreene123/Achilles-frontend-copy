@@ -16,9 +16,9 @@ import Counter from "../components/counter";
 
 const About = () => {
   const result = [
-    { id: 1, rate: "90", title: "Success rate", unit: "%", icon: "successicon.png" },
-    { id: 2, rate: "1400", title: "Copies sold so far", unit: "", icon: "copies.png" },
-    { id: 3, rate: "24", title: "Schools reached", unit: "", icon: "schools.png" },
+    { id: 1, rate: "98", title: "Success rate", unit: "%", icon: "successicon.png" },
+    { id: 2, rate: "1200", title: "Copies sold so far", unit: "", icon: "copies.png" },
+    { id: 3, rate: "50", title: "Schools reached", unit: "", icon: "schools.png" },
   ];
 
   const images = [

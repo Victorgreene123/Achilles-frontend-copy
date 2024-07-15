@@ -17,12 +17,12 @@ const Hero = () => {
   return (
     <div className="bg-[#F0F2F5] p-10 lg:flex lg:items-center lg:justify-evenly space-y-10">
       <div className="text-center lg:text-left space-y-10 lg:w-2/4">
-        <h1 className="text-5xl lg:text-7xl font-semibold text-blue-950">
-          Conquer medical School with{" "}
-          <span className="text-[#f18337]">Ease</span>.
+        <h1 className="text-5xl lg:text-7xl font-semibold text-blue-950 tracking-tighter">
+          Ace medical School with{" "}
+          <span className="text-[#f18337] tracking-tighter">Ease</span>.
         </h1>
         <p className="text-sm lg:w-3/4">
-          Your one-stop-place for go-to destination for exam prep resources
+          Your one-stop destination for exam prep resources
           tailored for Nigerian medical students.
         </p>
         <div className="flex flex-col lg:flex-row gap-3 items-center">
@@ -44,15 +44,15 @@ const Hero = () => {
         </div>
       </div>
       <div className='lg:flex lg:items-start lg:justify-center lg:w-1/2  lg:h-[400px] h-[325px]   overflow-hidden'>
-      <div className="grid grid-cols-2 justify-center scrolling  ">
-        <img className="w-full  lg:h-[200px]" src={rectangle137} alt="" />
-        <img className="w-full lg:h-[200px]" src={rectangle138} alt="" />
-        <img className="w-full lg:h-[200px]" src={rectangle142} alt="" />
-        <img className="w-full lg:h-[200px]" src={rectangle143} alt="" />
-        <img className="w-full lg:h-[200px]" src={reactangle139} alt="" />
-        <img className="w-full lg:h-[200px]" src={reactangle140} alt="" />
-        <img className="w-full lg:h-[200px]" src={reactangle144} alt="" />
-        <img className="w-full lg:h-[200px]" src={rectangle141} alt="" />
+      <div className="grid grid-cols-2 justify-center scrolling ">
+        <img className="w-full  lg:h-auto" src={rectangle137} alt="" />
+        <img className="w-full lg:h-auto" src={rectangle138} alt="" />
+        <img className="w-full lg:h-auto" src={rectangle142} alt="" />
+        <img className="w-full lg:h-auto" src={rectangle143} alt="" />
+        <img className="w-full lg:h-auto" src={reactangle139} alt="" />
+        <img className="w-full lg:h-auto" src={reactangle140} alt="" />
+        <img className="w-full lg:h-auto" src={reactangle144} alt="" />
+        <img className="w-full lg:h-auto" src={rectangle141} alt="" />
         
       </div>
       </div>
