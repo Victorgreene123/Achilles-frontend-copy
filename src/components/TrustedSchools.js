@@ -33,7 +33,7 @@ const TrustedSchools = () => {
          
         </div>
       </div>
-      <div className="flex flex-col items-center p-10 space-y-10">
+      <div className="flex flex-col items-center py-20 space-y-20">
         <h2 className="text-3xl lg:text-6xl text-center font-semibold text-blue-950 w-3/4 lg:w-2/4">
           We finally Hacked Med-school{" "}
           <span className="text-[#f18337]">for you</span> !

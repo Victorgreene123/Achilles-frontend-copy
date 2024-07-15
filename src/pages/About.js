@@ -100,7 +100,7 @@ const About = () => {
       </div>
 
       <div>
-        <div className='container px-10 py-24 mx-auto flex flex-col gap-20 items-center lg:items-start'>
+        <div className='container px-10 py-14 mt-0 mx-auto flex flex-col gap-20 items-center lg:items-start'>
           <div className='gap-10 flex flex-col items-center lg:items-start'>
             <div className='flex justify-center lg:justify-start'>
               <div className='bg-blue-700 w-48 h-1'></div>

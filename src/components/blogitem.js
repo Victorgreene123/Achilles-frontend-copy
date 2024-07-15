@@ -5,7 +5,11 @@ const BlogItem = (props) => {
   const location = useLocation();
   return (
     <div className='w-[90%] mx-auto box-border text-xs sm:text-sm md:text-sm lg:text-sm xl:text-sm p-4 '>
-      <img src={`/images/${props.image}`} className='w-full h-auto rounded-lg' alt={props.title} />
+       <Link
+          className='leading-relaxed text-justify mt-2'
+          to={`/article/${props.id}?page=${props.currentPage}`}
+          state={{ from: location }}
+        ><img src={`/images/${props.image}`} className='w-full h-auto rounded-lg' alt={props.title} /></Link>
 
       <div className='w-full flex items-center justify-between my-4'>
         <span className='text-gray-600'>{props.category}</span>
@@ -13,7 +17,11 @@ const BlogItem = (props) => {
       </div>
 
       <div className='leading-tight mt-2'>
-        <h3 className='text-[1.4rem] font-semibold mb-3'>{props.title}</h3>
+      <Link
+          className='leading-relaxed text-justify mt-2'
+          to={`/article/${props.id}?page=${props.currentPage}`}
+          state={{ from: location }}
+        ><h3 className='text-[1.4rem] font-semibold mb-3'>{props.title}</h3></Link>
         <p className='leading-relaxed text-justify mt-2'>{props.description}</p>
       </div>
 
@@ -23,7 +31,7 @@ const BlogItem = (props) => {
           to={`/article/${props.id}?page=${props.currentPage}`}
           state={{ from: location }}
         >
-          <button className="px-4 py-2 mx-1 border bg-white text-blue-500 rounded">
+          <button className="px-4 py-2 mx-1 border bg-blue-500 text-white rounded">
           Read More {">>>"}</button>
         </Link>
       </div>

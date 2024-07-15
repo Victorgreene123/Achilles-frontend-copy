@@ -184,8 +184,9 @@ const ContactUs = () => {
               </div>
 
               <div className='text-sm'>
-                <p>+234 910 218 4183</p>
-                <p>+234 810 538 8080</p>
+              
+              <p ><a href="tel:+2349069556424"> +234-906-955-6424</a></p>
+              <p><a href="tel:+2348108287800">+234-810-828-7800</a></p>
               </div>
             </div>
 
@@ -196,8 +197,8 @@ const ContactUs = () => {
               </div>
 
               <div className='text-sm'>
-                <p>+234 910 218 4183</p>
-                <p>+234 810 538 8080</p>
+                <p><a href="https://wa.me/09102184183">+234 910 218 4183</a></p>
+                <p><a href="https://wa.me/08105388080">+234 810 538 8080</a></p>
               </div>
             </div>
 
@@ -208,7 +209,10 @@ const ContactUs = () => {
               </div>
 
               <div>
-                <p>support@achillesdrill.com</p>
+               <p >
+              <a href="mailto:support@achillesdrill.com
+              ">support@achillesdrill.com</a>
+              </p>
               </div>
             </div>
           </div>

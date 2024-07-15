@@ -43,16 +43,16 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className='lg:flex lg:items-start lg:justify-center lg:w-2/5  lg:h-[400px] h-[325px]   overflow-hidden'>
+      <div className='lg:flex lg:items-start lg:justify-center lg:w-2/5  lg:h-[408px] h-[325px]   overflow-hidden'>
       <div className="grid grid-cols-2 justify-center scrolling ">
-        <img className="w-full  lg:h-auto" src={rectangle137} alt="" />
-        <img className="w-full lg:h-auto" src={rectangle138} alt="" />
-        <img className="w-full lg:h-auto" src={rectangle142} alt="" />
-        <img className="w-full lg:h-auto" src={rectangle143} alt="" />
-        <img className="w-full lg:h-auto" src={reactangle139} alt="" />
-        <img className="w-full lg:h-auto" src={reactangle140} alt="" />
-        <img className="w-full lg:h-auto" src={reactangle144} alt="" />
-        <img className="w-full lg:h-auto" src={rectangle141} alt="" />
+        <img className="w-[241px] lg:h[201px]" src={rectangle137} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={rectangle138} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={rectangle142} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={rectangle143} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={reactangle139} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={reactangle140} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={reactangle144} alt="" />
+        <img className="w-[241px] lg:h-[201px]" src={rectangle141} alt="" />
         
       </div>
       </div>
