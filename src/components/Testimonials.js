@@ -28,68 +28,31 @@ const Testimonials = () => {
         "“...There were times I just felt like throwing my books away and giving up, I felt so choked, but somehow Achilles Drill made it easy to cope. I had As in all my Anatomy courses, first and second semester, you had a big hand in that. Thank you so much, I’m really grateful for all you did.”",
       image: eclipse1,
     },
-    // {
-    //   id: 2,
-    //   head: "Totally Worth It",
-    //   logo: ui,
-    //   names: "Olabimpe",
-    //   school: "Pharmacy , UI",
-    //   message:
-    //     "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
-    //   image: eclipse2,
-    // },
-    // {
-    //   id: 3,
-    //   head: "Totally Worth It",
-    //   logo: unilag,
-    //   names: "Bukola",
-    //   school: "Pharmacology , Unilag",
-    //   message:
-    //     "“…for real your first clip on Anatomical terms motivated me. The first time I read a slide on anatomy, it was on femoral artery during the holidays, it felt like I was reading Chinese because I couldn’t understand anything. I’m so glad I checked out the Telegram GC for your lectures…”",
-    //   image: eclipse3,
-    // },
- 
-    
     {
-      id: 7,
-      head: "Life-changing Experience",
-      logo: uniben,
-      names: "Chinedu O.",
-      school: "Engineering, Uniben",
+      id: 2,
+      head: "Totally Worth It",
+      logo: ui,
+      names: "Olabimpe",
+      school: "Pharmacy , UI",
       message:
-        "Achilles Drill has completely transformed my study habits. The structured lessons and interactive content have made learning much more engaging and effective. I couldn't have asked for a better study tool.",
-      image: eclipse1,
-    },
-    {
-      id: 8,
-      head: "Remarkable Improvement",
-      logo: oou,
-      names: "Fatimah S.",
-      school: "Law, OOU",
-      message:
-        "The impact Achilles Drill has had on my academic performance is remarkable. The resources are top-notch, and the support from the team is unparalleled. I've seen a significant improvement in my grades.",
+        "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
       image: eclipse2,
     },
     {
-      id: 9,
-      head: "Exceptional Resource",
-      logo: Lasu,
-      names: "Segun A.",
-      school: "Business Administration, LASU",
+      id: 3,
+      head: "Totally Worth It",
+      logo: unilag,
+      names: "Bukola",
+      school: "Pharmacology , Unilag",
       message:
-        "Achilles Drill is an exceptional resource for students. The breadth and depth of the material are impressive, and it's tailored to meet the needs of students at all levels. Highly recommended!",
+        "“…for real your first clip on Anatomical terms motivated me. The first time I read a slide on anatomy, it was on femoral artery during the holidays, it felt like I was reading Chinese because I couldn’t understand anything. I’m so glad I checked out the Telegram GC for your lectures…”",
       image: eclipse3,
     },
-    {
-      id: 10,
-      head: "Outstanding Support",
-      logo: ui,
-      names: "Ifeoma N.",
-      school: "Computer Science, UI",
-      message:
-        "The support from the Achilles team has been outstanding. They are always available to help and provide guidance. The tutorials are clear, concise, and very helpful for understanding complex concepts.",
-      image: eclipse2,
-    },
+ 
+    
+    
+    
+   
     {
       id: 11,
       head: "Highly Effective",
@@ -193,7 +156,7 @@ const Testimonials = () => {
 
       >
 
-        
+
         {testimonial.map((item) => (
            <div key={item.id} className='mx-1 lg:mx-5'>
           <Testimonial key={item.id} {...item} /></div>
