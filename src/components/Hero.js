@@ -15,8 +15,8 @@ import { PiCaretDownBold } from "react-icons/pi";
 
 const Hero = () => {
   return (
-    <div className="bg-[#F0F2F5] p-10 lg:flex lg:items-center lg:justify-evenly space-y-10">
-      <div className="text-center lg:text-left space-y-10 lg:w-2/4">
+    <div className="bg-[#F0F2F5] p-10 lg:px-20 lg:flex lg:items-center lg:justify-evenly space-y-10">
+      <div className="text-center lg:text-left space-y-10 lg:w-2/4 ">
         <h1 className="text-5xl lg:text-7xl font-semibold text-blue-950 tracking-tighter">
           Ace medical School with{" "}
           <span className="text-[#f18337] tracking-tighter">Ease</span>.
@@ -43,9 +43,9 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className='lg:flex lg:items-start lg:justify-center lg:w-2/5  lg:h-[408px] h-[325px]   overflow-hidden'>
-      <div className="grid grid-cols-2 justify-center scrolling ">
-        <img className="w-[241px] lg:h[201px]" src={rectangle137} alt="" />
+      <div className='lg:flex lg:items-start lg:justify-center lg:w-2/5  lg:h-[411px] h-[325px]   overflow-hidden'>
+      <div className="grid grid-cols-2 gap-1 justify-center scrolling ">
+        <img className="w-[241px] lg:h-[201px]" src={rectangle137} alt="" />
         <img className="w-[241px] lg:h-[201px]" src={rectangle138} alt="" />
         <img className="w-[241px] lg:h-[201px]" src={rectangle142} alt="" />
         <img className="w-[241px] lg:h-[201px]" src={rectangle143} alt="" />
