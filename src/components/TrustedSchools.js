@@ -46,7 +46,7 @@ const TrustedSchools = () => {
           loop={false}
           muted={false}
         /> */}
-        <Youtube src="https://www.youtube.com/embed/gOhGsrayF18?si=JskSob52JPCur8D" style="w-full h-[200px] lg:w-4/5 lg:h-[530px]" title="Welcome to achilles drill"/>
+        <Youtube src="https://www.youtube.com/embed/gOhGsrayF18?si=JskSob52JPCur8D" style="w-4/5 h-[200px] lg:w-4/5 lg:h-[530px]" title="Welcome to achilles drill"/>
       </div>
     </div>
   );
