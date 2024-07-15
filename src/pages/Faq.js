@@ -93,7 +93,7 @@ const FAQ = () => {
               </div>
 
               <div className='hidden lg:block'>
-                <h1 className='text-6xl font-bold'>Got more</h1>
+                <h1 className='text-6xl font-bold text-blue-900'>Got more</h1>
                 <h1 className='text-6xl font-bold text-[#f18337]'>questions?</h1>
               </div>
 

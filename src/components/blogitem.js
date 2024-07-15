@@ -23,7 +23,8 @@ const BlogItem = (props) => {
           to={`/article/${props.id}?page=${props.currentPage}`}
           state={{ from: location }}
         >
-          Read More {">>>"}
+          <button className="px-4 py-2 mx-1 border bg-white text-blue-500 rounded">
+          Read More {">>>"}</button>
         </Link>
       </div>
     </div>
