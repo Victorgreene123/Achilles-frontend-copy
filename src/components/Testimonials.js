@@ -20,7 +20,7 @@ const Testimonials = () => {
   const testimonial = [
     {
       id: 1,
-      head: "Totally Worth It",
+      head: "Achilles Deill made it easy",
       logo: unilag,
       names: "Victoire",
       school: "MLS , Unilag",
@@ -30,7 +30,7 @@ const Testimonials = () => {
     },
     {
       id: 2,
-      head: "Totally Worth It",
+      head: "Keep building lives",
       logo: ui,
       names: "Olabimpe",
       school: "Pharmacy , UI",
@@ -40,7 +40,7 @@ const Testimonials = () => {
     },
     {
       id: 3,
-      head: "Totally Worth It",
+      head: "Motivated me",
       logo: unilag,
       names: "Bukola",
       school: "Pharmacology , Unilag",
@@ -55,12 +55,12 @@ const Testimonials = () => {
    
     {
       id: 11,
-      head: "Highly Effective",
-      logo: unilag,
-      names: "James T.",
-      school: "Medicine, Unilag",
+      head: "From having 40-50% into having 70-75%",
+      logo: aifunai,
+      names: "Ruyina Eteng",
+      school: "Medicine, AE-FUNIA",
       message:
-        "Achilles Drill is a highly effective study tool. The combination of video lectures, practice questions, and study guides has made my preparation for exams much more efficient. I highly recommend it to all students.",
+        "…please don’t stop what you are doing, your videos helped me jump from having 40-50% into having 70-75% in steeplechase anatomy exam…I have dragged many of my coursemates and YouTube fam to see the gold you’ve uploaded on your channel…",
       image: eclipse3,
     },
   ];
