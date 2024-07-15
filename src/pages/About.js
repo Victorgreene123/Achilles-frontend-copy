@@ -5,14 +5,20 @@ import rectangle137 from "../Assets/Rectangle 137.png";
 import rectangle138 from "../Assets/Rectangle 138.png";
 import rectangle142 from "../Assets/Rectangle 142.png";
 import rectangle143 from "../Assets/Rectangle 143.png";
+
+import rectangle141 from "../Assets/Rectangle 141.png";
+
+import reactangle140 from "../Assets/Rectangle 140.png"
+import reactangle139 from "../Assets/teams.png"
+import reactangle144 from "../Assets/Rectangle144.png"
 import Team from "../components/Team";
 import Counter from "../components/counter";
 
 const About = () => {
   const result = [
-    { id: 1, rate: "90", title: "Success rate", unit: "%", icon: "successicon.png" },
-    { id: 2, rate: "1400", title: "Copies sold so far", unit: "", icon: "copies.png" },
-    { id: 3, rate: "24", title: "Schools reached", unit: "", icon: "schools.png" },
+    { id: 1, rate: "98", title: "Success rate", unit: "%", icon: "successicon.png" },
+    { id: 2, rate: "1200", title: "Copies sold so far", unit: "", icon: "copies.png" },
+    { id: 3, rate: "50", title: "Schools reached", unit: "", icon: "schools.png" },
   ];
 
   const images = [
@@ -20,6 +26,12 @@ const About = () => {
     { id: 2, src: rectangle138, alt: "image2" },
     { id: 3, src: rectangle142, alt: "image3" },
     { id: 4, src: rectangle143, alt: "image4" },
+
+    { id: 5, src: rectangle141, alt: "image5" },
+    { id: 6, src: reactangle139, alt: "image6" },
+    { id: 7, src: reactangle144, alt: "image7" },
+    { id: 8, src: reactangle140, alt: "image8" },
+
   ];
 
   return (
@@ -42,27 +54,38 @@ const About = () => {
         </div>
       </div>
 
-      <div className='py-20'>
+      <div className='py-20 '>
         <div className='text-center flex flex-col items-center'>
           <h2 className='font-semibold text-4xl lg:text-6xl lg:w-[50rem] text-blue-950 py-10 px-5'>
             We finally hacked Med-school <span className='text-[#f18337]'>for you</span>!
           </h2>
         </div>
 
-        <div className='lg:flex lg:items-center lg:justify-center'>
-          <div className='grid grid-cols-2 gap-4'>
+        <div className='lg:flex lg:items-start lg:justify-center lg:h-[350px] h-[325px]   overflow-hidden'>
+          <div className='grid grid-cols-2 gap-1 scrolling'>
             {images.map((image) => (
               <img
                 key={image.id}
-                className='w-full fade-in hover-lively'
+                className='w-full lg:[h-175px] fade-in hover-lively'
                 src={image.src}
                 alt={image.alt}
               />
             ))}
           </div>
 
-          <div className='hidden lg:block'>
-            <div className='grid grid-cols-2 gap-4'>
+          <div className='hidden lg:flex'>
+            <div className='grid grid-cols-2 gap-1 scrolling'>
+              {images.map((image) => (
+                <img
+                  key={image.id}
+                  className='w-full fade-in hover-lively'
+                  src={image.src}
+                  alt={image.alt}
+                />
+              ))}
+            </div>
+           
+            <div className='grid grid-cols-2 gap-1 scrolling'>
               {images.map((image) => (
                 <img
                   key={image.id}
@@ -77,7 +100,7 @@ const About = () => {
       </div>
 
       <div>
-        <div className='container px-10 py-24 mx-auto flex flex-col gap-20 items-center lg:items-start'>
+        <div className='container px-10 py-14 mt-0 mx-auto flex flex-col gap-20 items-center lg:items-start'>
           <div className='gap-10 flex flex-col items-center lg:items-start'>
             <div className='flex justify-center lg:justify-start'>
               <div className='bg-blue-700 w-48 h-1'></div>

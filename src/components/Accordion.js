@@ -119,7 +119,7 @@ const Accordion = () => {
       <div className='bg-white lg:p-10'>
         <div className='container mx-auto p-10 lg:p-10 flex flex-col lg:flex-row lg:justify-between items-center gap-5'>
           <div className='text-center lg:text-left items-center lg:items-start flex flex-col gap-5'>
-            <h1 className='lg:w-4/5  text-3xl lg:text-5xl font-semibold text-blue-600'>
+            <h1 className='lg:w-4/5  text-3xl lg:text-5xl font-semibold text-[#2547A7]'>
               Take the first step towards academic excellence
             </h1>
             <p className='text-[#2547A7]'>Check out some of the resources today</p>

@@ -172,9 +172,10 @@ const ProductsPage = () => {
             PRODUCTS
           </p>
 
-          <div className='md:max-w-[78%] lg:max-w-[80%] xl:max-w-[60%]'>
+          <div className='md:max-w-[78%] lg:max-w-[85%] xl:max-w-[60%]'>
             <h1 className='text-3xl text-[#081640] font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[72px] xl:text-[3.5rem]'>
-              Shaping Africa's <span className='text-[#f18337]'>med excellence</span> with our{" "}
+              Shaping Africa's <span className='text-[#f18337]'>med excellence</span> 
+              </h1> <h1 className="text-3xl text-[#081640] font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[72px] xl:text-[3.5rem]" > with our{" "}
               <span className='text-[#f18337]'>product lines</span>
             </h1>
           </div>
@@ -438,7 +439,7 @@ const ProductsPage = () => {
         )}
 
         {submissionResponse && (
-          <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-30'>
+          <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-30'>
             <div className='bg-white p-8 rounded-md w-[80%] mx-auto lg:w-[40%]'>
               <div className='text-center'>
                 <p className='text-lg'>{submissionResponse}</p>

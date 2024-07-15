@@ -64,8 +64,8 @@ const FAQ = () => {
       <div className=''>
         <div className='bg-[#F3F5FA] pt-16 pb-20'>
           <div className='max-w-[85%] mx-auto'>
-            <h1 className='text-[#f18337] text-3xl sm:text-4xl lg:text-6xl'>Frequently</h1>
-            <h1 className='text-3xl sm:text-4xl lg:text-6xl'>Asked Questions</h1>
+            <h1 className='text-[#f18337] text-3xl sm:text-4xl lg:text-5xl tracking-tighter font-medium'>Frequently</h1>
+            <h1 className='text-3xl sm:text-4xl lg:text-5xl text-[#081640] tracking-tighter font-semibold'>Asked Questions</h1>
           </div>
         </div>
 
@@ -93,7 +93,7 @@ const FAQ = () => {
               </div>
 
               <div className='hidden lg:block'>
-                <h1 className='text-6xl font-bold'>Got more</h1>
+                <h1 className='text-6xl font-bold text-blue-900'>Got more</h1>
                 <h1 className='text-6xl font-bold text-[#f18337]'>questions?</h1>
               </div>
 
