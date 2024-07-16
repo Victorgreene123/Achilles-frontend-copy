@@ -10,6 +10,7 @@ import team8 from "../Assets/team8.jpg";
 import team9 from "../Assets/team9.jpg";
 import team10 from "../Assets/team10.jpg";
 import team11 from "../Assets/team11.jpg";
+import team12 from "../Assets/team12.jpg";
 
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
@@ -54,6 +55,15 @@ const Team = () => {
       image: team4,
       linkedin: "https://www.linkedin.com/in/marquis-abah-584a12199",
       instagram: "#",
+    },
+
+    {
+      id: 12,
+      name: "Abe Marvellous",
+      role: "Chief Strategy Officer",
+      image: team12,
+      linkedin: "http://www.linkedin.com/in/abe-marvellous",
+      instagram: "https://www.instagram.com/kamal_marxl?igsh=MWI1ZWVyd3cwczk1YQ==",
     },
 
     {
