@@ -5,9 +5,11 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import { Provider } from "react-redux";
-import store from "./store";
+import { createStore } from "redux";
+import ApiReducer from "./reducers";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+const store = createStore(ApiReducer)
 
 root.render(
   <React.StrictMode>

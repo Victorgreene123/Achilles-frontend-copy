@@ -1,7 +1,7 @@
 {
     "name": "client",
     "version": "0.1.0",
-    "homepage": "https://achilles-frontend-copy.vercel.app/",
+    "homepage": "https://achillesdrill.com/",
     "private": true,
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^6.5.2",

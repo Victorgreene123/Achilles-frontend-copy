@@ -26,7 +26,7 @@ const ProductsPage = () => {
   const openResponseModal = () => setResponseModalVisible(true);
   const closeResponseModal = () => setResponseModalVisible(false);
 
-  const baseURL = useSelector((state) => state.baseUrl);
+  const baseURL = useSelector((state) => state.baseURL);
   const endPoint = `${baseURL}waitlist/join`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
