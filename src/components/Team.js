@@ -8,6 +8,8 @@ import team6 from "../Assets/team6.jpg";
 import team7 from "../Assets/team7.jpg";
 import team8 from "../Assets/team8.jpg";
 import team9 from "../Assets/team9.jpg";
+import team10 from "../Assets/team10.jpg";
+import team11 from "../Assets/team11.jpg";
 
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
@@ -97,6 +99,24 @@ const Team = () => {
       image: team9,
       linkedin: "https://ng.linkedin.com/in/oshikoya-oluwasegun-437243238",
       instagram: "#",
+    },
+
+    {
+      id: 10,
+      name: "Olanipekun Jesutofunmi",
+      role: "Follow Up Coach",
+      image: team10,
+      linkedin: "#",
+      instagram: "https://www.instagram.com/jesutofunmiolanipekun",
+    },
+
+    {
+      id: 11,
+      name: "Akinwunmi Olive",
+      role: "Technical Writing Team Lead",
+      image: team11,
+      linkedin: "https://www.linkedin.com/in/olive-akinwumi-721759184",
+      instagram: "https://www.instagram.com/oliveakinwumi",
     },
   ];
 

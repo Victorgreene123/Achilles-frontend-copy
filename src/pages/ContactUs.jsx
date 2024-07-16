@@ -39,7 +39,7 @@ const ContactUs = () => {
   };
 
   const baseURL = useSelector((state) => state.baseURL);
-  const enPoint = `${baseURL}contact/getintouch`;
+  const endPoint = `${baseURL}contact/getintouch`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
