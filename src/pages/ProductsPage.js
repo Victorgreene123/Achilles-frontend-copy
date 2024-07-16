@@ -12,6 +12,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Youtube from "../components/YoutubeVid";
 
+import { useSelector } from "react-redux";
+
 const ProductsPage = () => {
   const [activeSection, setActiveSection] = useState("LECTURE_BANKS");
   const [isFormModalVisible, setFormModalVisible] = useState(false);
@@ -24,7 +26,8 @@ const ProductsPage = () => {
   const openResponseModal = () => setResponseModalVisible(true);
   const closeResponseModal = () => setResponseModalVisible(false);
 
-  const endPoint = "https://achilles-web-be.onrender.com/waitlist/join";
+  const baseURL = useSelector((state) => state.baseUrl);
+  const endPoint = `${baseURL}waitlist/join`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
@@ -41,6 +44,7 @@ const ProductsPage = () => {
       } else {
         setSubmissionResponse(error.response?.data.message || "An error occurred");
       }
+      // console.log(error);
       setIsSuccess(false);
       closeFormModal();
       openResponseModal();
