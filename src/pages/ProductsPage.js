@@ -172,11 +172,10 @@ const ProductsPage = () => {
             PRODUCTS
           </p>
 
-          <div className='md:max-w-[78%] lg:max-w-[85%] xl:max-w-[60%]'>
-            <h1 className='text-3xl text-[#081640] font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[72px] xl:text-[3.5rem]'>
-              Shaping Africa's <span className='text-[#f18337]'>med excellence</span> 
-              </h1> <h1 className="text-3xl text-[#081640] font-bold tracking-tighter sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[72px] xl:text-[3.5rem]" > with our{" "}
-              <span className='text-[#f18337]'>product lines</span>
+          <div>
+            <h1 className='text-xl text-[#081640] font-semibold tracking-tight sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[72px] xl:text-[3.5rem]'>
+              Shaping Africa's <span className='text-[#f18337]'>med excellence</span> <br /> with
+              our <span className='text-[#f18337]'>product lines</span>
             </h1>
           </div>
         </div>
