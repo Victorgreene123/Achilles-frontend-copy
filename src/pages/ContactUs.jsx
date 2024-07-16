@@ -13,6 +13,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import boy from "../Assets/boy.PNG";
 
+import { useSelector } from "react-redux";
+
 const ContactUs = () => {
   const [responseMessage, setResponseMessage] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -36,7 +38,8 @@ const ContactUs = () => {
     enquiry: "",
   };
 
-  const endPoint = "https://api.achillesdrill.com/contact/getintouch";
+  const baseURL = useSelector((state) => state.baseURL);
+  const endPoint = `${baseURL}contact/getintouch`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
@@ -184,9 +187,12 @@ const ContactUs = () => {
               </div>
 
               <div className='text-sm'>
-              
-              <p ><a href="tel:+2349069556424"> +234-906-955-6424</a></p>
-              <p><a href="tel:+2348108287800">+234-810-828-7800</a></p>
+                <p>
+                  <a href='tel:+2349069556424'> +234-906-955-6424</a>
+                </p>
+                <p>
+                  <a href='tel:+2348108287800'>+234-810-828-7800</a>
+                </p>
               </div>
             </div>
 
@@ -197,8 +203,12 @@ const ContactUs = () => {
               </div>
 
               <div className='text-sm'>
-                <p><a href="https://wa.me/09102184183">+234 910 218 4183</a></p>
-                <p><a href="https://wa.me/08105388080">+234 810 538 8080</a></p>
+                <p>
+                  <a href='https://wa.me/09102184183'>+234 910 218 4183</a>
+                </p>
+                <p>
+                  <a href='https://wa.me/08105388080'>+234 810 538 8080</a>
+                </p>
               </div>
             </div>
 
@@ -209,10 +219,14 @@ const ContactUs = () => {
               </div>
 
               <div>
-               <p >
-              <a href="mailto:support@achillesdrill.com
-              ">support@achillesdrill.com</a>
-              </p>
+                <p>
+                  <a
+                    href='mailto:support@achillesdrill.com
+              '
+                  >
+                    support@achillesdrill.com
+                  </a>
+                </p>
               </div>
             </div>
           </div>
