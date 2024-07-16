@@ -113,7 +113,7 @@ const Team = () => {
     {
       id: 11,
       name: "Akinwunmi Olive",
-      role: "Technical Writing Team Lead",
+      role: "Tech-Writing Lead",
       image: team11,
       linkedin: "https://www.linkedin.com/in/olive-akinwumi-721759184",
       instagram: "https://www.instagram.com/oliveakinwumi",
