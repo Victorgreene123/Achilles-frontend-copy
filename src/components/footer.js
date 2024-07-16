@@ -36,7 +36,7 @@ function Footer() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-    fetch("https://achilles-web-be.onrender.com/newsletter/subscribe", {
+    fetch("https://api.achillesdrill.com/newsletter/subscribe", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -24,7 +24,7 @@ const ProductsPage = () => {
   const openResponseModal = () => setResponseModalVisible(true);
   const closeResponseModal = () => setResponseModalVisible(false);
 
-  const endPoint = "https://achilles-web-be.onrender.com/waitlist/join";
+  const endPoint = "https://api.achillesdrill.com/waitlist/join";
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {

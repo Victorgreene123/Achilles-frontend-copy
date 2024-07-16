@@ -36,7 +36,7 @@ const ContactUs = () => {
     enquiry: "",
   };
 
-  const endPoint = "https://achilles-web-be.onrender.com/contact/getintouch";
+  const endPoint = "https://api.achillesdrill.com/contact/getintouch";
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {
