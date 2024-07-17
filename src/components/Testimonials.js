@@ -52,7 +52,7 @@ const Testimonials = () => {
 
     {
       id: 11,
-      head: "From having 40-50% into having 70-75%",
+      head: "From having 40-50% to having 70-75%",
       logo: aifunai,
       names: "Ruyina Eteng",
       school: "Medicine, AE-FUNAI",
