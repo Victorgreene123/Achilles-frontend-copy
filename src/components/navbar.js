@@ -50,7 +50,7 @@ export default function Navbar() {
     console.log("Response Modal Closed");
   };
 
-  const baseURL = useSelector((state) => state.baseURL);
+  const baseURL = useSelector((state) => state.baseUrl);
   const endPoint = `${baseURL}waitlist/join`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {

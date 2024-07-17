@@ -37,7 +37,7 @@ const Testimonials = () => {
       school: "Pharmacy , UI",
       message:
         "“…I really want to give a shout out to the ACHILLES TEAM, the tutorial really helped. I can remember pouring what I learnt in blood physiology for them like that. I had an 83% in Physiology and 82% in Anatomy. I wish the tutorial could continue, thank you Achilles, keep building lives…”",
-      image: eclipse3,
+      image: eclipse2,
     },
     {
       id: 3,
@@ -55,10 +55,10 @@ const Testimonials = () => {
       head: "From having 40-50% into having 70-75%",
       logo: aifunai,
       names: "Ruyina Eteng",
-      school: "Medicine, AE-FUNIA",
+      school: "Medicine, AE-FUNAI",
       message:
         "…please don’t stop what you are doing, your videos helped me jump from having 40-50% into having 70-75% in steeplechase anatomy exam…I have dragged many of my coursemates and YouTube fam to see the gold you’ve uploaded on your channel…",
-      image: eclipse2,
+      image: eclipse3,
     },
   ];
 
