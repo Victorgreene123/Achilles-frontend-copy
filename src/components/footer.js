@@ -35,8 +35,8 @@ function Footer() {
     }));
   };
 
-  const baseURL = useSelector((state) => state.baseUrl);
-  const endPoint = `${baseURL}newslettersubscriber`;
+  const baseURL = useSelector((state) => state.baseURL);
+  const endPoint = `${baseURL}newsletter/subscribe`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
