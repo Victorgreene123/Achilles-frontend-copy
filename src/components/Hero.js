@@ -6,9 +6,9 @@ import rectangle143 from "../Assets/Rectangle 143.png";
 
 import rectangle141 from "../Assets/Rectangle 141.png";
 
-import reactangle140 from "../Assets/Rectangle 140.png"
-import reactangle139 from "../Assets/teams.png"
-import reactangle144 from "../Assets/Rectangle144.png"
+import reactangle140 from "../Assets/Rectangle 140.png";
+import reactangle139 from "../Assets/teams.png";
+import reactangle144 from "../Assets/Rectangle144.png";
 
 import { PiDownloadSimpleLight } from "react-icons/pi";
 import { PiCaretDownBold } from "react-icons/pi";
@@ -22,8 +22,8 @@ const Hero = () => {
           <span className="text-[#f18337] tracking-tighter">Ease</span>.
         </h1>
         <p className="text-sm lg:w-3/4">
-          Your one-stop destination for exam prep resources
-          tailored for Nigerian medical students.
+          Your one-stop destination for exam prep resources tailored for
+          Nigerian medical students.
         </p>
         <div className="flex flex-col lg:flex-row gap-3 items-center">
           <a
@@ -43,20 +43,50 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className='lg:flex lg:items-start lg:justify-center lg:w-2/5  lg:h-[411px] h-[325px]   overflow-hidden'>
-      <div className="grid grid-cols-2 gap-1 justify-center scrolling ">
-        <img className="w-[241px] lg:h-[201px]" src={rectangle137} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={rectangle138} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={rectangle142} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={rectangle143} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={reactangle139} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={reactangle140} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={reactangle144} alt="" />
-        <img className="w-[241px] lg:h-[201px]" src={rectangle141} alt="" />
-        
+      <div className="lg:flex lg:items-start lg:justify-center lg:w-2/5  lg:h-[411px] h-[325px]   overflow-hidden">
+        <div className="grid grid-cols-2 gap-1 justify-center scrolling ">
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={rectangle137}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={rectangle138}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={rectangle142}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={rectangle143}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={reactangle139}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={reactangle140}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={reactangle144}
+            alt=""
+          />
+          <img
+            className="w-[241px] md:w-full lg:h-[201px]"
+            src={rectangle141}
+            alt=""
+          />
+        </div>
       </div>
-      </div>
- 
     </div>
   );
 };

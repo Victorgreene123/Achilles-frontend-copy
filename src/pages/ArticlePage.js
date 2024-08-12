@@ -8,14 +8,7 @@ import CommentForm from "../components/CommentForm";
 const ArticlePage = ({ data }) => {
   const { id } = useParams();
   const location = useLocation();
-  const [comments, setComments] = useState([
-    { author: "Alice", content: "Nice post!", date: "2024-07-31 12:34" },
-    {
-      author: "Bob",
-      content: "I found this helpful.",
-      date: "2024-07-31 13:45",
-    },
-  ]);
+  const [comments, setComments] = useState([]);
   const article = data.find((item) => item.id === parseInt(id));
 
   if (!article) {
