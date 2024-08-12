@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
-import React from "react";
->>>>>>> 3e7af7a5a6273a6f468bb2b327f05b8cfb940a76
 
 const CommentItem = ({ author, content, date }) => {
   const formatRelativeTime = (dateString) => {

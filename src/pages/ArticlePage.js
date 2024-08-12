@@ -98,10 +98,6 @@ import CommentForm from "../components/CommentForm";
 const ArticlePage = () => {
   const { id } = useParams();
   const location = useLocation();
-<<<<<<< HEAD
-  const [comments, setComments] = useState([]);
-  const article = data.find((item) => item.id === parseInt(id));
-=======
   const [article, setArticle] = useState(null);
   const [comments, setComments] = useState([]);
   const [reload , setReload] = useState(false)
