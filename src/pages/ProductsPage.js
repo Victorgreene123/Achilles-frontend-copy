@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
@@ -15,6 +15,16 @@ import Youtube from "../components/YoutubeVid";
 import { useSelector } from "react-redux";
 
 const ProductsPage = () => {
+  const [videos, setVideos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const firstvideo = videos.find((item) => item.slot === "1")
+  const secondvideo = videos.find((item) => item.slot === "2")
+  const thirdvideo = videos.find((item) => item.slot === "3")
+  const fourthvideo = videos.find((item) => item.slot === "4")
+  const fifthvideo = videos.find((item) => item.slot === "5")
+
+  
   const [activeSection, setActiveSection] = useState("LECTURE_BANKS");
   const [isFormModalVisible, setFormModalVisible] = useState(false);
   const [isResponseModalVisible, setResponseModalVisible] = useState(false);
@@ -167,6 +177,24 @@ const ProductsPage = () => {
       </div>
     );
   };
+
+  useEffect(() => {
+    fetch("https://achilles-web-be.onrender.com/video/get")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setVideos(data.videos);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div className='relative'>
@@ -334,65 +362,94 @@ const ProductsPage = () => {
           <div className='mb-40 z-0 lg:flex gap-4'>
             <div className='mb-8 flex-[3]'>
               {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:h-full' /> */}
-              <Youtube
-                src='https://www.youtube.com/embed/xi1sKqM-QkA?si=Tuvagj4olryfeVWU'
+              {
+                firstvideo ? 
+
+                (
+                <>
+                <Youtube
+                src={firstvideo.url}
                 title='Welcome to achilles drill'
                 style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
               />
               <div className='bg-black text-center py-4'>
-                <p className='text-white'>Learn FASTER in MED SCHOOL with ChatGPT</p>
+                <p className='text-white'>{firstvideo.title}</p>
               </div>
+              </>
+              
+            ): ' '
+}
             </div>
 
             <div className='flex-[3]'>
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-2'>
                 <div className='relative'>
-                  <div className='py-6 px-3 bg-[#dcdcf5]'>
-                    {/* <video src='https://www.youtube.com/watch?v=gOhGsrayF18' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
-
+                 
+                {
+                  secondvideo ?
+                    (
+                    <>
+                     <div className='py-6 px-3 bg-[#dcdcf5]'>
+                     {/* <video src='https://www.youtube.com/watch?v=gOhGsrayF18' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
                     <Youtube
-                      src='https://www.youtube.com/embed/ogBByvsk0VU?si=X3JvHjx-UI7DG1uX'
+                      src={secondvideo.url}
                       title='Welcome to achilles drill'
                       style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
                     />
                   </div>
-                  <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                  <div className='w-12 h-3 bg-white absolute bottom-0'></div></>) : ' '
+                }
                 </div>
 
                 <div className='relative'>
+                  {
+                    thirdvideo ?
+                    (<>
                   <div className='mt-8 lg:mt-0 py-6 px-3 bg-[#dcdcf5]'>
                     {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
                     <Youtube
-                      src='https://www.youtube.com/embed/P1NraMV6Ky8?si=I8UaLFoO_5JUOpj1'
+                      src={thirdvideo.url}
                       title='Welcome to achilles drill'
                       style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
                     />
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                  </>) : ''
+}
                 </div>
 
                 <div className='relative'>
+                  {
+                   fourthvideo ? 
+                    <>
                   <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
                     {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
                     <Youtube
-                      src='https://www.youtube.com/embed/tnADA37As6c?si=Sba7jAqEeX_Z4JyB'
+                      src={fourthvideo.url}
                       title='Welcome to achilles drill'
                       style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
                     />
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
-                </div>
+                 </> : ' '
+                 }
+                  </div>
 
                 <div className='relative'>
+                {
+                   fifthvideo ? 
+                    <>
                   <div className='mt-8 lg:mt-2 py-6 px-3 bg-[#dcdcf5]'>
                     {/* <video src='' controls className='w-full sm:aspect-[16/7] lg:aspect-video' /> */}
                     <Youtube
-                      src='https://www.youtube.com/embed/lToIUS5ITp4?si=Zs4TX4KZuYO53-32'
+                      src= {fifthvideo.url}
                       title='Welcome to achilles drill'
                       style='w-full h-[200px] sm:aspect-[16/7] lg:h-full'
                     />
                   </div>
                   <div className='w-12 h-3 bg-white absolute bottom-0'></div>
+                 </> : ' '
+                 }
                 </div>
               </div>
 
