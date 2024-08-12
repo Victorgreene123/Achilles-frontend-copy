@@ -11,7 +11,7 @@ const BlogItem = (props) => {
         state={{ from: location }}
       >
         <img
-          src={`/images/${props.image}`}
+          src={props.image} 
           className="w-full h-auto rounded-lg"
           alt={props.title}
         />

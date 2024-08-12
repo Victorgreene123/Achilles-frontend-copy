@@ -3,14 +3,16 @@ import React from "react";
 import Comment from "./CommentItem";
 
 const CommentList = ({ comments }) => {
+  const visibleComment =comments.filter((item) => item.visibility === true)
   return (
     <div className="mt-4">
-      {comments.map((comment, index) => (
+      {visibleComment.length === 0 ? <p>Be the first to comment !</p> : ""}
+      {visibleComment.map((comment, index) => (
         <Comment
           key={index}
-          author={comment.author}
-          content={comment.content}
-          date={comment.date}
+          author={comment.fullname}
+          content={comment.comment}
+          date={comment.created_at}
         />
       ))}
     </div>

@@ -1,35 +1,46 @@
-import React from "react";
-import eclipse2 from "../Assets/test2.jpg";
+import React from 'react';
 
 const CommentItem = ({ author, content, date }) => {
+  const formatRelativeTime = (dateString) => {
+    const parsedDate = new Date(dateString);
+    const now = new Date();
+    const diffInMs = now - parsedDate;
+    const diffInSeconds = Math.floor(diffInMs / 1000);
+    const diffInMinutes = Math.floor(diffInSeconds / 60);
+    const diffInHours = Math.floor(diffInMinutes / 60);
+    const diffInDays = Math.floor(diffInHours / 24);
+    const diffInWeeks = Math.floor(diffInDays / 7);
+    const diffInMonths = Math.floor(diffInDays / 30);
+    const diffInYears = Math.floor(diffInDays / 365);
+
+    if (diffInYears > 0) {
+      return `${diffInYears} year${diffInYears > 1 ? 's' : ''} ago`;
+    }
+    if (diffInMonths > 0) {
+      return `${diffInMonths} month${diffInMonths > 1 ? 's' : ''} ago`;
+    }
+    if (diffInWeeks > 0) {
+      return `${diffInWeeks} week${diffInWeeks > 1 ? 's' : ''} ago`;
+    }
+    if (diffInDays > 0) {
+      return `${diffInDays} day${diffInDays > 1 ? 's' : ''} ago`;
+    }
+    if (diffInHours > 0) {
+      return `${diffInHours} hour${diffInHours > 1 ? 's' : ''} ago`;
+    }
+    if (diffInMinutes > 0) {
+      return `${diffInMinutes} minute${diffInMinutes > 1 ? 's' : ''} ago`;
+    }
+    return `${diffInSeconds} second${diffInSeconds > 1 ? 's' : ''} ago`;
+  };
+
+  const formatdate = formatRelativeTime(date);
+
   return (
-    //   <div className="bg-gray-50 shadow-md p-8 rounded-lg">
-    //     <div className="flex flex-col gap-3">
-    //       <div className="flex gap-8">
-    //         <img src={eclipse2} alt="" className="rounded-full w-14 h-14" />
-    //         <div>
-    //           <p className="font-bold">@mike</p>
-    //           <p className="text-xs italic">4 hours ago</p>
-    //         </div>
-    //       </div>
-    //       <p className="text-sm text-justify leading-5">
-    //         Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
-    //         nisi saepe aspernatur cumque debitis velit voluptatibus suscipit
-    //         voluptates magnam tempore nam, pariatur, aut harum reprehenderit
-    //         beatae quo consequatur nesciunt perspiciatis.
-    //       </p>
-    //       <div className="flex justify-end gap-7">
-    //         <button className="text-xs text-[#274CB2] font-bold">Delete</button>
-    //         <button className="text-xs text-gray-100 bg-[#274CB2] font-bold px-6 py-1 rounded-sm">
-    //           Edit
-    //         </button>
-    //       </div>
-    //     </div>
-    //   </div>
     <div className="p-4 border-b border-gray-200">
       <div className="flex justify-between items-center">
         <h4 className="font-bold">{author}</h4>
-        <span className="text-gray-600 text-sm">{date}</span>
+        <span className="text-gray-600 text-sm">{formatdate}</span>
       </div>
       <p className="mt-2">{content}</p>
     </div>

@@ -99,27 +99,43 @@ const ArticlePage = () => {
   const { id } = useParams();
   const location = useLocation();
   const [article, setArticle] = useState(null);
-  const [comments, setComments] = useState([
-    { author: "Alice", content: "Nice post!", date: "2024-07-31 12:34" },
-    {
-      author: "Bob",
-      content: "I found this helpful.",
-      date: "2024-07-31 13:45",
-    },
-  ]);
-
+  const [comments, setComments] = useState([]);
+  const [reload , setReload] = useState(false)
+  // const initreloadcomment = (newComment) =>{
+  //   setReload(true)
+  //   setComments
+  // }
   useEffect(() => {
     // Fetch article data from the API
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`https://achilles-web-be.onrender.com/blog/fetch/${id}`);
-        setArticle(response.data);
+        const response = await axios.get(`https://achilles-web-be.onrender.com/blog/fetch/`);
+       
+        const article = response.data.articles.find((item) => item._id === id)
+        setArticle(article);
+        console.log(article)
       } catch (error) {
         console.error("Error fetching article:", error);
       }
     };
 
     fetchArticle();
+  }, [id]);
+  useEffect(() => {
+    // Fetch article data from the API
+    const fetchComment = async () => {
+      try {
+        const response = await axios.get(`https://achilles-web-be.onrender.com/comment/all`);
+       
+        const comments = response.data.allComment.filter((item) => item.article._id === id)
+        setComments(comments);
+        console.log(comments)
+      } catch (error) {
+        console.error("Error fetching article:", error);
+      }
+    };
+
+    fetchComment();
   }, [id]);
 
   if (!article) {
@@ -151,7 +167,8 @@ const ArticlePage = () => {
 
       <div className='mt-8 w-[80%] mx-auto mb-8 text-justify md:w-[70%] lg:w-[50%]'>
         <div>
-          <p className=''>{content}</p>
+        <div dangerouslySetInnerHTML={{ __html: content }} />
+          
         </div>
 
         <div className='mt-24 bg-gray-200 py-6 px-8 rounded-md text-left'>
@@ -162,7 +179,7 @@ const ArticlePage = () => {
 
         <div className='max-w-2xl mx-auto p-4'>
           <h1 className='text-2xl font-bold mb-4'>Comments</h1>
-          <CommentForm onAddComment={setComments} />
+          <CommentForm  id = {id}/>
           <CommentList comments={comments} />
         </div>
       </div>

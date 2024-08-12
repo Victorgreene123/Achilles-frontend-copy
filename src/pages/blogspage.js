@@ -178,12 +178,12 @@ const BlogPage = () => {
         <div className='grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-2'>
           {getCurrentData().map((item) => (
             <BlogItem
-              key={item.id}
-              id={item.id}
+              key={item._id}
+              id={item._id}
               image={item.image}
-              description={item.description}
+                     
               title={item.title}
-              date={item.datePosted}
+              date={item.created_at}
               category={item.category}
               currentPage={currentPage}
             />
