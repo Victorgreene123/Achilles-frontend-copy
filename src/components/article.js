@@ -1,3 +1,25 @@
+
+import React from "react";
+import { useState } from "react";
+
+// const [blog,setBlogs] = useState([])
+// function getBlogs() {
+// fetch("https://achilles-web-be.onrender.com/blog/fetch")
+//       .then((response) => {
+//         if (!response.ok) {
+//           throw new Error("Network response was not ok");
+//         }
+//         return response.json();
+//       })
+//       .then((data) => {
+//         setBlogs(data.articles);
+      
+//       })
+//       .catch((error) => {
+//         console.log(error)
+//       });
+
+//     }
 export const articles = [
   {
     id: 1,
