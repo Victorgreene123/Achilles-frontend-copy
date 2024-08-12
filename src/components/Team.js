@@ -63,7 +63,8 @@ const Team = () => {
       role: "Chief Strategy Officer",
       image: team12,
       linkedin: "http://www.linkedin.com/in/abe-marvellous",
-      instagram: "https://www.instagram.com/kamal_marxl?igsh=MWI1ZWVyd3cwczk1YQ==",
+      instagram:
+        "https://www.instagram.com/kamal_marxl?igsh=MWI1ZWVyd3cwczk1YQ==",
     },
 
     {
@@ -131,45 +132,55 @@ const Team = () => {
   ];
 
   return (
-    <div className='bg-[#274CB2]'>
-      <div className='w-[95%] mx-auto p-10 space-y-20'>
-        <div className='space-y-5'>
-          <div className='flex justify-start'>
-            <div className='bg-slate-300 w-44 h-1'></div>
-            <div className='bg-[#f18337] w-28 h-1'></div>
+    <div className="bg-[#274CB2]">
+      <div className="w-[95%] mx-auto p-10 space-y-20">
+        <div className="space-y-5">
+          <div className="flex justify-start">
+            <div className="bg-slate-300 w-44 h-1"></div>
+            <div className="bg-[#f18337] w-28 h-1"></div>
           </div>
 
-          <h2 className='text-3xl text-white font-semibold'>Meet the team</h2>
+          <h2 className="text-3xl text-white font-semibold">Meet the team</h2>
         </div>
 
-        <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto lg:gap-6 xl:gap-10'>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mx-auto lg:gap-6 xl:gap-10">
           {team.map((item) => (
             <div
               key={item.id}
-              className='bg-white hover:bg-[#1D3B8A] hover:text-white transition duration-300 group md:w-full'
+              className="bg-white hover:bg-[#1D3B8A] hover:text-white transition duration-300 group md:w-full"
             >
               <div>
                 <img
                   src={item.image}
-                  alt=''
-                  className='w-full h-64 object-cover lg:object-top object-top lg:h-80 xl:h-96'
+                  alt=""
+                  className="w-full h-64 object-cover lg:object-top object-top lg:h-80 xl:h-96"
                 />
               </div>
 
-              <div className='px-5 py-10 flex justify-between items-center'>
+              <div className="px-5 py-10 flex justify-between items-center">
                 <div>
-                  <p className='font-semibold text-lg group-hover:text-white md:text-xl'>
+                  <p className="font-semibold text-lg group-hover:text-white md:text-xl">
                     {item.name}
                   </p>
-                  <p className='group-hover:text-white text-lg md:text-xl'>{item.role}</p>
+                  <p className="group-hover:text-white text-lg md:text-xl">
+                    {item.role}
+                  </p>
                 </div>
 
-                <div className='flex flex-col text-2xl text-blue-700 group-hover:text-white'>
-                  <a href={item.instagram} target='_blank' rel='noopener noreferrer'>
+                <div className="flex flex-col gap-2 text-2xl text-blue-700 group-hover:text-white">
+                  <a
+                    href={item.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BiLogoInstagram />
                   </a>
 
-                  <a href={item.linkedin} target='_blank' rel='noopener noreferrer'>
+                  <a
+                    href={item.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <BiLogoLinkedin />
                   </a>
                 </div>
