@@ -8,6 +8,7 @@ const CommentForm = ({ onAddComment }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (author && content) {
+      
       onAddComment({ author, content, date: new Date().toLocaleString() });
       setAuthor("");
       setContent("");
