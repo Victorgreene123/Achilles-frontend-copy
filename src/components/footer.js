@@ -87,7 +87,7 @@ function Footer() {
   };
 
   return (
-    <footer className="font-open-sans bg-[#080F24] text-white py-16 px-20 box-border bottom-0">
+    <footer className="font-open-sans bg-[#080F24] text-white py-16 lg:px-20 px-12 box-border bottom-0">
       <div className="flex flex-col lg:flex-row justify-center">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-40 w-full lg:w-4/5 box-border items-baseline">
           <div className="flex flex-col mb-10 lg:mb-0">
