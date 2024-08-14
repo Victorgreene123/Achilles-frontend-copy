@@ -10,7 +10,7 @@ const [loading, setLoading] = useState(true);
 const [error, setError] = useState(null);
 
 useEffect(() => {
-  fetch("https://achilles-web-be.onrender.com/faq/read")
+  fetch("https://api.achillesdrill.com/faq/read")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Network response was not ok");

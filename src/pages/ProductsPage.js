@@ -179,7 +179,7 @@ const ProductsPage = () => {
   };
 
   useEffect(() => {
-    fetch("https://achilles-web-be.onrender.com/video/get")
+    fetch("https://api.achillesdrill.com/video/get")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

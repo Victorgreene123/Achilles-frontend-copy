@@ -2,7 +2,7 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 
 const baseUrlSlice = createSlice({
   name: "baseUrl",
-  initialState: "https://achilles-web-be.onrender.com/",
+  initialState: "https://api.achillesdrill.com/",
   reducers: {
     setBaseURL: (state, action) => action.payload,
   },

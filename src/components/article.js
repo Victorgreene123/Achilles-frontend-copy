@@ -3,7 +3,7 @@
 
 // const [blog, setBlogs] = useState([]);
 // function getBlogs() {
-//   fetch("https://achilles-web-be.onrender.com/blog/fetch")
+//   fetch("https://api.achillesdrill.com/blog/fetch")
 //     .then((response) => {
 //       if (!response.ok) {
 //         throw new Error("Network response was not ok");
@@ -27,7 +27,7 @@ function Articles() {
 
   useEffect(() => {
     // Fetch articles from the database when the component mounts
-    fetch("https://achilles-web-be.onrender.com/blog/fetch")
+    fetch("https://api.achillesdrill.com/blog/fetch")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

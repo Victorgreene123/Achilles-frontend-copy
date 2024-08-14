@@ -1,5 +1,5 @@
 const initState = {
-    baseURL: 'https://achilles-web-be.onrender.com/'
+    baseURL: 'https://api.achillesdrill.com/'
 }
 
 const ApiReducer = (state=initState, action)=>{

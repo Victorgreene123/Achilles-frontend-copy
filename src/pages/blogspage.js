@@ -112,7 +112,7 @@ const BlogPage = () => {
   const itemsPerPage = 9;
 
   useEffect(() => {
-    fetch("https://achilles-web-be.onrender.com/blog/fetch")
+    fetch("https://api.achillesdrill.com/blog/fetch")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

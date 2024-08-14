@@ -17,7 +17,7 @@ const CommentForm = ({ id }) => {
         comment:content,
         fullname : author
       }
-      fetch('https://achilles-web-be.onrender.com/comment/write', {
+      fetch('https://api.achillesdrill.com/comment/write', {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

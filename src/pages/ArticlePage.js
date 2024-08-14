@@ -109,7 +109,7 @@ const ArticlePage = () => {
     // Fetch article data from the API
     const fetchArticle = async () => {
       try {
-        const response = await axios.get(`https://achilles-web-be.onrender.com/blog/fetch/`);
+        const response = await axios.get(`https://api.achillesdrill.com/blog/fetch/`);
        
         const article = response.data.articles.find((item) => item._id === id)
         setArticle(article);
@@ -125,7 +125,7 @@ const ArticlePage = () => {
     // Fetch article data from the API
     const fetchComment = async () => {
       try {
-        const response = await axios.get(`https://achilles-web-be.onrender.com/comment/all`);
+        const response = await axios.get(`https://api.achillesdrill.com/comment/all`);
        
         const comments = response.data.allComment.filter((item) => item.article._id === id)
         setComments(comments);
