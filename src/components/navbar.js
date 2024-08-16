@@ -51,7 +51,7 @@ export default function Navbar() {
   };
 
   const baseURL = useSelector((state) => state.baseUrl);
-  const endPoint = `${baseURL}waitlist/join`;
+  const endPoint = `https://api.achillesdrill.com/waitlist/join`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {

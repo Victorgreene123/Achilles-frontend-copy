@@ -39,7 +39,7 @@ const ContactUs = () => {
   };
 
   const baseURL = useSelector((state) => state.baseUrl);
-  const endPoint = `${baseURL}contact/getintouch`;
+  const endPoint = `https://api.achillesdrill.com/contact/getintouch`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {

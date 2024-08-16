@@ -37,7 +37,7 @@ const ProductsPage = () => {
   const closeResponseModal = () => setResponseModalVisible(false);
 
   const baseURL = useSelector((state) => state.baseURL);
-  const endPoint = `${baseURL}waitlist/join`;
+  const endPoint = `https://api.achillesdrill.com/waitlist/join`;
 
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     try {

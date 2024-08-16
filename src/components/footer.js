@@ -36,7 +36,7 @@ function Footer() {
   };
 
   const baseURL = useSelector((state) => state.baseURL);
-  const endPoint = `${baseURL}newsletter/subscribe`;
+  const endPoint = `https://api.achillesdrill.com/newsletter/subscribe`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
