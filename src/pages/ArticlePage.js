@@ -94,6 +94,7 @@ import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import CommentList from "../components/CommentList";
 import CommentForm from "../components/CommentForm";
+import Loading from "../components/loading";
 
 const ArticlePage = () => {
   const { id } = useParams();
@@ -101,6 +102,8 @@ const ArticlePage = () => {
   const [article, setArticle] = useState(null);
   const [comments, setComments] = useState([]);
   const [reload , setReload] = useState(false)
+  const [loading, setLoading] = useState(true); // Loading state
+  const [error, setError] = useState(null);
   // const initreloadcomment = (newComment) =>{
   //   setReload(true)
   //   setComments
@@ -112,7 +115,11 @@ const ArticlePage = () => {
         const response = await axios.get(`https://api.achillesdrill.com/blog/fetch/`);
        
         const article = response.data.articles.find((item) => item._id === id)
-        setArticle(article);
+        setTimeout(() => {
+          setArticle(article);  // Set the fetched blogs
+          setLoading(false);        // Stop the loading animation after delay
+        }, 3000);
+       
         console.log(article)
       } catch (error) {
         console.error("Error fetching article:", error);
@@ -139,7 +146,7 @@ const ArticlePage = () => {
   }, [id]);
 
   if (!article) {
-    return <div>Loading...</div>;
+    return <Loading item='article'/>;
   }
 
   const from = location.state?.from || "/blogs";
