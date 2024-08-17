@@ -10,7 +10,7 @@ import reactangle140 from "../Assets/Rectangle 140.png";
 import reactangle139 from "../Assets/teams.png";
 import reactangle144 from "../Assets/Rectangle144.png";
 
-import { PiDownloadSimpleLight } from "react-icons/pi";
+import { PiClipboardBold, PiClipboardFill, PiDownloadSimpleLight } from "react-icons/pi";
 import { PiCaretDownBold } from "react-icons/pi";
 
 const Hero = () => {
@@ -32,11 +32,13 @@ const Hero = () => {
           >
             Get Started Now
           </a>
-          <a href="/" className="flex flex-col items-center">
+          <a href="https://quiz.achillesdrill.com" className="flex flex-col items-center">
             <div className="flex items-center gap-1">
-              <PiDownloadSimpleLight />
+              
+            <PiClipboardBold />
+
               <p className="text-sm text-blue-950 font-semibold">
-                Download Dr Drills Mobile App
+                Take a Quick Test
               </p>
               <PiCaretDownBold />
             </div>
