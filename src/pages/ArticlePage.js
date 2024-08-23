@@ -132,9 +132,9 @@ const ArticlePage = () => {
     // Fetch article data from the API
     const fetchComment = async () => {
       try {
-        const response = await axios.get(`https://api.achillesdrill.com/comment/all`);
+        const response = await axios.get(`https://api.achillesdrill.com/comment/${id}`);
        
-        const comments = response.data.allComment.filter((item) => item.article._id === id)
+        const comments = response.data.comments
         setComments(comments);
         console.log(comments)
       } catch (error) {
@@ -172,19 +172,19 @@ const ArticlePage = () => {
         </div>
       </div>
 
-      <div className='mt-8 w-[80%] mx-auto mb-8 text-justify md:w-[70%] lg:w-[50%]'>
+      <div className='mt-8 w-[90%] lg:mx-auto mb-8 text-justify md:w-[70%] lg:w-[50%]'>
         <div>
         <div dangerouslySetInnerHTML={{ __html: content }} />
           
         </div>
 
-        <div className='mt-24 bg-gray-200 py-6 px-8 rounded-md text-left'>
+        <div className='mx-auto w-[110%] mt-24 bg-gray-200 py-6 px-8 rounded-md text-left'>
           <h1 className='text-2xl font-bold mb-6 md:text-4xl'>Conclusion</h1>
 
           <p className='text-sm leading-6 text-[#2f2f58f1] md:text-base'>{conclusion}</p>
         </div>
 
-        <div className='max-w-2xl mx-auto p-4'>
+        <div className='max-w-2xl mx-5 lg:mx-auto p-4'>
           <h1 className='text-2xl font-bold mb-4'>Comments</h1>
           <CommentForm  id = {id}/>
           <CommentList comments={comments} />

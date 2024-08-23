@@ -27,7 +27,8 @@ const CommentForm = ({ id }) => {
       .then(response => {
         setIsLoading(false); // Stop spinner
         if (response.status === 200) {
-          window.location.reload();
+          // window.location.reload();
+          alert(response.message)
           
         } else {
           throw new Error("Failed to send mail");
