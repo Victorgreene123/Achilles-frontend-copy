@@ -16,7 +16,6 @@ import team12 from "../Assets/team12.jpg";
 // import "react-multi-carousel/lib/styles.css";
 // import { BiLogoInstagram, BiLogoTwitter } from "react-icons/bi";
 
-import "react-multi-carousel/lib/styles.css";
 import { BiLogoInstagram, BiLogoLinkedin, BiLogoTwitter } from "react-icons/bi";
 
 const Team = () => {

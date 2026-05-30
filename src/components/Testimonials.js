@@ -12,7 +12,7 @@ import eclipse3 from "../Assets/test3.jpg";
 import eclipse4 from "../Assets/test4.jpg";
 import Testimonial from "./Testimonial";
 import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import "./carousel.css";
 
 const Testimonials = () => {
   const carouselRef = useRef(null);

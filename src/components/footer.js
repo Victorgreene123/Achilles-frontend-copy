@@ -266,8 +266,12 @@ function Footer() {
         ></img>
         <div className="mb-5 lg:mb-0">
           <ul className="flex gap-3 lg:gap-10 text-sm">
-            <li>Terms</li>
-            <li>Privacy</li>
+            <li>
+              <Link to="/terms">Terms</Link>
+            </li>
+            <li>
+              <Link to="/privacy">Privacy</Link>
+            </li>
 
             <li>Copyright @2024 Achilles Drill</li>
           </ul>

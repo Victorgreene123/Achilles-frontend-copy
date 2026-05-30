@@ -211,6 +211,9 @@ export default function Navbar() {
         <div className='flex items-center justify-between w-full'>
           <div className='hidden md:flex items-center ml-5 w-full'>
             <ul className='flex justify-center w-3/5 gap-7 text-sm m-0 p-0'>
+              <li className={getNavLinkClass("/")}>
+                <Link to='/'>Home</Link>
+              </li>
               <li className={getNavLinkClass("/about")}>
                 <Link to='/about'>About us</Link>
               </li>

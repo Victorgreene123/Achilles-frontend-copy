@@ -9,6 +9,9 @@ import About from "./pages/About";
 import ContactUs from "./pages/ContactUs";
 import ProductsPage from "./pages/ProductsPage";
 import Faq from "./pages/Faq";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
+import NotFound from "./pages/NotFound";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/homepage";
 import Layout from "./components/Layout";
@@ -35,10 +38,13 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path='/about' element={<About />} />
             <Route path='/contactus' element={<ContactUs />} />
-            <Route path='/Faq' element={<Faq />} />
+            <Route path='/faq' element={<Faq />} />
             <Route path='/productsPage' element={<ProductsPage />} />
             <Route path='blogs' element={<BlogPage  />} />
             <Route path='article/:id' element={<ArticlePage  />} />
+            <Route path='/terms' element={<Terms />} />
+            <Route path='/privacy' element={<Privacy />} />
+            <Route path='*' element={<NotFound />} />
           </Route>
         </Routes>
       </Router>
